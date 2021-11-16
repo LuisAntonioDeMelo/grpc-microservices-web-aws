@@ -1,0 +1,21 @@
+server:
+  port: 8099
+spring:
+  application:
+    name: grpc-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://101.101.101.2:31396
+        namespace: wave-flux
+grpc:
+  client:
+    gestao-service:
+      address: static://localhost:9991
+      negotiationType: plaintext
+    financeiro-service:
+      address: static://localhost:7575
+      negotiationType: plaintext
+    corporative-service:
+      address: static://localhost:9990
+      negotiationType: plaintext

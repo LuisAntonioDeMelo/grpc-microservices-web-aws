@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.grpc.proto";
+
+message ClienteDTO {
+  int64 id = 1;
+  int64 idPessoa = 2;
+  string nomeCliente = 3;
+  double limite = 4;
+  string dataCadastro = 5;
+  int32 diaVencimento = 6;
+  bool credito = 7;
+}
+
+message ClienteRequest {
+  int64 codigo = 1;
+}
+message ClienteResponse {
+  ClienteDTO cliente = 1;
+}
+
+message ClientesResponse {
+  repeated ClienteDTO clientes = 1;
+}
+message emptyCliente {}
+
+service ClienteService {
+  rpc salvarCliente(ClienteDTO) returns (ClienteResponse);
+  rpc obterPorId(ClienteRequest) returns (ClienteResponse);
+  rpc obterClientes(emptyCliente) returns (ClientesResponse);
+}

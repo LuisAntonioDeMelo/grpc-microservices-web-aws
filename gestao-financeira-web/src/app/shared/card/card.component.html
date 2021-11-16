@@ -1,0 +1,14 @@
+<div class="container">
+  <a *ngFor="let card of itemsCard" [routerLink]="'/'+card.link">
+    <mat-card class="first-card">
+        <mat-card-title>
+            <h4><b>{{card.nome}}</b></h4>
+        </mat-card-title>
+        <mat-card-content *ngIf="card.submenu">
+          <p  *ngFor="let sub of card.submenu">
+            {{sub.titulo}}
+          </p>
+        </mat-card-content>
+    </mat-card>
+    </a>
+</div>

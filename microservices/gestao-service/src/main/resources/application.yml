@@ -1,0 +1,12 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: gestao-service
+grpc:
+  server:
+    port: 9991
+  client:
+    corporative-service:
+      address: static://localhost:9990
+      negotiationType: plaintext

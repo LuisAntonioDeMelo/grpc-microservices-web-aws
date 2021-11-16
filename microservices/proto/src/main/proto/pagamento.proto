@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.grpc.proto";
+
+enum EnumTipoPagamento {
+  NONE = 0;
+  PRAZO = 1;
+  VISTA = 2;
+}
+
+message PagamentoDTO {
+  int64 id = 1;
+  double valorPago = 2;
+  string dataPagamento = 3;
+  EnumTipoPagamento tipoPagamento = 4;
+  bool isParcelado = 5;
+  int32 parcelas = 6;
+  double juros =7;
+  int64 idCliente = 8;
+  int32 idLancamento = 9;
+}
+
+    private Long id;
+
+    private TipoPagamento tipoPagamento;
+
+    private LocalDateTime dataPagamento;
+
+    private Double valorPago;
+
+    private Boolean isParcelado;
+
+    private Integer parcelas;
+
+    private Double jurosParcela;
+
+
+message PagamentoRequest {
+  int64 codigo = 1;
+}
+message PagamentoResponse {
+  repeated PagamentoDTO pagamentos = 1;
+}
+
+message emptyPagamento {}
+
+service PagamentoService {
+  rpc salvarPagamento(PagamentoDTO) returns (PagamentoDTO);
+  rpc obterOrcamentos(emptyPagamento) returns (PagamentoResponse);
+}

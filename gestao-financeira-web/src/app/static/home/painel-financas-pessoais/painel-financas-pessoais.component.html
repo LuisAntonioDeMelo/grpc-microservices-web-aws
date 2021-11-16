@@ -1,0 +1,12 @@
+
+  <div class="container" *ngIf="route.children.length === 0">
+    <a *ngFor="let card of items" [routerLink]="card.link">
+      <mat-card class="card-style">
+        <mat-card-title>
+          <h4>{{ card.nome }}</h4>
+        </mat-card-title>
+      </mat-card>
+    </a>
+  </div>
+
+  <router-outlet></router-outlet>

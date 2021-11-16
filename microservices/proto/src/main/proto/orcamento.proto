@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.grpc.proto";
+
+message OrcamentoDTO {
+  int64 id = 1;
+  string descricao = 2;
+}
+
+message OrcamentoRequest {
+  int64 codigo = 1;
+}
+message OrcamentoResponse {
+  repeated OrcamentoDTO orcamentos = 1;
+}
+
+message emptyOrcamento{}
+
+service OrcamentoService {
+  rpc salvarOrcamento(OrcamentoDTO) returns (OrcamentoDTO);
+  rpc obterOrcamentos(emptyOrcamento) returns (OrcamentoResponse);
+}

@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.grpc.proto";
+
+message CategoriaDTO {
+  int64 id = 1;
+  string nome = 2;
+}
+
+message categoriaRequest {
+  int64 codigo = 1;
+}
+message categoriasResponse {
+  repeated CategoriaDTO categorias = 1;
+}
+
+message emptyCategoria {}
+
+service CategoriaService {
+  rpc salvarCategoria(CategoriaDTO) returns (CategoriaDTO);
+  rpc obterCategorias(emptyCategoria) returns (categoriasResponse);
+}

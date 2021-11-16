@@ -1,0 +1,88 @@
+<mat-card>
+  <form [formGroup]="lancamentoForm" #form="ngForm">
+    <h4>Tipo Lançamento</h4>
+    <mat-button-toggle-group id="tipoLancamento" formControlName="tipoLancamento" appearance="legacy" name="fontStyle"
+      aria-label="Font Style">
+      <mat-button-toggle id="despesa" value="0">Despesa</mat-button-toggle>
+      <mat-button-toggle id="receita" value="1">Receita</mat-button-toggle>
+    </mat-button-toggle-group>
+    <br />
+    <br />
+    <div flexLayout="flex">
+      <div fxFlex="30">
+        <h4>Pagamento</h4>
+        <mat-form-field appearance="fill">
+          <mat-label>Selecione uma Data</mat-label>
+          <input id="dataPagamento" formControlName="dataPagamento" matInput [matDatepicker]="picker2" />
+          <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+          <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div fxFlex="30">
+        <h4>Vencimento</h4>
+        <mat-form-field appearance="fill">
+          <mat-label>Selecione uma Data</mat-label>
+          <input id="dataVencimento" formControlName="dataVencimento" matInput [matDatepicker]="picker1" />
+          <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+          <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+    <div flexLayout="flex">
+      <div fxFlex="70">
+        <h4>Descrição</h4>
+        <mat-form-field appearance="fill">
+          <mat-label>Insira a descrição</mat-label>
+          <input matInput id="descricao" formControlName="descricao" />
+        </mat-form-field>
+      </div>
+      <div fxFlex="30">
+        <h4>Valor</h4>
+        <mat-form-field appearance="fill">
+          <mat-label>Insira o valor</mat-label>
+          <input matInput id="valor" formControlName="valor" />
+        </mat-form-field>
+      </div>
+    </div>
+    <div flexLayout="flex">
+      <div fxFlex="50">
+        <h4>Categoria</h4>
+        <mat-form-field appearance="fill">
+          <mat-label>Selecione uma categoria</mat-label>
+          <mat-select id="categoria" formControlName="categoria">
+            <mat-option value="">---</mat-option>
+            <mat-option [id]="categoria.codigo" *ngFor="let categoria of categorias" [value]="categoria">
+              {{ categoria.nome }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div fxFlex="50">
+        <h4>Pessoa</h4>
+        <mat-form-field appearance="fill">
+          <mat-label>Selecione uma Pessoa</mat-label>
+          <mat-select id="pessoa" formControlName="pessoa">
+            <mat-option value="">---</mat-option>
+            <mat-option [id]="'pessoa-' + pessoa.codigo" *ngFor="let pessoa of pessoas" [value]="pessoa">
+              {{ pessoa.nome }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <h4>Observação</h4>
+    <mat-form-field appearance="fill">
+      <mat-label>Insira uma observação</mat-label>
+      <textarea id="observacao" matInput formControlName="observacao"></textarea>
+    </mat-form-field>
+    <div>
+      <button id="btn-limpar" (click)="limpar()" mat-raised-button color="primary" style="margin-right: 20px;">
+        Limpar
+      </button>
+      <button id="btn-salvar" (click)="salvar()" mat-raised-button color="primary" class="">
+        Salvar
+      </button>
+    </div>
+  </form>
+
+</mat-card>

@@ -1,0 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+h2 {
+  font-family: 'Roboto', sans-serif;
+  color: #660bd6;
+  font-size: 18px;
+}
+
+.breadcrumb {
+  background: none;
+  font-size: 18px;
+  margin: 0;
+}
+.breadcrumb a, .breadcrumb span {
+  color: #660bd6;
+  text-decoration: none;
+}
+.breadcrumb a:hover, .breadcrumb span:hover {
+  color: rgb(8, 41, 112);
+  text-decoration: none;
+}
+.breadcrumb li {
+  list-style: none;
+  float: left;
+  margin: 5px;
+}
+.breadcrumb li:last-child {
+  margin-right: 20px;
+}
+.breadcrumb li::after {
+  content: "->";
+  color: darkgrey;
+}
+.breadcrumb li:last-child::after {
+  content: "";
+}

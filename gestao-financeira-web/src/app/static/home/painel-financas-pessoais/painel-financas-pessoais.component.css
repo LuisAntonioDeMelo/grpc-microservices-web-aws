@@ -1,0 +1,26 @@
+
+
+section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container {
+  margin-top: 2em;
+  flex-direction: row;
+  display: flex;
+}
+
+.card-style {
+  width: 236px;
+  height:236px;
+  background-color: #673ab7;
+  color: #fff;
+  margin-left: 0.5em;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+}

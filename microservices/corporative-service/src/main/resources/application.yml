@@ -1,0 +1,9 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: corporative-service
+
+grpc:
+  server:
+    port: 9990
