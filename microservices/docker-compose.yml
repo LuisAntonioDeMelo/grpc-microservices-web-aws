@@ -61,11 +61,16 @@ services:
       ports:
         - "8761:8761"
       mem_limit: 1024m
+      depends_on:
+       - angular
+
 
     angular:
-      build: ../gestao-financeira-web 
+      build: 
+        context: ../gestao-financeira-web 
+        dockerfile: Dockerfile
       ports:
-        - "4200:4200"  
+        - "4200:80"  
     
 networks:
   sprintapp: 
