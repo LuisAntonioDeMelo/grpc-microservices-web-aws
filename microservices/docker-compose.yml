@@ -10,8 +10,13 @@ services:
       environment:
         - SPRING_PROFILES_ACTIVE=prod
         - AUTH_ENABLED=false
+        - eureka.client.serviceUrl.defaultZone=http://eureka-server:8761/eureka/
       depends_on:
         - eureka-server
+      links:
+        -  eureka-server
+      networks:
+        - sprintapp
 
     gestao-service:
       build: ./gestao-service
@@ -22,10 +27,13 @@ services:
       environment:
         - SPRING_PROFILES_ACTIVE=prod
         - AUTH_ENABLED=false
+        - eureka.client.serviceUrl.defaultZone=http://eureka-server:8761/eureka/
       networks:
         - sprintapp
       depends_on:
         - eureka-server
+      links:
+        -  eureka-server
 
     financeiro-service:
       build: ./financeiro-service
@@ -36,10 +44,13 @@ services:
       environment:
         - SPRING_PROFILES_ACTIVE=prod
         - AUTH_ENABLED=false
+        - eureka.client.serviceUrl.defaultZone=http://eureka-server:8761/eureka/
       networks:
         - sprintapp
       depends_on:
         - eureka-server
+      links:
+        -  eureka-server
 
     corporative-service:
       build: ./corporative-service
@@ -50,10 +61,13 @@ services:
       environment:
         - SPRING_PROFILES_ACTIVE=prod
         - AUTH_ENABLED=false
+        - eureka.client.serviceUrl.defaultZone=http://eureka-server:8761/eureka/
       networks:
         - sprintapp
       depends_on:
         - eureka-server
+      links:
+        -  eureka-server
 
     eureka-server:
       build: ./eureka-server
@@ -63,7 +77,8 @@ services:
       mem_limit: 1024m
       depends_on:
        - angular
-
+      networks:
+        - sprintapp
 
     angular:
       build: 
