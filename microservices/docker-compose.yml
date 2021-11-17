@@ -10,7 +10,8 @@ services:
       environment:
         - SPRING_PROFILES_ACTIVE=prod
         - AUTH_ENABLED=false
-
+      depends_on:
+        - eureka-server
 
     gestao-service:
       build: ./gestao-service
@@ -23,6 +24,8 @@ services:
         - AUTH_ENABLED=false
       networks:
         - sprintapp
+      depends_on:
+        - eureka-server
 
     financeiro-service:
       build: ./financeiro-service
@@ -35,6 +38,8 @@ services:
         - AUTH_ENABLED=false
       networks:
         - sprintapp
+      depends_on:
+        - eureka-server
 
     corporative-service:
       build: ./corporative-service
@@ -47,6 +52,8 @@ services:
         - AUTH_ENABLED=false
       networks:
         - sprintapp
+      depends_on:
+        - eureka-server
 
     eureka-server:
       build: ./eureka-server
@@ -54,7 +61,12 @@ services:
       ports:
         - "8761:8761"
       mem_limit: 1024m
-      
+
+    angular:
+      build: ../gestao-financeira-web 
+      ports:
+        - "4200:4200"  
+    
 networks:
   sprintapp: 
     driver : bridge

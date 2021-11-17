@@ -63,8 +63,8 @@
           <mat-label>Selecione uma Pessoa</mat-label>
           <mat-select id="pessoa" formControlName="pessoa">
             <mat-option value="">---</mat-option>
-            <mat-option [id]="'pessoa-' + pessoa.codigo" *ngFor="let pessoa of pessoas" [value]="pessoa">
-              {{ pessoa.nome }}
+            <mat-option [id]="'pessoa-' + pessoa.codigo" *ngFor="let cliente of clientes" [value]="cliente">
+              {{ cliente.nome }}
             </mat-option>
           </mat-select>
         </mat-form-field>

@@ -1,7 +1,7 @@
 import { ClienteService } from './../../services/cliente.service';
 import { Component, OnInit, ViewChild } from '@angular/core'
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms'
-import { MatSnackBar } from '@angular/material/snack-bar'
+import { MatSnackBar } from '@angular/material/snack-bar/'
 import {
   Lancamento,
   Categoria,
@@ -10,7 +10,6 @@ import {
 } from 'src/app/models/models'
 import { CategoriaService } from 'src/app/services/categoria.service'
 import { LancamentoService } from 'src/app/services/lancamento.service'
-import { PessoaService } from 'src/app/services/pessoa.service'
 
 @Component({
   selector: 'app-lancamento-form',
