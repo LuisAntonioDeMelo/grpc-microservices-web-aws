@@ -10,7 +10,6 @@ services:
       environment:
         - SPRING_PROFILES_ACTIVE=prod
         - AUTH_ENABLED=false
-        - eureka.client.serviceUrl.defaultZone=http://eureka-server:8761/eureka/
       depends_on:
         - eureka-server
       networks:
@@ -25,7 +24,6 @@ services:
       environment:
         - SPRING_PROFILES_ACTIVE=prod
         - AUTH_ENABLED=false
-        - eureka.client.serviceUrl.defaultZone=http://eureka-server:8761/eureka/
       depends_on:
         - eureka-server
       networks:
@@ -40,7 +38,6 @@ services:
       environment:
         - SPRING_PROFILES_ACTIVE=prod
         - AUTH_ENABLED=false
-        - eureka.client.serviceUrl.defaultZone=http://eureka-server:8761/eureka/
       depends_on:
         - eureka-server
       networks:
@@ -55,7 +52,6 @@ services:
       environment:
         - SPRING_PROFILES_ACTIVE=prod
         - AUTH_ENABLED=false
-        - eureka.client.serviceUrl.defaultZone=http://eureka-server:8761/eureka/
       depends_on:
         - eureka-server   
       networks:
