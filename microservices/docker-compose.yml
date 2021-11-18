@@ -13,8 +13,6 @@ services:
         - eureka.client.serviceUrl.defaultZone=http://eureka-server:8761/eureka/
       depends_on:
         - eureka-server
-      links:
-        -  eureka-server
       networks:
         - sprintapp
 
@@ -28,12 +26,10 @@ services:
         - SPRING_PROFILES_ACTIVE=prod
         - AUTH_ENABLED=false
         - eureka.client.serviceUrl.defaultZone=http://eureka-server:8761/eureka/
-      networks:
-        - sprintapp
       depends_on:
         - eureka-server
-      links:
-        -  eureka-server
+      networks:
+        - sprintapp
 
     financeiro-service:
       build: ./financeiro-service
@@ -45,12 +41,10 @@ services:
         - SPRING_PROFILES_ACTIVE=prod
         - AUTH_ENABLED=false
         - eureka.client.serviceUrl.defaultZone=http://eureka-server:8761/eureka/
-      networks:
-        - sprintapp
       depends_on:
         - eureka-server
-      links:
-        -  eureka-server
+      networks:
+        - sprintapp
 
     corporative-service:
       build: ./corporative-service
@@ -62,12 +56,10 @@ services:
         - SPRING_PROFILES_ACTIVE=prod
         - AUTH_ENABLED=false
         - eureka.client.serviceUrl.defaultZone=http://eureka-server:8761/eureka/
+      depends_on:
+        - eureka-server   
       networks:
         - sprintapp
-      depends_on:
-        - eureka-server
-      links:
-        -  eureka-server
 
     eureka-server:
       build: ./eureka-server
