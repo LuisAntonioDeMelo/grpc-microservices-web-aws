@@ -6,7 +6,7 @@ services:
       container_name: api-gateway
       mem_limit: 1024m
       ports:
-        - "8090:8090"
+        - "80:8090"
       environment:
         - SPRING_PROFILES_ACTIVE=prod
         - AUTH_ENABLED=false
@@ -18,9 +18,6 @@ services:
     gestao-service:
       build: ./gestao-service
       container_name: gestao-service
-      mem_limit: 1024m
-      ports:
-        - "8080:8080"
       environment:
         - SPRING_PROFILES_ACTIVE=prod
         - AUTH_ENABLED=false
@@ -32,9 +29,6 @@ services:
     financeiro-service:
       build: ./financeiro-service
       container_name: financeiro-service
-      mem_limit: 1024m
-      ports:
-        - "8082:8082"
       environment:
         - SPRING_PROFILES_ACTIVE=prod
         - AUTH_ENABLED=false
@@ -46,9 +40,6 @@ services:
     corporative-service:
       build: ./corporative-service
       container_name: corporative-service
-      mem_limit: 1024m
-      ports:
-        - "8081:8081"
       environment:
         - SPRING_PROFILES_ACTIVE=prod
         - AUTH_ENABLED=false
@@ -63,17 +54,8 @@ services:
       ports:
         - "8761:8761"
       mem_limit: 1024m
-      depends_on:
-       - angular
       networks:
         - sprintapp
-
-    angular:
-      build: 
-        context: ../gestao-financeira-web 
-        dockerfile: Dockerfile
-      ports:
-        - "4200:80"  
     
 networks:
   sprintapp: 

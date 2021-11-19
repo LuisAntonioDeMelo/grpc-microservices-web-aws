@@ -7,8 +7,3 @@ spring:
 grpc:
   server:
     port: 7575
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka

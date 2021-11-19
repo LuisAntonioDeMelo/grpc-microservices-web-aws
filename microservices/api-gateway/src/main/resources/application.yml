@@ -19,8 +19,3 @@ grpc:
     corporative-service:
       address: static://localhost:9990
       negotiationType: plaintext
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka
