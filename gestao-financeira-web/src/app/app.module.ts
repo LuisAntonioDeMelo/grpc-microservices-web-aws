@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { LancamentoComponent } from './lancamento/lancamento.component';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
@@ -37,6 +37,10 @@ import { ClienteFormComponent } from './cliente/cliente-form/cliente-form.compon
 import { ClienteListaComponent } from './cliente/cliente-lista/cliente-lista.component';
 import { CategoriaListaComponent } from './categoria/categoria-lista/categoria-lista.component';
 import { CategoriaFormComponent } from './categoria/categoria-form/categoria-form.component';
+import { LoginComponent } from './static/login/login.component';
+import { RegisterComponent } from './static/register/register.component';
+import { ErrorInterceptor } from './helpers/error.interceptor';
+
 
 @NgModule({
   declarations: [
@@ -68,7 +72,10 @@ import { CategoriaFormComponent } from './categoria/categoria-form/categoria-for
     ClienteFormComponent,
     ClienteListaComponent,
     CategoriaListaComponent,
-    CategoriaFormComponent  ],
+    CategoriaFormComponent,
+    LoginComponent,
+    RegisterComponent
+ ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -79,7 +86,8 @@ import { CategoriaFormComponent } from './categoria/categoria-form/categoria-for
     BrowserAnimationsModule
   ],
   providers: [
-    { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }
+    { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
   ],
   bootstrap: [AppComponent]
 })

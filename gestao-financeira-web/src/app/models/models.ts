@@ -42,3 +42,13 @@ export enum TipoLancamento {
   despesa = "DESPESA",
   receita = "RECEITA"
 }
+
+export class User {
+  id: number;
+  username: string;
+  password: string;
+  firstName: string;
+  lastName: string;
+  token: string;
+}
+

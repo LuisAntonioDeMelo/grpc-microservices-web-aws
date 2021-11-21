@@ -1,4 +1,7 @@
+import { AuthService } from './services/auth.service';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { User } from './models/models';
 
 @Component({
   selector: 'app-root',
@@ -8,13 +11,26 @@ import { Component } from '@angular/core';
 export class AppComponent {
   events: string[] = [];
   opened: boolean;
+  currentUser: User;
+  showMenu: boolean = true;
   title = 'gestao-financeira-web';
-  routings = [
-    {icon:'home',nome:'Inicio',rota:''},
-    {icon:'assignment',nome:'Finanças Pessoais',rota:'painel-financas-pessoais'},
-    {icon:'assignment',nome:'Gestão',rota:'painel-gestao'},
-    {icon:'assignment',nome:'Investimentos',rota:'painel-investimentos'},
-    {icon:'assignment',nome:'Config',rota:''}
-  ];
+
+  constructor (
+    private router: Router,
+    private auth: AuthService
+  ){
+    this.auth.currentUser.subscribe( res => {
+      if(res){
+        this.currentUser = res
+        this.showMenu = false;
+      }
+    });
+  }
+
+
+  public logout() {
+    this.auth.logout();
+    this.router.navigate(['/login'])
+  }
 
 }

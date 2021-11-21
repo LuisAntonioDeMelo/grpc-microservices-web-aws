@@ -8,8 +8,16 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+  routings = [
+    {icon:'home',nome:'Inicio',rota:'home'},
+    {icon:'assignment',nome:'Finanças Pessoais',rota:'/home/painel-financas-pessoais'},
+    {icon:'assignment',nome:'Gestão',rota:'/home/painel-gestao'},
+    {icon:'assignment',nome:'Investimentos',rota:'/home/painel-investimentos'},
+    {icon:'assignment',nome:'Config',rota:''}
+  ];
+
   itemsCard = [
-    {nome:'Finanças Pessoais', link: '/painel-financas-pessoais',
+    {nome:'Finanças Pessoais', link: '/home/painel-financas-pessoais',
       submenu: [
         {titulo:'Lançamentos'},
         {titulo: 'Orçamentos'},
@@ -25,7 +33,7 @@ export class HomeComponent implements OnInit {
       {titulo: 'Cargos'},
       {titulo: 'Fornecedores'}
     ]},
-    {nome:'Investimentos', link: '/painel-investimentos'}
+    {nome:'Investimentos', link: '/home/painel-investimentos'}
   ]
 
   constructor(public route: ActivatedRoute) {}

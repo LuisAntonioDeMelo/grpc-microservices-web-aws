@@ -1,0 +1,38 @@
+<div class="login-page">
+  <div class="login-spacer"></div>
+  <div class="login-container mat-card">
+    <div id="login-fab" class="mdl-color--accent mdl-color-text--white">
+      <i id="lock-icon" class="material-icons">send</i>
+    </div>
+    <h2 style="padding-top: 1em;" class="card-heading">
+      Registrar - Gestão Financeira
+    </h2>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="login-form">
+      <mat-form-field >
+        <input formControlName="username" class="form-control" matInput placeholder="Usúario">
+      </mat-form-field>
+      <mat-form-field >
+        <input formControlName="nome" class="form-control" matInput placeholder="Nome">
+      </mat-form-field>
+      <mat-form-field >
+        <input matInput formControlName="email" class="form-control" placeholder="Email">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput formControlName="password" class="form-control" type='password' placeholder="Senha">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput formControlName="confirmPassword" class="form-control" type='password' placeholder="Confirmar Senha">
+      </mat-form-field>
+    </form>
+    <div class="buttons">
+      <div class="login">
+        <button  mat-raised-button color="primary">Registrar</button>
+      </div>
+      <div class="register">
+        <button routerLink="/login" mat-button color="primary">Login</button>
+        <button mat-button color="primary">Esqueceu a Senha ?</button>
+      </div>
+    </div>
+
+  </div>
+</div>

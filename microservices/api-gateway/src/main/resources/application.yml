@@ -3,11 +3,7 @@ server:
 spring:
   application:
     name: grpc-gateway
-  cloud:
-    nacos:
-      discovery:
-        server-addr: http://101.101.101.2:31396
-        namespace: wave-flux
+
 grpc:
   client:
     gestao-service:
