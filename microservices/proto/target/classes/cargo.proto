@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.grpc.proto";
+
+message cargoDTO {
+  int64 id = 1;
+  string descricao = 2;
+}
+
+message cargoRequest {
+  int64 codigo = 1;
+}
+message cargoResponse {
+  repeated cargoDTO cargos = 1;
+}
+
+message emptyCargo {}
+
+service CargoService {
+  rpc salvarCargo(cargoDTO) returns (cargoDTO);
+  rpc obterCargoss(emptyCargo) returns (cargoResponse);
+}

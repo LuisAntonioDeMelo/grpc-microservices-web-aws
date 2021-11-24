@@ -17,7 +17,14 @@ private static final long serialVersionUID = 0L;
   }
   private PagamentoDTO() {
     id_ = 0L;
-    descricao_ = "";
+    valorPago_ = 0D;
+    dataPagamento_ = "";
+    tipoPagamento_ = 0;
+    isParcelado_ = false;
+    parcelas_ = 0;
+    juros_ = 0D;
+    idCliente_ = 0L;
+    idLancamento_ = 0;
   }
 
   @java.lang.Override
@@ -49,10 +56,46 @@ private static final long serialVersionUID = 0L;
             id_ = input.readInt64();
             break;
           }
-          case 18: {
+          case 17: {
+
+            valorPago_ = input.readDouble();
+            break;
+          }
+          case 26: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            descricao_ = s;
+            dataPagamento_ = s;
+            break;
+          }
+          case 32: {
+            int rawValue = input.readEnum();
+
+            tipoPagamento_ = rawValue;
+            break;
+          }
+          case 40: {
+
+            isParcelado_ = input.readBool();
+            break;
+          }
+          case 48: {
+
+            parcelas_ = input.readInt32();
+            break;
+          }
+          case 57: {
+
+            juros_ = input.readDouble();
+            break;
+          }
+          case 64: {
+
+            idCliente_ = input.readInt64();
+            break;
+          }
+          case 72: {
+
+            idLancamento_ = input.readInt32();
             break;
           }
           default: {
@@ -96,38 +139,109 @@ private static final long serialVersionUID = 0L;
     return id_;
   }
 
-  public static final int DESCRICAO_FIELD_NUMBER = 2;
-  private volatile java.lang.Object descricao_;
+  public static final int VALORPAGO_FIELD_NUMBER = 2;
+  private double valorPago_;
   /**
-   * <code>string descricao = 2;</code>
+   * <code>double valorPago = 2;</code>
    */
-  public java.lang.String getDescricao() {
-    java.lang.Object ref = descricao_;
+  public double getValorPago() {
+    return valorPago_;
+  }
+
+  public static final int DATAPAGAMENTO_FIELD_NUMBER = 3;
+  private volatile java.lang.Object dataPagamento_;
+  /**
+   * <code>string dataPagamento = 3;</code>
+   */
+  public java.lang.String getDataPagamento() {
+    java.lang.Object ref = dataPagamento_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      descricao_ = s;
+      dataPagamento_ = s;
       return s;
     }
   }
   /**
-   * <code>string descricao = 2;</code>
+   * <code>string dataPagamento = 3;</code>
    */
   public com.google.protobuf.ByteString
-      getDescricaoBytes() {
-    java.lang.Object ref = descricao_;
+      getDataPagamentoBytes() {
+    java.lang.Object ref = dataPagamento_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      descricao_ = b;
+      dataPagamento_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
+  }
+
+  public static final int TIPOPAGAMENTO_FIELD_NUMBER = 4;
+  private int tipoPagamento_;
+  /**
+   * <code>.EnumTipoPagamento tipoPagamento = 4;</code>
+   */
+  public int getTipoPagamentoValue() {
+    return tipoPagamento_;
+  }
+  /**
+   * <code>.EnumTipoPagamento tipoPagamento = 4;</code>
+   */
+  public com.grpc.proto.EnumTipoPagamento getTipoPagamento() {
+    @SuppressWarnings("deprecation")
+    com.grpc.proto.EnumTipoPagamento result = com.grpc.proto.EnumTipoPagamento.valueOf(tipoPagamento_);
+    return result == null ? com.grpc.proto.EnumTipoPagamento.UNRECOGNIZED : result;
+  }
+
+  public static final int ISPARCELADO_FIELD_NUMBER = 5;
+  private boolean isParcelado_;
+  /**
+   * <code>bool isParcelado = 5;</code>
+   */
+  public boolean getIsParcelado() {
+    return isParcelado_;
+  }
+
+  public static final int PARCELAS_FIELD_NUMBER = 6;
+  private int parcelas_;
+  /**
+   * <code>int32 parcelas = 6;</code>
+   */
+  public int getParcelas() {
+    return parcelas_;
+  }
+
+  public static final int JUROS_FIELD_NUMBER = 7;
+  private double juros_;
+  /**
+   * <code>double juros = 7;</code>
+   */
+  public double getJuros() {
+    return juros_;
+  }
+
+  public static final int IDCLIENTE_FIELD_NUMBER = 8;
+  private long idCliente_;
+  /**
+   * <code>int64 idCliente = 8;</code>
+   */
+  public long getIdCliente() {
+    return idCliente_;
+  }
+
+  public static final int IDLANCAMENTO_FIELD_NUMBER = 9;
+  private int idLancamento_;
+  /**
+   * <code>int32 idLancamento = 9;</code>
+   */
+  public int getIdLancamento() {
+    return idLancamento_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -147,8 +261,29 @@ private static final long serialVersionUID = 0L;
     if (id_ != 0L) {
       output.writeInt64(1, id_);
     }
-    if (!getDescricaoBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, descricao_);
+    if (valorPago_ != 0D) {
+      output.writeDouble(2, valorPago_);
+    }
+    if (!getDataPagamentoBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, dataPagamento_);
+    }
+    if (tipoPagamento_ != com.grpc.proto.EnumTipoPagamento.NONE.getNumber()) {
+      output.writeEnum(4, tipoPagamento_);
+    }
+    if (isParcelado_ != false) {
+      output.writeBool(5, isParcelado_);
+    }
+    if (parcelas_ != 0) {
+      output.writeInt32(6, parcelas_);
+    }
+    if (juros_ != 0D) {
+      output.writeDouble(7, juros_);
+    }
+    if (idCliente_ != 0L) {
+      output.writeInt64(8, idCliente_);
+    }
+    if (idLancamento_ != 0) {
+      output.writeInt32(9, idLancamento_);
     }
     unknownFields.writeTo(output);
   }
@@ -163,8 +298,36 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, id_);
     }
-    if (!getDescricaoBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, descricao_);
+    if (valorPago_ != 0D) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(2, valorPago_);
+    }
+    if (!getDataPagamentoBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, dataPagamento_);
+    }
+    if (tipoPagamento_ != com.grpc.proto.EnumTipoPagamento.NONE.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(4, tipoPagamento_);
+    }
+    if (isParcelado_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(5, isParcelado_);
+    }
+    if (parcelas_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(6, parcelas_);
+    }
+    if (juros_ != 0D) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(7, juros_);
+    }
+    if (idCliente_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(8, idCliente_);
+    }
+    if (idLancamento_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(9, idLancamento_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -184,8 +347,25 @@ private static final long serialVersionUID = 0L;
     boolean result = true;
     result = result && (getId()
         == other.getId());
-    result = result && getDescricao()
-        .equals(other.getDescricao());
+    result = result && (
+        java.lang.Double.doubleToLongBits(getValorPago())
+        == java.lang.Double.doubleToLongBits(
+            other.getValorPago()));
+    result = result && getDataPagamento()
+        .equals(other.getDataPagamento());
+    result = result && tipoPagamento_ == other.tipoPagamento_;
+    result = result && (getIsParcelado()
+        == other.getIsParcelado());
+    result = result && (getParcelas()
+        == other.getParcelas());
+    result = result && (
+        java.lang.Double.doubleToLongBits(getJuros())
+        == java.lang.Double.doubleToLongBits(
+            other.getJuros()));
+    result = result && (getIdCliente()
+        == other.getIdCliente());
+    result = result && (getIdLancamento()
+        == other.getIdLancamento());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -200,8 +380,26 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getId());
-    hash = (37 * hash) + DESCRICAO_FIELD_NUMBER;
-    hash = (53 * hash) + getDescricao().hashCode();
+    hash = (37 * hash) + VALORPAGO_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getValorPago()));
+    hash = (37 * hash) + DATAPAGAMENTO_FIELD_NUMBER;
+    hash = (53 * hash) + getDataPagamento().hashCode();
+    hash = (37 * hash) + TIPOPAGAMENTO_FIELD_NUMBER;
+    hash = (53 * hash) + tipoPagamento_;
+    hash = (37 * hash) + ISPARCELADO_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIsParcelado());
+    hash = (37 * hash) + PARCELAS_FIELD_NUMBER;
+    hash = (53 * hash) + getParcelas();
+    hash = (37 * hash) + JUROS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getJuros()));
+    hash = (37 * hash) + IDCLIENTE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getIdCliente());
+    hash = (37 * hash) + IDLANCAMENTO_FIELD_NUMBER;
+    hash = (53 * hash) + getIdLancamento();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -337,7 +535,21 @@ private static final long serialVersionUID = 0L;
       super.clear();
       id_ = 0L;
 
-      descricao_ = "";
+      valorPago_ = 0D;
+
+      dataPagamento_ = "";
+
+      tipoPagamento_ = 0;
+
+      isParcelado_ = false;
+
+      parcelas_ = 0;
+
+      juros_ = 0D;
+
+      idCliente_ = 0L;
+
+      idLancamento_ = 0;
 
       return this;
     }
@@ -366,7 +578,14 @@ private static final long serialVersionUID = 0L;
     public com.grpc.proto.PagamentoDTO buildPartial() {
       com.grpc.proto.PagamentoDTO result = new com.grpc.proto.PagamentoDTO(this);
       result.id_ = id_;
-      result.descricao_ = descricao_;
+      result.valorPago_ = valorPago_;
+      result.dataPagamento_ = dataPagamento_;
+      result.tipoPagamento_ = tipoPagamento_;
+      result.isParcelado_ = isParcelado_;
+      result.parcelas_ = parcelas_;
+      result.juros_ = juros_;
+      result.idCliente_ = idCliente_;
+      result.idLancamento_ = idLancamento_;
       onBuilt();
       return result;
     }
@@ -418,9 +637,30 @@ private static final long serialVersionUID = 0L;
       if (other.getId() != 0L) {
         setId(other.getId());
       }
-      if (!other.getDescricao().isEmpty()) {
-        descricao_ = other.descricao_;
+      if (other.getValorPago() != 0D) {
+        setValorPago(other.getValorPago());
+      }
+      if (!other.getDataPagamento().isEmpty()) {
+        dataPagamento_ = other.dataPagamento_;
         onChanged();
+      }
+      if (other.tipoPagamento_ != 0) {
+        setTipoPagamentoValue(other.getTipoPagamentoValue());
+      }
+      if (other.getIsParcelado() != false) {
+        setIsParcelado(other.getIsParcelado());
+      }
+      if (other.getParcelas() != 0) {
+        setParcelas(other.getParcelas());
+      }
+      if (other.getJuros() != 0D) {
+        setJuros(other.getJuros());
+      }
+      if (other.getIdCliente() != 0L) {
+        setIdCliente(other.getIdCliente());
+      }
+      if (other.getIdLancamento() != 0) {
+        setIdLancamento(other.getIdLancamento());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -477,71 +717,272 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object descricao_ = "";
+    private double valorPago_ ;
     /**
-     * <code>string descricao = 2;</code>
+     * <code>double valorPago = 2;</code>
      */
-    public java.lang.String getDescricao() {
-      java.lang.Object ref = descricao_;
+    public double getValorPago() {
+      return valorPago_;
+    }
+    /**
+     * <code>double valorPago = 2;</code>
+     */
+    public Builder setValorPago(double value) {
+      
+      valorPago_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double valorPago = 2;</code>
+     */
+    public Builder clearValorPago() {
+      
+      valorPago_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object dataPagamento_ = "";
+    /**
+     * <code>string dataPagamento = 3;</code>
+     */
+    public java.lang.String getDataPagamento() {
+      java.lang.Object ref = dataPagamento_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        descricao_ = s;
+        dataPagamento_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string descricao = 2;</code>
+     * <code>string dataPagamento = 3;</code>
      */
     public com.google.protobuf.ByteString
-        getDescricaoBytes() {
-      java.lang.Object ref = descricao_;
+        getDataPagamentoBytes() {
+      java.lang.Object ref = dataPagamento_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        descricao_ = b;
+        dataPagamento_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string descricao = 2;</code>
+     * <code>string dataPagamento = 3;</code>
      */
-    public Builder setDescricao(
+    public Builder setDataPagamento(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      descricao_ = value;
+      dataPagamento_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>string descricao = 2;</code>
+     * <code>string dataPagamento = 3;</code>
      */
-    public Builder clearDescricao() {
+    public Builder clearDataPagamento() {
       
-      descricao_ = getDefaultInstance().getDescricao();
+      dataPagamento_ = getDefaultInstance().getDataPagamento();
       onChanged();
       return this;
     }
     /**
-     * <code>string descricao = 2;</code>
+     * <code>string dataPagamento = 3;</code>
      */
-    public Builder setDescricaoBytes(
+    public Builder setDataPagamentoBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      descricao_ = value;
+      dataPagamento_ = value;
+      onChanged();
+      return this;
+    }
+
+    private int tipoPagamento_ = 0;
+    /**
+     * <code>.EnumTipoPagamento tipoPagamento = 4;</code>
+     */
+    public int getTipoPagamentoValue() {
+      return tipoPagamento_;
+    }
+    /**
+     * <code>.EnumTipoPagamento tipoPagamento = 4;</code>
+     */
+    public Builder setTipoPagamentoValue(int value) {
+      tipoPagamento_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.EnumTipoPagamento tipoPagamento = 4;</code>
+     */
+    public com.grpc.proto.EnumTipoPagamento getTipoPagamento() {
+      @SuppressWarnings("deprecation")
+      com.grpc.proto.EnumTipoPagamento result = com.grpc.proto.EnumTipoPagamento.valueOf(tipoPagamento_);
+      return result == null ? com.grpc.proto.EnumTipoPagamento.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.EnumTipoPagamento tipoPagamento = 4;</code>
+     */
+    public Builder setTipoPagamento(com.grpc.proto.EnumTipoPagamento value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      tipoPagamento_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.EnumTipoPagamento tipoPagamento = 4;</code>
+     */
+    public Builder clearTipoPagamento() {
+      
+      tipoPagamento_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private boolean isParcelado_ ;
+    /**
+     * <code>bool isParcelado = 5;</code>
+     */
+    public boolean getIsParcelado() {
+      return isParcelado_;
+    }
+    /**
+     * <code>bool isParcelado = 5;</code>
+     */
+    public Builder setIsParcelado(boolean value) {
+      
+      isParcelado_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool isParcelado = 5;</code>
+     */
+    public Builder clearIsParcelado() {
+      
+      isParcelado_ = false;
+      onChanged();
+      return this;
+    }
+
+    private int parcelas_ ;
+    /**
+     * <code>int32 parcelas = 6;</code>
+     */
+    public int getParcelas() {
+      return parcelas_;
+    }
+    /**
+     * <code>int32 parcelas = 6;</code>
+     */
+    public Builder setParcelas(int value) {
+      
+      parcelas_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 parcelas = 6;</code>
+     */
+    public Builder clearParcelas() {
+      
+      parcelas_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private double juros_ ;
+    /**
+     * <code>double juros = 7;</code>
+     */
+    public double getJuros() {
+      return juros_;
+    }
+    /**
+     * <code>double juros = 7;</code>
+     */
+    public Builder setJuros(double value) {
+      
+      juros_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double juros = 7;</code>
+     */
+    public Builder clearJuros() {
+      
+      juros_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private long idCliente_ ;
+    /**
+     * <code>int64 idCliente = 8;</code>
+     */
+    public long getIdCliente() {
+      return idCliente_;
+    }
+    /**
+     * <code>int64 idCliente = 8;</code>
+     */
+    public Builder setIdCliente(long value) {
+      
+      idCliente_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 idCliente = 8;</code>
+     */
+    public Builder clearIdCliente() {
+      
+      idCliente_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private int idLancamento_ ;
+    /**
+     * <code>int32 idLancamento = 9;</code>
+     */
+    public int getIdLancamento() {
+      return idLancamento_;
+    }
+    /**
+     * <code>int32 idLancamento = 9;</code>
+     */
+    public Builder setIdLancamento(int value) {
+      
+      idLancamento_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 idLancamento = 9;</code>
+     */
+    public Builder clearIdLancamento() {
+      
+      idLancamento_ = 0;
       onChanged();
       return this;
     }

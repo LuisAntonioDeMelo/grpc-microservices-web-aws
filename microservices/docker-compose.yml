@@ -4,24 +4,45 @@ services:
     api-gateway:
       image: devluis27/api-gateway:latest
       ports:
-        - "80:8090"
+        - "8099:8099"
       environment:
-        - SPRING_PROFILES_ACTIVE=prod
-        - AUTH_ENABLED=false
+        - JAVA_OPTS=
+           -DEUREKA_SERVER=eureka-server
+           -Dspring.profiles.active=prod
+        - IP_HOST=192.168.1.2
       depends_on:
         - eureka-server
       networks:
         - sprintapp
 
     gestao-service:
-      image: devluis27/gestao-service-prod
+      image: devluis27/gestao-service:latest
+      ports:
+        - "8080:8080"
       environment:
-        - SPRING_PROFILES_ACTIVE=prod
+        - JAVA_OPTS=
+           -DEUREKA_SERVER=eureka-server
+           -Dspring.profiles.active=prod
+        - IP_HOST=192.168.1.2
       depends_on:
         - eureka-server
       networks:
         - sprintapp
-
+        
+    auth-service:
+      image: devluis27/auth-service:latest
+      ports:
+        - "9001:9001"
+      environment:
+        - JAVA_OPTS=
+           -DEUREKA_SERVER=eureka-server
+           -Dspring.profiles.active=prod
+        - IP_HOST=192.168.1.2
+      depends_on:
+        - eureka-server
+      networks:
+        - sprintapp      
+        
     eureka-server:
       image: devluis27/eureka-server:latest
       ports:

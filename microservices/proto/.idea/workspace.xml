@@ -5,10 +5,69 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1ba3415-752c-464f-a98d-758759a43552" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_util_3_12_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_api_1_37_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_core_1_37_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_services_1_37_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_stub_1_37_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_devh_grpc_common_spring_boot_2_12_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_devh_grpc_server_spring_boot_autoconfigure_2_12_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_devh_grpc_server_spring_boot_starter_2_12_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_13_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_13_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_30.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_4_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_4_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_4_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_4_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_3_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_27.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/services/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/com/gf/gateway/services/ClienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/com/gf/gateway/services/ClienteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../authentication-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication-service/src/main/java/com/authentication/service/AuthenticationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../authentication-service/src/main/java/com/authentication/service/AuthenticationApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../authentication-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker-compose-local.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gestao-service/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../gestao-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eureka-server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../eureka-server/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eureka-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../eureka-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gestao-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../gestao-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gestao-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gestao-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gestao-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../gestao-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gestao-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../gestao-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_api_1_32_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_context_1_32_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_context_1_37_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_core_1_32_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_netty_shaded_1_32_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_netty_shaded_1_37_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_stub_1_32_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_perfmark_perfmark_api_0_19_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_perfmark_perfmark_api_0_23_0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web/gestao-financeira-web/src/app/lancamento/lancamento-form/lancamento-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../web/gestao-financeira-web/src/app/lancamento/lancamento-form/lancamento-form.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/proto.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/proto/pagamento.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/pagamento.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/Pagamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/Pagamento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/PagamentoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/PagamentoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/PagamentoDTOOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/PagamentoDTOOrBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proto-1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proto-1.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/proto-1.2.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,18 +78,26 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/proto/lancamento-service.proto" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/readme.txt" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/proto/conta-cliente.proto" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/proto/pagamento.proto" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/proto/pessoa.proto" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/utils/Utils.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/proto/cargo.proto" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/proto/categoria.proto" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/proto/cidade.proto" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/readme.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/proto/pagamento.proto" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/proto.iml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/proto/categoria.proto" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/proto/cargo.proto" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/proto/lancamento-service.proto" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/proto/cidade.proto" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/categoriaRequestOrBuilder.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/proto/cliente.proto" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="C:\Users\luis_\.m2\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1zOCAmL98rEDzlMbvoMXwMg62Kr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -43,6 +110,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../api-gateway" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -53,6 +121,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -88,6 +157,11 @@
       <workItem from="1636846012794" duration="9142000" />
       <workItem from="1636950004755" duration="2303000" />
       <workItem from="1637006293357" duration="2028000" />
+      <workItem from="1637630658733" duration="2201000" />
+      <workItem from="1637632896668" duration="4791000" />
+      <workItem from="1637711257887" duration="3383000" />
+      <workItem from="1637723494148" duration="1192000" />
+      <workItem from="1637725408643" duration="1588000" />
     </task>
     <servers />
   </component>
@@ -108,5 +182,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/categoriaRequestOrBuilder.java</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

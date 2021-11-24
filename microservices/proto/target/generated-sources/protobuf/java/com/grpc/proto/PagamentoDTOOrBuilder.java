@@ -13,12 +13,51 @@ public interface PagamentoDTOOrBuilder extends
   long getId();
 
   /**
-   * <code>string descricao = 2;</code>
+   * <code>double valorPago = 2;</code>
    */
-  java.lang.String getDescricao();
+  double getValorPago();
+
   /**
-   * <code>string descricao = 2;</code>
+   * <code>string dataPagamento = 3;</code>
+   */
+  java.lang.String getDataPagamento();
+  /**
+   * <code>string dataPagamento = 3;</code>
    */
   com.google.protobuf.ByteString
-      getDescricaoBytes();
+      getDataPagamentoBytes();
+
+  /**
+   * <code>.EnumTipoPagamento tipoPagamento = 4;</code>
+   */
+  int getTipoPagamentoValue();
+  /**
+   * <code>.EnumTipoPagamento tipoPagamento = 4;</code>
+   */
+  com.grpc.proto.EnumTipoPagamento getTipoPagamento();
+
+  /**
+   * <code>bool isParcelado = 5;</code>
+   */
+  boolean getIsParcelado();
+
+  /**
+   * <code>int32 parcelas = 6;</code>
+   */
+  int getParcelas();
+
+  /**
+   * <code>double juros = 7;</code>
+   */
+  double getJuros();
+
+  /**
+   * <code>int64 idCliente = 8;</code>
+   */
+  long getIdCliente();
+
+  /**
+   * <code>int32 idLancamento = 9;</code>
+   */
+  int getIdLancamento();
 }

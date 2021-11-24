@@ -25,15 +25,15 @@ public final class Cliente {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ClienteRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ClientesResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ClientesResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ClienteResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ClienteResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ClientesResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ClientesResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_emptyCliente_descriptor;
   static final 
@@ -52,9 +52,9 @@ public final class Cliente {
       "(\003\022\020\n\010idPessoa\030\002 \001(\003\022\023\n\013nomeCliente\030\003 \001(" +
       "\t\022\016\n\006limite\030\004 \001(\001\022\024\n\014dataCadastro\030\005 \001(\t\022" +
       "\025\n\rdiaVencimento\030\006 \001(\005\022\017\n\007credito\030\007 \001(\010\"" +
-      " \n\016ClienteRequest\022\016\n\006codigo\030\001 \001(\003\"1\n\020Cli" +
-      "entesResponse\022\035\n\010clientes\030\001 \003(\0132\013.Client" +
-      "eDTO\"/\n\017ClienteResponse\022\034\n\007cliente\030\001 \001(\013" +
+      " \n\016ClienteRequest\022\016\n\006codigo\030\001 \001(\003\"/\n\017Cli" +
+      "enteResponse\022\034\n\007cliente\030\001 \001(\0132\013.ClienteD" +
+      "TO\"1\n\020ClientesResponse\022\035\n\010clientes\030\001 \003(\013" +
       "2\013.ClienteDTO\"\016\n\014emptyCliente2\244\001\n\016Client" +
       "eService\022.\n\rsalvarCliente\022\013.ClienteDTO\032\020" +
       ".ClienteResponse\022/\n\nobterPorId\022\017.Cliente" +
@@ -86,18 +86,18 @@ public final class Cliente {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ClienteRequest_descriptor,
         new java.lang.String[] { "Codigo", });
-    internal_static_ClientesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_ClientesResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ClientesResponse_descriptor,
-        new java.lang.String[] { "Clientes", });
     internal_static_ClienteResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_ClienteResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ClienteResponse_descriptor,
         new java.lang.String[] { "Cliente", });
+    internal_static_ClientesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_ClientesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ClientesResponse_descriptor,
+        new java.lang.String[] { "Clientes", });
     internal_static_emptyCliente_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_emptyCliente_fieldAccessorTable = new

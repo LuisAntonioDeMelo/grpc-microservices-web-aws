@@ -7,11 +7,11 @@ spring:
 grpc:
   client:
     gestao-service:
-      address: static://localhost:9991
+      address: static://${IP_HOST}:9991
       negotiationType: plaintext
     financeiro-service:
-      address: static://localhost:7575
+      address: static://${IP_HOST}:7575
       negotiationType: plaintext
     corporative-service:
-      address: static://localhost:9990
+      address: static://${IP_HOST}:9990
       negotiationType: plaintext

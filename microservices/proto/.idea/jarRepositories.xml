@@ -2,9 +2,24 @@
 <project version="4">
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
+      <option name="id" value="52ef1902-7601-4dc6-b8cb-608d84804819" />
+      <option name="name" value="52ef1902-7601-4dc6-b8cb-608d84804819" />
+      <option name="url" value="https://mymavenrepo.com/repo/HGfCdlcrMqyoOA38c0RX/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="central" />
       <option name="name" value="Central Repository" />
       <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://maven-central.storage.googleapis.com/maven2/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="myMavenRepo.read" />
+      <option name="name" value="myMavenRepo.read" />
+      <option name="url" value="https://mymavenrepo.com/repo/HGfCdlcrMqyoOA38c0RX/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="central" />

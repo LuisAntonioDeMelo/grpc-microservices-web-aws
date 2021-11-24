@@ -43,15 +43,20 @@ public final class Pagamento {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\017pagamento.proto\"-\n\014PagamentoDTO\022\n\n\002id\030" +
-      "\001 \001(\003\022\021\n\tdescricao\030\002 \001(\t\"\"\n\020PagamentoReq" +
-      "uest\022\016\n\006codigo\030\001 \001(\003\"6\n\021PagamentoRespons" +
-      "e\022!\n\npagamentos\030\001 \003(\0132\r.PagamentoDTO\"\020\n\016" +
-      "emptyPagamento2{\n\020PagamentoService\022/\n\017sa" +
-      "lvarPagamento\022\r.PagamentoDTO\032\r.Pagamento" +
-      "DTO\0226\n\017obterOrcamentos\022\017.emptyPagamento\032" +
-      "\022.PagamentoResponseB\022\n\016com.grpc.protoP\001b" +
-      "\006proto3"
+      "\n\017pagamento.proto\"\316\001\n\014PagamentoDTO\022\n\n\002id" +
+      "\030\001 \001(\003\022\021\n\tvalorPago\030\002 \001(\001\022\025\n\rdataPagamen" +
+      "to\030\003 \001(\t\022)\n\rtipoPagamento\030\004 \001(\0162\022.EnumTi" +
+      "poPagamento\022\023\n\013isParcelado\030\005 \001(\010\022\020\n\010parc" +
+      "elas\030\006 \001(\005\022\r\n\005juros\030\007 \001(\001\022\021\n\tidCliente\030\010" +
+      " \001(\003\022\024\n\014idLancamento\030\t \001(\005\"\"\n\020PagamentoR" +
+      "equest\022\016\n\006codigo\030\001 \001(\003\"6\n\021PagamentoRespo" +
+      "nse\022!\n\npagamentos\030\001 \003(\0132\r.PagamentoDTO\"\020" +
+      "\n\016emptyPagamento*3\n\021EnumTipoPagamento\022\010\n" +
+      "\004NONE\020\000\022\t\n\005PRAZO\020\001\022\t\n\005VISTA\020\0022{\n\020Pagamen" +
+      "toService\022/\n\017salvarPagamento\022\r.Pagamento" +
+      "DTO\032\r.PagamentoDTO\0226\n\017obterOrcamentos\022\017." +
+      "emptyPagamento\032\022.PagamentoResponseB\022\n\016co" +
+      "m.grpc.protoP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -70,7 +75,7 @@ public final class Pagamento {
     internal_static_PagamentoDTO_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PagamentoDTO_descriptor,
-        new java.lang.String[] { "Id", "Descricao", });
+        new java.lang.String[] { "Id", "ValorPago", "DataPagamento", "TipoPagamento", "IsParcelado", "Parcelas", "Juros", "IdCliente", "IdLancamento", });
     internal_static_PagamentoRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_PagamentoRequest_fieldAccessorTable = new

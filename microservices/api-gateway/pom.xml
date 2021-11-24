@@ -13,6 +13,8 @@
 	<version>0.1</version>
 	<name>api-gateway</name>
 	<description>Gateway de comunicação com os microserviços</description>
+
+
 	<profiles>
 		<profile>
 			<id>dev</id>
@@ -78,19 +80,25 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>proto.com</groupId>
-			<artifactId>proto</artifactId>
-			<scope>system</scope>
-			<version>1.2</version>
-			<systemPath>${basedir}/libs/proto/1.2/proto-1.2.jar</systemPath>
-		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 			<version>3.0.4</version>
 		</dependency>
+		<dependency>
+			<groupId>com.proto</groupId>
+			<artifactId>proto</artifactId>
+			<version>1.2</version>
+		</dependency>
 	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>myMavenRepo.read</id>
+			<url>https://mymavenrepo.com/repo/HGfCdlcrMqyoOA38c0RX/</url>
+		</repository>
+	</repositories>
 
 	<dependencyManagement>
 		<dependencies>
@@ -101,15 +109,9 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-			<dependency>
-				<groupId>com.alibaba.cloud</groupId>
-				<artifactId>spring-cloud-alibaba-dependencies</artifactId>
-				<version>2.2.3.RELEASE</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
 		</dependencies>
 	</dependencyManagement>
+
 	<build>
 		<plugins>
 			<plugin>

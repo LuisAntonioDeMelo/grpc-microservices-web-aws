@@ -83,6 +83,7 @@ com\grpc\proto\ClienteServiceGrpc.class
 com\grpc\proto\CargoServiceGrpc$CargoServiceMethodDescriptorSupplier.class
 com\grpc\proto\PagamentoDTO.class
 com\grpc\proto\cargoResponse$1.class
+com\grpc\proto\EnumTipoPagamento$1.class
 com\grpc\proto\OrcamentoResponse$1.class
 com\grpc\proto\PesquisaLancamentoQuery$Builder.class
 com\grpc\proto\ContaRequestOrBuilder.class
@@ -147,6 +148,7 @@ com\grpc\proto\CategoriaServiceGrpc$CategoriaServiceMethodDescriptorSupplier.cla
 com\grpc\proto\emptyPagamentoOrBuilder.class
 com\grpc\proto\CidadeServiceGrpc$CidadeServiceStub.class
 com\grpc\proto\PessoaServiceGrpc$1.class
+com\grpc\proto\EnumTipoPagamento.class
 com\grpc\proto\PagamentoResponse$1.class
 com\grpc\proto\PagamentoServiceGrpc$PagamentoServiceFileDescriptorSupplier.class
 com\grpc\proto\LancamentoServiceOuterClass.class
