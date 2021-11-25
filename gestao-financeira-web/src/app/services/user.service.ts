@@ -15,6 +15,7 @@ export class UserService {
     register(user: User) {
         return this.http.post(`${security_url}/users/register`, user);
     }
+    
 
     delete(id: number) {
         return this.http.delete(`${security_url}/users/${id}`);
