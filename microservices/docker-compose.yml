@@ -9,7 +9,7 @@ services:
         - JAVA_OPTS=
            -DEUREKA_SERVER=eureka-server
            -Dspring.profiles.active=prod
-        - IP_HOST=192.168.1.2
+        - IP_HOST=https://ec2-3-89-85-77.compute-1.amazonaws.com/
       depends_on:
         - eureka-server
       networks:
@@ -23,7 +23,7 @@ services:
         - JAVA_OPTS=
            -DEUREKA_SERVER=eureka-server
            -Dspring.profiles.active=prod
-        - IP_HOST=192.168.1.2
+        - IP_HOST=https://ec2-3-89-85-77.compute-1.amazonaws.com/
       depends_on:
         - eureka-server
       networks:
@@ -37,7 +37,7 @@ services:
         - JAVA_OPTS=
            -DEUREKA_SERVER=eureka-server
            -Dspring.profiles.active=prod
-        - IP_HOST=192.168.1.2
+        - IP_HOST=https://ec2-3-89-85-77.compute-1.amazonaws.com/
       depends_on:
         - eureka-server
       networks:
