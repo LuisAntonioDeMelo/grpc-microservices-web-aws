@@ -32,7 +32,7 @@ services:
     auth-service:
       image: devluis27/auth-service:latest
       ports:
-        - "9001:9002"
+        - "9002:9001"
       environment:
         - JAVA_OPTS=
            -DEUREKA_SERVER=eureka-server
