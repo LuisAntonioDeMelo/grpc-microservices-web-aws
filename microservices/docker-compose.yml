@@ -9,8 +9,14 @@ services:
         - JAVA_OPTS=
            -DEUREKA_SERVER=eureka-server
            -Dspring.profiles.active=prod
-        - IP_HOST=localhost
+        - IP_HOST=eureka-server
+        - GRPC_HOST_GESTAO=gestao-service
+        - GRPC_HOST_FINANCEIRO=0
+        - GRPC_HOST_CORP=0
       depends_on:
+        - eureka-server
+      links:
+        - gestao-service
         - eureka-server
       networks:
         - sprintapp
@@ -23,8 +29,11 @@ services:
         - JAVA_OPTS=
            -DEUREKA_SERVER=eureka-server
            -Dspring.profiles.active=prod
-        - IP_HOST=localhost
+        - IP_HOST=eureka-server
+        - GRPC_HOST_CORP=0
       depends_on:
+        - eureka-server
+      links:
         - eureka-server
       networks:
         - sprintapp
@@ -32,13 +41,15 @@ services:
     auth-service:
       image: devluis27/auth-service:latest
       ports:
-        - "9002:9001"
+        - "9001:9001"
       environment:
         - JAVA_OPTS=
            -DEUREKA_SERVER=eureka-server
            -Dspring.profiles.active=prod
-        - IP_HOST=localhost
+        - IP_HOST=eureka-server
       depends_on:
+        - eureka-server
+      links:
         - eureka-server
       networks:
         - sprintapp      

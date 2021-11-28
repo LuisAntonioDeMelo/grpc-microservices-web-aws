@@ -11,13 +11,14 @@
 #
 #FROM openjdk:8-alpine
 #COPY --from=build /workspace/target/*.jar app.jar
-#EXPOSE 8099
+#
 #ENTRYPOINT ["java","-jar","app.jar"]
 
 FROM openjdk:8-alpine
 ARG JAR_FILE=target/api-gateway-0.1.jar
 WORKDIR /opt/app
 COPY ${JAR_FILE} app.jar
+EXPOSE 8099
 ENV JAVA_OPTS=""
 ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar" ]
 ENTRYPOINT ["java","-jar","app.jar"]
