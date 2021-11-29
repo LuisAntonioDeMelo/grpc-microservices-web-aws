@@ -29,6 +29,8 @@ public class Usuario implements Serializable {
 	private String login;
 	
 	private String senha;
+
+	private String email;
 	
 	private boolean ativo;
 
@@ -37,13 +39,13 @@ public class Usuario implements Serializable {
 	@ManyToOne
 	private Pessoa pessoa;
 
-	@JsonIgnore
-	@ManyToMany
-	private List<Grupo> grupos;
-
-	@JsonIgnore
-	@ManyToMany
-	private List<Permissao> permissoes;
+//	@JsonIgnore
+//	@ManyToMany
+//	private List<Grupo> grupos;
+//
+//	@JsonIgnore
+//	@ManyToMany
+//	private List<Permissao> permissoes;
 
 	@Override
 	public String toString() {
