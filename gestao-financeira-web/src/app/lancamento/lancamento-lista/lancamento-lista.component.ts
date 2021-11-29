@@ -82,12 +82,12 @@ export class LancamentoListaComponent implements OnInit {
   }
 
   novo(){
-    this.router.navigate(['/painel-financas-pessoais/lancamentos/lancamento-form']);
+    this.router.navigate(['/home/painel-financas-pessoais/lancamentos/lancamento-form']);
   }
   limpar(){}
 
   editar(lancamento: Lancamento) {
-    this.router.navigate(['/painel-financas-pessoais/lancamentos/lancamento-form/', lancamento.codigo]);
+    this.router.navigate(['/home/painel-financas-pessoais/lancamentos/lancamento-form/', lancamento.codigo]);
   }
 
   excluir(lancamento: Lancamento) {

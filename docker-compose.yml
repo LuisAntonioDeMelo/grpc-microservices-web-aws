@@ -2,32 +2,60 @@ version: '3.1'
 
 services:
     api-gateway:
-      build: ./api-gateway
-      container_name: api-gateway
+      image: devluis27/api-gateway:latest
       ports:
-        - "80:8090"
+        - "8099:8099"
       environment:
-        - SPRING_PROFILES_ACTIVE=prod
-        - AUTH_ENABLED=false
+        - JAVA_OPTS=
+           -DEUREKA_SERVER=eureka-server
+           -Dspring.profiles.active=prod
+        - IP_HOST=eureka-server
+        - GRPC_HOST_GESTAO=gestao-service
+        - GRPC_HOST_FINANCEIRO=0
+        - GRPC_HOST_CORP=0
       depends_on:
+        - eureka-server
+      links:
+        - gestao-service
         - eureka-server
       networks:
         - sprintapp
 
     gestao-service:
-      build: ./gestao-service
-      container_name: gestao-service
+      image: devluis27/gestao-service:latest
+      ports:
+        - "8080:8080"
       environment:
-        - SPRING_PROFILES_ACTIVE=prod
-        - AUTH_ENABLED=false
+        - JAVA_OPTS=
+           -DEUREKA_SERVER=eureka-server
+           -Dspring.profiles.active=prod
+        - IP_HOST=eureka-server
+        - GRPC_HOST_CORP=0
       depends_on:
+        - eureka-server
+      links:
         - eureka-server
       networks:
         - sprintapp
-
+        
+    auth-service:
+      image: devluis27/auth-service:latest
+      ports:
+        - "9001:9001"
+      environment:
+        - JAVA_OPTS=
+           -DEUREKA_SERVER=eureka-server
+           -Dspring.profiles.active=prod
+        - IP_HOST=eureka-server
+      depends_on:
+        - eureka-server
+      links:
+        - eureka-server
+      networks:
+        - sprintapp      
+        
     eureka-server:
-      build: ./eureka-server
-      container_name: eureka-server
+      image: devluis27/eureka-server:latest
       ports:
         - "8761:8761"
       networks:

@@ -21,12 +21,18 @@
           <span>Gestão Financeira</span>
         </b>
         <span class="example-spacer"></span>
-        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-          <mat-icon>settings </mat-icon>
+
+        <div>
+          <small class="nome"><mat-icon>perm_identity</mat-icon> {{ usuario.nome | slice:0:20 }} ...</small>
+        </div>
+        <button [matMenuTriggerFor]="menu" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+          <mat-icon>settings</mat-icon>
         </button>
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-          <mat-icon>share</mat-icon>
-        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="logout()" >Deslogar
+            <mat-icon>logout</mat-icon>
+          </button>
+        </mat-menu>
       </mat-toolbar>
     <!-- conteudo -->
       <div class="container">

@@ -1,19 +1,14 @@
-// This file can be replaced during build by using the `fileReplacements` array.
-// `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
-// The list of file replacements can be found in `angular.json`.
-
-export const url:string = 'http://localhost:8099'
-export const security_url: string = 'http://localhost:9001'
 
 export const environment = {
-  production: false
+  production: false,
+  url: 'http://localhost:8099/gate-v1/api',
+  security_url:'http://localhost:9001'
 };
 
-/*
- * For easier debugging in development mode, you can import the following file
- * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
- * This import should be commented out in production mode because it will have a negative impact
- * on performance if an error is thrown.
- */
-// import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+
+// export const environment = {
+//   production: false,
+//   url: 'http://ec2-3-85-86-164.compute-1.amazonaws.com:8099',
+//   security_url:'http://ec2-3-85-86-164.compute-1.amazonaws.com:9001'
+// };
+

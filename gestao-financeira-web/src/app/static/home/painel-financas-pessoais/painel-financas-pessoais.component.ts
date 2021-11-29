@@ -10,8 +10,8 @@ import { Subject } from 'rxjs'
 export class PainelFinancasPessoaisComponent implements OnInit {
   constructor(public route: ActivatedRoute) {}
   items = [
-    { nome: 'Lançamentos', link: '/painel-financas-pessoais/lancamentos' },
-    { nome: 'Orçamentos', link: 'painel-financas-pessoais/painel-gestao' },
+    { nome: 'Lançamentos', link: '/home/painel-financas-pessoais/lancamentos' },
+    { nome: 'Orçamentos', link: '/home/painel-financas-pessoais/painel-gestao' },
     {
       nome: 'Conta Cliente',
       link: 'painel-financas-pessoais/painel-investimentos',

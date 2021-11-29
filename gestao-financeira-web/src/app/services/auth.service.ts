@@ -1,4 +1,4 @@
-import { security_url } from './../../environments/environment';
+import { environment } from './../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 import { Injectable } from '@angular/core';
@@ -24,7 +24,7 @@ export class AuthService {
    }
 
    login(username: string, password: string){
-     return this.http.post<any>(`${security_url}/users/auth`, {username, password}).pipe(map(user => {
+     return this.http.post<any>(`${environment.security_url}/users/auth`, {username, password}).pipe(map(user => {
        if(user){
         localStorage.setItem('currentUser', JSON.stringify(user));
         this.currentUserSubject.next(user);

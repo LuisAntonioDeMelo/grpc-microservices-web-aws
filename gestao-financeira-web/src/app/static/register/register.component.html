@@ -23,16 +23,15 @@
       <mat-form-field>
         <input matInput formControlName="confirmPassword" class="form-control" type='password' placeholder="Confirmar Senha">
       </mat-form-field>
+      <div class="buttons">
+        <div class="login">
+          <button type="submit" mat-raised-button color="primary">Registrar</button>
+        </div>
+        <div class="register">
+          <button routerLink="/login" mat-button color="primary">Login</button>
+          <button mat-button color="primary">Esqueceu a Senha ?</button>
+        </div>
+      </div>
     </form>
-    <div class="buttons">
-      <div class="login">
-        <button  mat-raised-button color="primary">Registrar</button>
-      </div>
-      <div class="register">
-        <button routerLink="/login" mat-button color="primary">Login</button>
-        <button mat-button color="primary">Esqueceu a Senha ?</button>
-      </div>
-    </div>
-
   </div>
 </div>

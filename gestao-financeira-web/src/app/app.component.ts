@@ -26,11 +26,4 @@ export class AppComponent {
       }
     });
   }
-
-
-  public logout() {
-    this.auth.logout();
-    this.router.navigate(['/login'])
-  }
-
 }

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
-import { url } from 'src/environments/environment';
+import { environment } from 'src/environments/environment';
 import { Pessoa } from '../models/models';
 
 @Injectable({
@@ -12,6 +12,6 @@ export class PessoaService {
   constructor(private http:HttpClient) { }
 
   get():Observable<Pessoa[]> {
-    return this.http.get<Pessoa[]>(`${url}/pessoas`)
+    return this.http.get<Pessoa[]>(`${environment.url}/pessoas`)
   }
 }

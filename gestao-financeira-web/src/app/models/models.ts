@@ -45,10 +45,9 @@ export enum TipoLancamento {
 
 export class User {
   id: number;
-  username: string;
-  password: string;
-  firstName: string;
-  lastName: string;
-  token: string;
+  login: string;
+  senha: string;
+  nome: string;
+  ativo: boolean;
 }
 

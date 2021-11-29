@@ -1,6 +1,6 @@
 .login-page{
-  height: 100vh;
-  width: 100%;
+  height: auto;
+  width: auto;
   background-color: rgb(16, 16, 16);
 }
 
@@ -60,4 +60,12 @@ border-radius: 50%;
   padding-top: 2vh;
   padding-bottom: 2vh;
   justify-content: space-between;
+}
+
+.blue-snackbar {
+  background: #2196F3;
+}
+
+.red-snackbar {
+  background: #f71e1e;
 }
