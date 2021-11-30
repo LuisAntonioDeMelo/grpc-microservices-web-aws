@@ -5,29 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1ba3415-752c-464f-a98d-758759a43552" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/com/gf/gateway/resources/CategoriaResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/com/gf/gateway/services/CategoriaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gestao-service/src/main/java/com/gf/financeiro/gestao/service/CategoriaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gestao-service/src/main/java/com/gf/financeiro/gestao/service/DepartamentoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/models/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/models/models.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/services/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/services/categoria.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/services/categoria.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/services/cliente.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/services/cliente.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/services/lancamento.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/services/lancamento.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/services/pessoa.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/services/pessoa.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/services/user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/login/login.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/login/login.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/register/register.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/register/register.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/register/register.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/register/register.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/environments/environment.prod.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/environments/environment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../authentication-service/src/main/java/com/authentication/service/model/Grupo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../authentication-service/src/main/java/com/authentication/service/model/Permissao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../authentication-service/src/main/java/com/authentication/service/model/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../authentication-service/src/main/java/com/authentication/service/model/Pessoa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../authentication-service/src/main/java/com/authentication/service/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/../authentication-service/src/main/java/com/authentication/service/model/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../authentication-service/src/main/java/com/authentication/service/repository/Grupos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../authentication-service/src/main/java/com/authentication/service/repository/Permissoes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../authentication-service/src/main/java/com/authentication/service/services/AuthUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../authentication-service/src/main/java/com/authentication/service/services/AuthUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../authentication-service/src/main/java/com/authentication/service/services/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../authentication-service/src/main/java/com/authentication/service/services/UsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/com/gf/gateway/rest/CategoriaVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/com/gf/gateway/rest/CategoriaVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../corporative-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../corporative-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../corporative-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../corporative-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eureka-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../eureka-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gestao-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../gestao-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gestao-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../gestao-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gestao-service/src/test/java/com/gf/financeiro/gestao/GestaoServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gestao-service/src/test/java/com/gf/financeiro/gestao/GestaoServiceApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +67,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../corporative-service" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gestao-service" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -124,6 +118,8 @@
       <workItem from="1637723494148" duration="1192000" />
       <workItem from="1637725408643" duration="1588000" />
       <workItem from="1638135202443" duration="1179000" />
+      <workItem from="1638156462909" duration="1184000" />
+      <workItem from="1638231622696" duration="655000" />
     </task>
     <servers />
   </component>
