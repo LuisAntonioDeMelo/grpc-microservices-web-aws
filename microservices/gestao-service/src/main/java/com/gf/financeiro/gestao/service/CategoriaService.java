@@ -2,13 +2,15 @@ package com.gf.financeiro.gestao.service;
 
 import com.gf.financeiro.gestao.model.Categoria;
 import com.gf.financeiro.gestao.repository.CategoriaRepository;
-import com.grpc.proto.*;
+import com.grpc.proto.CategoriaDTO;
+import com.grpc.proto.CategoriaServiceGrpc;
+import com.grpc.proto.categoriasResponse;
+import com.grpc.proto.emptyCategoria;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.util.CollectionUtils;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -22,7 +24,7 @@ public class CategoriaService extends CategoriaServiceGrpc.CategoriaServiceImplB
     @Override
     public void obterCategorias(emptyCategoria request, StreamObserver<categoriasResponse> responseObserver) {
         List<Categoria> categorias = categoriaRepository.findAll();
-        if (!CollectionUtils.isEmpty(categorias)) {
+      //  if (!CollectionUtils.isEmpty(categorias)) {
             List<CategoriaDTO>  categoriaDTOS =
                     categorias.stream()
                             .map(c -> getBuild(c))
@@ -30,7 +32,7 @@ public class CategoriaService extends CategoriaServiceGrpc.CategoriaServiceImplB
 
             categoriasResponse response = categoriasResponse.newBuilder().addAllCategorias(categoriaDTOS).build();
             responseObserver.onNext(response);
-        }
+       // }
         responseObserver.onCompleted();
     }
 
