@@ -18,6 +18,7 @@ import { ClienteComponent } from './cliente/cliente.component'
 
 
 const routes: Routes = [
+  { path: '', pathMatch:'full', redirectTo: 'home'},
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   {
@@ -31,7 +32,6 @@ const routes: Routes = [
       {
         path: 'painel-financas-pessoais',
         component: PainelFinancasPessoaisComponent,
-        canActivate: [AuthGuard],
         data: {
           breadcrumb: 'Painel Finanças Pessoais',
         },

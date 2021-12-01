@@ -38,8 +38,14 @@
       <div class="container">
        <section class="mat-card">
         <app-page-bread></app-page-bread>
+        <div>
+          <app-dados-usuario></app-dados-usuario>
+        </div>
         <div *ngIf="route.children.length === 0" >
-          <app-card [itemsCard]="itemsCard"></app-card>
+          <mat-card>
+            <h4> Modulos </h4>
+            <app-card [itemsCard]="itemsCard"></app-card>
+          </mat-card>
         </div>
          <router-outlet></router-outlet>
        </section>

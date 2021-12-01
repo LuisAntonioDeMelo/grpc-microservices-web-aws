@@ -61,9 +61,9 @@
         <h4>Pessoa</h4>
         <mat-form-field appearance="fill">
           <mat-label>Selecione uma Pessoa</mat-label>
-          <mat-select id="pessoa" formControlName="pessoa">
+          <mat-select id="cliente" formControlName="pessoa">
             <mat-option value="">---</mat-option>
-            <mat-option [id]="'pessoa-' + pessoa.codigo" *ngFor="let cliente of clientes" [value]="cliente">
+            <mat-option [id]="'cliente-' + cliente.codigo" *ngFor="let cliente of clientes" [value]="cliente">
               {{ cliente.nome }}
             </mat-option>
           </mat-select>

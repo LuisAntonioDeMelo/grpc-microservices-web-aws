@@ -40,6 +40,7 @@ import { CategoriaFormComponent } from './categoria/categoria-form/categoria-for
 import { LoginComponent } from './static/login/login.component';
 import { RegisterComponent } from './static/register/register.component';
 import { ErrorInterceptor } from './helpers/error.interceptor';
+import { DadosUsuarioComponent } from './static/home/dados-usuario/dados-usuario.component';
 
 
 @NgModule({
@@ -74,7 +75,8 @@ import { ErrorInterceptor } from './helpers/error.interceptor';
     CategoriaListaComponent,
     CategoriaFormComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    DadosUsuarioComponent
  ],
   imports: [
     BrowserModule,
