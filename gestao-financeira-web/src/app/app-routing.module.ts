@@ -1,4 +1,6 @@
-import { AuthGuard } from './helpers/auth.guard';
+import { ClienteFormComponent } from './cliente/cliente-form/cliente-form.component'
+import { ClienteListaComponent } from './cliente/cliente-lista/cliente-lista.component'
+import { AuthGuard } from './helpers/auth.guard'
 import { RegisterComponent } from './static/register/register.component'
 import { LoginComponent } from './static/login/login.component'
 import { DepartamentoComponent } from './departamento/departamento.component'
@@ -16,9 +18,8 @@ import { LancamentoComponent } from './lancamento/lancamento.component'
 import { HomeComponent } from './static/home/home.component'
 import { ClienteComponent } from './cliente/cliente.component'
 
-
 const routes: Routes = [
-  { path: '', pathMatch:'full', redirectTo: 'home'},
+  { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   {
@@ -70,22 +71,22 @@ const routes: Routes = [
         },
         children: [
           {
-            path: 'clientes',
+            path: 'cliente',
             component: ClienteComponent,
             data: {
-              breadcrumb: 'Clientes',
+              breadcrumb: 'Cliente',
             },
             children: [
               {
                 path: '',
-                component: LancamentoListaComponent,
+                component: ClienteListaComponent,
                 data: {
-                  breadcrumb: 'Listar Clientes',
+                  breadcrumb: 'Dados Cliente',
                 },
               },
               {
                 path: 'cliente-form',
-                component: LancamentoFormComponent,
+                component: ClienteFormComponent,
                 data: {
                   breadcrumb: 'Formulário',
                 },
@@ -93,22 +94,22 @@ const routes: Routes = [
             ],
           },
           {
-            path: 'funcionarios',
-            component: FuncionarioComponent,
+            path: 'conta-cliente',
+            component: ClienteComponent,
             data: {
-              breadcrumb: 'Funcionarios',
+              breadcrumb: 'Cliente',
             },
             children: [
               {
                 path: '',
-                component: LancamentoListaComponent,
+                component: ClienteListaComponent,
                 data: {
-                  breadcrumb: 'Listar Funcionarios',
+                  breadcrumb: 'Dados Cliente',
                 },
               },
               {
-                path: 'Funcionario-form',
-                component: LancamentoFormComponent,
+                path: 'cliente-form',
+                component: ClienteFormComponent,
                 data: {
                   breadcrumb: 'Formulário',
                 },

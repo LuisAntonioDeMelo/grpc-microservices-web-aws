@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Builder
@@ -17,6 +19,14 @@ public class ClienteVO {
     private Integer diaVencimento;
     private Boolean credito;
     private String dataCadastro;
+
+    public static List<ClienteVO> toList(List<ClienteDTO> clientesList) {
+        List<ClienteVO> clienteVOS = new ArrayList<>();
+        clientesList.stream().forEach(c -> {
+            clienteVOS.add(toVO(c));
+        });
+        return clienteVOS;
+    }
 
     public ClienteDTO buildProto() {
         return ClienteDTO.newBuilder()

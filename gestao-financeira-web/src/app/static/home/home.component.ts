@@ -13,30 +13,35 @@ export class HomeComponent implements OnInit {
 
   routings = [
     {icon:'home',nome:'Inicio',rota:'/home'},
-    {icon:'assignment',nome:'Finanças Pessoais',rota:'/home/painel-financas-pessoais'},
-    {icon:'assignment',nome:'Gestão',rota:'/home/painel-gestao'},
-    {icon:'assignment',nome:'Investimentos',rota:'/home/painel-investimentos'},
-    {icon:'assignment',nome:'Config',rota:'/home'}
+    {icon:'data_thresholding',nome:'Finanças Pessoais',rota:'/home/painel-financas-pessoais'},
+    {icon:'hail',nome:'Gestão Cliente',rota:'/home/painel-gestao'},
+    {icon:'request_quote',nome:'Investimentos',rota:'/home/painel-investimentos'},
+    {icon:'settings',nome:'Configuração',rota:'/home'}
   ];
 
   itemsCard = [
-    {nome:'Finanças Pessoais', link: '/home/painel-financas-pessoais',
+    {icon:'data_thresholding', nome:'Finanças Pessoais', link: '/home/painel-financas-pessoais',
       submenu: [
         {titulo:'Lançamentos'},
         {titulo: 'Orçamentos'},
-        {titulo: 'Conta Cliente'},
+        // {titulo: 'Conta Cliente'},
         {titulo: 'Extrato de Gastos'}
       ]
     },
-    {nome:'Gestão Sistema', link: '/painel-gestao',
+    {icon:'hail',nome:'Gestão Cliente', link: '/home/painel-gestao',
     submenu: [
-      {titulo:'Clientes'},
-      {titulo: 'Funcionários'},
-      {titulo: 'Departamentos'},
-      {titulo: 'Cargos'},
-      {titulo: 'Fornecedores'}
+      {titulo:'Cliente'},
+      {titulo: 'Contas Cliente'},
+      // {titulo: 'Departamentos'},
+      // {titulo: 'Cargos'},
+      // {titulo: 'Fornecedores'}
     ]},
-    {nome:'Investimentos', link: '/home/painel-investimentos'}
+    {icon:'request_quote',nome:'Investimentos', link: '/home/painel-investimentos',
+      submenu: [
+        {titulo: 'Produtos '},
+        {titulo: 'Vendas'}
+      ]
+    }
   ]
 
   constructor(

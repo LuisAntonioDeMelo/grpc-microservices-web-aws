@@ -1,6 +1,6 @@
-package com.gf.financeiro.gestao.model;
+package com.financeiro.corporative.model;
 
-import com.gf.financeiro.gestao.model.enums.TipoConta;
+import com.financeiro.corporative.model.enums.TipoConta;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

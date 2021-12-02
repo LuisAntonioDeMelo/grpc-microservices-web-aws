@@ -1,13 +1,11 @@
 package com.gf.gateway.services;
 
 import com.gf.gateway.rest.ClienteVO;
-
-import com.grpc.proto.ClienteDTO;
-import com.grpc.proto.ClienteRequest;
-import com.grpc.proto.ClienteResponse;
-import com.grpc.proto.ClienteServiceGrpc;
+import com.grpc.proto.*;
 import net.devh.boot.grpc.client.inject.GrpcClient;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class ClienteService extends ClienteServiceGrpc.ClienteServiceImplBase {
@@ -21,6 +19,12 @@ public class ClienteService extends ClienteServiceGrpc.ClienteServiceImplBase {
         ClienteResponse response =  clienteServiceBlockingStub.obterPorId(request);
         ClienteDTO dto  = response.getCliente();
         return ClienteVO.toVO(dto);
+    }
+
+
+    public List<ClienteVO> obterClientes() {
+        ClientesResponse response = clienteServiceBlockingStub.obterClientes(emptyCliente.newBuilder().build());
+        return ClienteVO.toList(response.getClientesList());
     }
 
     public ClienteVO salvarCliente(ClienteVO clienteVO){

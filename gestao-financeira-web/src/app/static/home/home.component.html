@@ -4,20 +4,22 @@
      <div class="mat-elevation-z8 opt">
       <button mat-icon-button (click)="drawer.toggle()">
       <mat-icon>keyboard_backspace</mat-icon>
-      <b>MENU</b>
+      <b> MENU</b>
       </button>
      </div>
+     <div class="items-menu">
       <a *ngFor="let routing of routings" mat-button [routerLink]="routing.rota" target="">
         <mat-icon>{{routing.icon}}</mat-icon>
-        {{routing.nome}}
-      </a>
+         {{routing.nome}}
+     </a>
+     </div>
     </mat-drawer>
     <mat-drawer-content>
       <mat-toolbar>
         <button mat-icon-button class="example-icon" (click)="drawer.toggle()" aria-label="Example icon-button with menu icon">
           <mat-icon>menu</mat-icon>
         </button>
-        <b>
+        <b class="titulo-org">
           <span>Gestão Financeira</span>
         </b>
         <span class="example-spacer"></span>
@@ -38,12 +40,12 @@
       <div class="container">
        <section class="mat-card">
         <app-page-bread></app-page-bread>
-        <div>
-          <app-dados-usuario></app-dados-usuario>
-        </div>
         <div *ngIf="route.children.length === 0" >
+          <div>
+            <app-dados-usuario></app-dados-usuario>
+          </div>
           <mat-card>
-            <h4> Modulos </h4>
+            <h4> <b>Modulos</b> </h4>
             <app-card [itemsCard]="itemsCard"></app-card>
           </mat-card>
         </div>

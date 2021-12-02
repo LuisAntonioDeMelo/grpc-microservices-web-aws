@@ -1,4 +1,4 @@
-package com.gf.financeiro.gestao.model.enums;
+package com.financeiro.corporative.model.enums;
 
 public enum TipoConta {
     CORRENTE(1, "conta corrente"),

@@ -7,12 +7,11 @@ services:
         - "8099:8099"
       environment:
         - JAVA_OPTS=
-           -DEUREKA_SERVER=eureka-server
+           -DEUREKA_SERVER=http://eureka-server:8761/eureka/
            -Dspring.profiles.active=prod
-        - IP_HOST=eureka-server
         - GRPC_HOST_GESTAO=gestao-service
         - GRPC_HOST_FINANCEIRO=0
-        - GRPC_HOST_CORP=0
+        - GRPC_HOST_CORP=corporative-service
       depends_on:
         - eureka-server
       links:
@@ -27,10 +26,24 @@ services:
         - "8080:8080"
       environment:
         - JAVA_OPTS=
-           -DEUREKA_SERVER=eureka-server
+           -DEUREKA_SERVER=http://eureka-server:8761/eureka/
            -Dspring.profiles.active=prod
-        - IP_HOST=eureka-server
-        - GRPC_HOST_CORP=0
+        - GRPC_HOST_CORP=corporative-service
+      depends_on:
+        - eureka-server
+      links:
+        - eureka-server
+      networks:
+        - sprintapp
+
+    corporative-service:
+      image: devluis27/corporative-service:latest
+      ports:
+        - "8081:8081"
+      environment:
+        - JAVA_OPTS=
+           -DEUREKA_SERVER=http://eureka-server:8761/eureka/
+           -Dspring.profiles.active=prod
       depends_on:
         - eureka-server
       links:
@@ -44,7 +57,7 @@ services:
         - "9001:9001"
       environment:
         - JAVA_OPTS=
-           -DEUREKA_SERVER=eureka-server
+           -DEUREKA_SERVER=http://eureka-server:8761/eureka/
            -Dspring.profiles.active=prod
         - IP_HOST=eureka-server
       depends_on:

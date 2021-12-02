@@ -9,11 +9,11 @@ import { ActivatedRoute } from '@angular/router'
 export class PainelGestaoComponent implements OnInit {
 
   itemsGestao = [
-    { nome: 'Clientes', link: '/painel-gestao/clientes' },
-    { nome: 'Fornecedores', link: '/painel-gestao/fornecedores' },
-    { nome: 'Funcionarios', link: '/painel-gestao/funcionarios' },
-    { nome: 'Departamentos', link: '/painel-gestao/departamentos' },
-    { nome: 'Cargos', link: '/painel-gestao/cargos' },
+    { nome: 'Cadastro Cliente', link: '/home/painel-gestao/cliente' },
+    { nome: 'Conta Cliente', link: '/home/painel-gestao/conta-cliente' },
+    // { nome: 'Funcionarios', link: '/painel-gestao/funcionarios' },
+    // { nome: 'Departamentos', link: '/painel-gestao/departamentos' },
+    // { nome: 'Cargos', link: '/painel-gestao/cargos' },
   ]
   constructor(public route: ActivatedRoute) {}
 

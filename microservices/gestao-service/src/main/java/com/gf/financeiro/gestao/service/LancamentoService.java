@@ -1,6 +1,5 @@
 package com.gf.financeiro.gestao.service;
 
-import com.gf.financeiro.gestao.model.Cliente;
 import com.gf.financeiro.gestao.model.Lancamento;
 import com.gf.financeiro.gestao.model.enums.TipoLancamento;
 import com.gf.financeiro.gestao.repository.LancamentoRepository;

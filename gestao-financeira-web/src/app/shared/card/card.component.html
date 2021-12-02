@@ -2,8 +2,12 @@
   <a *ngFor="let card of itemsCard" [routerLink]="'/'+card.link">
     <mat-card class="first-card">
         <mat-card-title>
-            <h4><b>{{card.nome}}</b></h4>
+          <h4> <mat-icon> {{card.icon}}</mat-icon> <b>{{card.nome}}</b></h4>
         </mat-card-title>
+        <mat-card-subtitle>
+          Opções >
+          <hr/>
+        </mat-card-subtitle>
         <mat-card-content *ngIf="card.submenu">
           <p  *ngFor="let sub of card.submenu">
             {{sub.titulo}}

@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/clientes")
 public class ClienteResource {
@@ -14,10 +16,16 @@ public class ClienteResource {
     @Autowired
     private ClienteService clienteService;
 
+    @GetMapping
+    public List<ClienteVO> findAll(){
+        return clienteService.obterClientes();
+    }
+
     @GetMapping(value = "/{codigo}")
     public ClienteVO obterPorCodigo(@PathVariable Long codigo) {
         return clienteService.obterPorCodigo(codigo);
     }
+
 
     @PostMapping
     @ExceptionHandler({IllegalArgumentException.class})

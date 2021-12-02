@@ -13,7 +13,7 @@ export class PainelFinancasPessoaisComponent implements OnInit {
     { nome: 'Lançamentos', link: '/home/painel-financas-pessoais/lancamentos' },
     { nome: 'Orçamentos', link: '/home/painel-financas-pessoais/painel-gestao' },
     {
-      nome: 'Conta Cliente',
+      nome: 'Extrato de Gastos',
       link: 'painel-financas-pessoais/painel-investimentos',
     },
   ]
