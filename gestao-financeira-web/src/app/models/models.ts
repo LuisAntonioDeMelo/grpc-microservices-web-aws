@@ -39,15 +39,32 @@ export class Estado {
 }
 
 export enum TipoLancamento {
-  despesa = "DESPESA",
-  receita = "RECEITA"
+  despesa = 'DESPESA',
+  receita = 'RECEITA',
 }
 
 export class User {
-  id: number;
-  login: string;
-  senha: string;
-  nome: string;
-  ativo: boolean;
+  id: number
+  login: string
+  senha: string
+  nome: string
+  ativo: boolean
 }
 
+export class Cliente {
+  id: number
+  nome: string
+  email: string
+  telefone: string
+  cpf: string
+  rg: string
+  cidade: number
+  estado: number
+  diaVencimento: number
+  limite: number
+  logradouro: string
+  numero: string
+  complemento: string
+  bairo: string
+  cep: string
+}

@@ -26,7 +26,7 @@ public class Orcamento {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "orcamento")
     private List<Produto> produtos;
 
-    @OneToOne
+    @ManyToOne
     private Cliente cliente;
 
     @NotNull

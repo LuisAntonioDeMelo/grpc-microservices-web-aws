@@ -19,6 +19,7 @@ public class Estado {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long codigo;
 
+    private String sigla;
     private String nome;
 
 }

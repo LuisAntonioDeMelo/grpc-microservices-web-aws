@@ -6,25 +6,32 @@ option java_package = "com.grpc.proto";
 message PessoaDTO {
   int64 id = 1;
   string nome = 2;
-  string rg = 3;
-  double email = 4;
-  string logradouro = 5;
-  string numero = 6;
-  string complemento = 7;
-  string bairro = 8;
-  string cep = 9;
-  int64 idCidade = 10;
-  bool ativo = 11;
+  string cpf = 3;
+  string rg = 4;
+  string email = 5;
+  string logradouro = 6;
+  string numero = 7;
+  string complemento = 8;
+  string bairro = 9;
+  string cep = 10;
+  int64 cidade = 11;
+  int64 estado = 12;
+  bool ativo = 13;
+  string telefone = 14;
 }
 
 message PessoaRequest {
   int64 codigo = 1;
 }
-message PessoaResponse {
+message PessoasResponse {
   repeated PessoaDTO pessoa = 1;
 }
 
+message PessoaResponse {
+  PessoaDTO pessoa = 1;
+}
+
 service PessoaService {
-  rpc salvarCliente(PessoaDTO) returns (PessoaResponse);
+  rpc atualizarPessoa(PessoaDTO) returns (PessoaResponse);
   rpc obterPorId(PessoaRequest) returns (PessoaResponse);
 }

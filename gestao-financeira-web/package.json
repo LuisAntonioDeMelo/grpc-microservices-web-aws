@@ -5,7 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build-prod": "ng build --target=production",
+    "build-prod": "ng build --prod",
+    "deploy-s3":"aws s3 sync dist/gestao-financeira-web  s3://gestao-financeira-web",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

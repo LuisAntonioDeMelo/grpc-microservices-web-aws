@@ -43,7 +43,8 @@ public class ClienteService extends ClienteServiceGrpc.ClienteServiceImplBase {
             cliente.setCredito(request.getCredito());
             cliente.setDiaVencimento(request.getDiaVencimento());
             cliente.setLimite(request.getLimite());
-            cliente.setPessoa(new Pessoa(request.getIdPessoa()));
+            Pessoa pessoa = pessoaRepository.getById(request.getIdPessoa());
+            cliente.setPessoa(pessoa);
             Cliente clienteSalvo =  clienteRepository.save(cliente);
             ClienteResponse clienteResponse = ClienteResponse.newBuilder().setCliente(getBuild(clienteSalvo)).build();
             responseObserver.onNext(clienteResponse);
@@ -62,7 +63,7 @@ public class ClienteService extends ClienteServiceGrpc.ClienteServiceImplBase {
         return ClienteDTO.newBuilder()
                 .setId(cliente.getId())
                 .setIdPessoa(cliente.getPessoa().getId())
-                //.setNomeCliente(cliente.getPessoa().getNome())
+                 .setNomeCliente(cliente.getPessoa().getNome())
                 .setLimite(cliente.getLimite())
                 .setDataCadastro(cliente.getDataCadastro().toString())
                 .setDiaVencimento(cliente.getDiaVencimento())

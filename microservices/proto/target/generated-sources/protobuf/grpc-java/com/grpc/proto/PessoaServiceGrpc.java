@@ -28,35 +28,35 @@ public final class PessoaServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.grpc.proto.PessoaDTO,
-      com.grpc.proto.PessoaResponse> getSalvarClienteMethod;
+      com.grpc.proto.PessoaResponse> getAtualizarPessoaMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "salvarCliente",
+      fullMethodName = SERVICE_NAME + '/' + "atualizarPessoa",
       requestType = com.grpc.proto.PessoaDTO.class,
       responseType = com.grpc.proto.PessoaResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.grpc.proto.PessoaDTO,
-      com.grpc.proto.PessoaResponse> getSalvarClienteMethod() {
-    io.grpc.MethodDescriptor<com.grpc.proto.PessoaDTO, com.grpc.proto.PessoaResponse> getSalvarClienteMethod;
-    if ((getSalvarClienteMethod = PessoaServiceGrpc.getSalvarClienteMethod) == null) {
+      com.grpc.proto.PessoaResponse> getAtualizarPessoaMethod() {
+    io.grpc.MethodDescriptor<com.grpc.proto.PessoaDTO, com.grpc.proto.PessoaResponse> getAtualizarPessoaMethod;
+    if ((getAtualizarPessoaMethod = PessoaServiceGrpc.getAtualizarPessoaMethod) == null) {
       synchronized (PessoaServiceGrpc.class) {
-        if ((getSalvarClienteMethod = PessoaServiceGrpc.getSalvarClienteMethod) == null) {
-          PessoaServiceGrpc.getSalvarClienteMethod = getSalvarClienteMethod = 
+        if ((getAtualizarPessoaMethod = PessoaServiceGrpc.getAtualizarPessoaMethod) == null) {
+          PessoaServiceGrpc.getAtualizarPessoaMethod = getAtualizarPessoaMethod = 
               io.grpc.MethodDescriptor.<com.grpc.proto.PessoaDTO, com.grpc.proto.PessoaResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "PessoaService", "salvarCliente"))
+                  "PessoaService", "atualizarPessoa"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.grpc.proto.PessoaDTO.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.grpc.proto.PessoaResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new PessoaServiceMethodDescriptorSupplier("salvarCliente"))
+                  .setSchemaDescriptor(new PessoaServiceMethodDescriptorSupplier("atualizarPessoa"))
                   .build();
           }
         }
      }
-     return getSalvarClienteMethod;
+     return getAtualizarPessoaMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.grpc.proto.PessoaRequest,
@@ -120,9 +120,9 @@ public final class PessoaServiceGrpc {
 
     /**
      */
-    public void salvarCliente(com.grpc.proto.PessoaDTO request,
+    public void atualizarPessoa(com.grpc.proto.PessoaDTO request,
         io.grpc.stub.StreamObserver<com.grpc.proto.PessoaResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getSalvarClienteMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getAtualizarPessoaMethod(), responseObserver);
     }
 
     /**
@@ -135,12 +135,12 @@ public final class PessoaServiceGrpc {
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getSalvarClienteMethod(),
+            getAtualizarPessoaMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.proto.PessoaDTO,
                 com.grpc.proto.PessoaResponse>(
-                  this, METHODID_SALVAR_CLIENTE)))
+                  this, METHODID_ATUALIZAR_PESSOA)))
           .addMethod(
             getObterPorIdMethod(),
             asyncUnaryCall(
@@ -172,10 +172,10 @@ public final class PessoaServiceGrpc {
 
     /**
      */
-    public void salvarCliente(com.grpc.proto.PessoaDTO request,
+    public void atualizarPessoa(com.grpc.proto.PessoaDTO request,
         io.grpc.stub.StreamObserver<com.grpc.proto.PessoaResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getSalvarClienteMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getAtualizarPessoaMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -207,9 +207,9 @@ public final class PessoaServiceGrpc {
 
     /**
      */
-    public com.grpc.proto.PessoaResponse salvarCliente(com.grpc.proto.PessoaDTO request) {
+    public com.grpc.proto.PessoaResponse atualizarPessoa(com.grpc.proto.PessoaDTO request) {
       return blockingUnaryCall(
-          getChannel(), getSalvarClienteMethod(), getCallOptions(), request);
+          getChannel(), getAtualizarPessoaMethod(), getCallOptions(), request);
     }
 
     /**
@@ -240,10 +240,10 @@ public final class PessoaServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.grpc.proto.PessoaResponse> salvarCliente(
+    public com.google.common.util.concurrent.ListenableFuture<com.grpc.proto.PessoaResponse> atualizarPessoa(
         com.grpc.proto.PessoaDTO request) {
       return futureUnaryCall(
-          getChannel().newCall(getSalvarClienteMethod(), getCallOptions()), request);
+          getChannel().newCall(getAtualizarPessoaMethod(), getCallOptions()), request);
     }
 
     /**
@@ -255,7 +255,7 @@ public final class PessoaServiceGrpc {
     }
   }
 
-  private static final int METHODID_SALVAR_CLIENTE = 0;
+  private static final int METHODID_ATUALIZAR_PESSOA = 0;
   private static final int METHODID_OBTER_POR_ID = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
@@ -275,8 +275,8 @@ public final class PessoaServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_SALVAR_CLIENTE:
-          serviceImpl.salvarCliente((com.grpc.proto.PessoaDTO) request,
+        case METHODID_ATUALIZAR_PESSOA:
+          serviceImpl.atualizarPessoa((com.grpc.proto.PessoaDTO) request,
               (io.grpc.stub.StreamObserver<com.grpc.proto.PessoaResponse>) responseObserver);
           break;
         case METHODID_OBTER_POR_ID:
@@ -344,7 +344,7 @@ public final class PessoaServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new PessoaServiceFileDescriptorSupplier())
-              .addMethod(getSalvarClienteMethod())
+              .addMethod(getAtualizarPessoaMethod())
               .addMethod(getObterPorIdMethod())
               .build();
         }

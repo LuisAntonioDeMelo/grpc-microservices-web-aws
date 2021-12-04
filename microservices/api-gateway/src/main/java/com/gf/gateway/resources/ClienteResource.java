@@ -27,7 +27,7 @@ public class ClienteResource {
     }
 
 
-    @PostMapping
+    @PostMapping("/salvar")
     @ExceptionHandler({IllegalArgumentException.class})
     public ResponseEntity<ClienteVO> criar(@RequestBody ClienteVO cliente) {
         ClienteVO clienteVO = clienteService.salvarCliente(cliente);

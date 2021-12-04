@@ -25,6 +25,11 @@ public final class Pessoa {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_PessoaRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_PessoasResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_PessoasResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_PessoaResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -38,17 +43,19 @@ public final class Pessoa {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\014pessoa.proto\"\267\001\n\tPessoaDTO\022\n\n\002id\030\001 \001(\003" +
-      "\022\014\n\004nome\030\002 \001(\t\022\n\n\002rg\030\003 \001(\t\022\r\n\005email\030\004 \001(" +
-      "\001\022\022\n\nlogradouro\030\005 \001(\t\022\016\n\006numero\030\006 \001(\t\022\023\n" +
-      "\013complemento\030\007 \001(\t\022\016\n\006bairro\030\010 \001(\t\022\013\n\003ce" +
-      "p\030\t \001(\t\022\020\n\010idCidade\030\n \001(\003\022\r\n\005ativo\030\013 \001(\010" +
-      "\"\037\n\rPessoaRequest\022\016\n\006codigo\030\001 \001(\003\",\n\016Pes" +
-      "soaResponse\022\032\n\006pessoa\030\001 \003(\0132\n.PessoaDTO2" +
-      "l\n\rPessoaService\022,\n\rsalvarCliente\022\n.Pess" +
-      "oaDTO\032\017.PessoaResponse\022-\n\nobterPorId\022\016.P" +
-      "essoaRequest\032\017.PessoaResponseB\022\n\016com.grp" +
-      "c.protoP\001b\006proto3"
+      "\n\014pessoa.proto\"\344\001\n\tPessoaDTO\022\n\n\002id\030\001 \001(\003" +
+      "\022\014\n\004nome\030\002 \001(\t\022\013\n\003cpf\030\003 \001(\t\022\n\n\002rg\030\004 \001(\t\022" +
+      "\r\n\005email\030\005 \001(\t\022\022\n\nlogradouro\030\006 \001(\t\022\016\n\006nu" +
+      "mero\030\007 \001(\t\022\023\n\013complemento\030\010 \001(\t\022\016\n\006bairr" +
+      "o\030\t \001(\t\022\013\n\003cep\030\n \001(\t\022\016\n\006cidade\030\013 \001(\003\022\016\n\006" +
+      "estado\030\014 \001(\003\022\r\n\005ativo\030\r \001(\010\022\020\n\010telefone\030" +
+      "\016 \001(\t\"\037\n\rPessoaRequest\022\016\n\006codigo\030\001 \001(\003\"-" +
+      "\n\017PessoasResponse\022\032\n\006pessoa\030\001 \003(\0132\n.Pess" +
+      "oaDTO\",\n\016PessoaResponse\022\032\n\006pessoa\030\001 \001(\0132" +
+      "\n.PessoaDTO2n\n\rPessoaService\022.\n\017atualiza" +
+      "rPessoa\022\n.PessoaDTO\032\017.PessoaResponse\022-\n\n" +
+      "obterPorId\022\016.PessoaRequest\032\017.PessoaRespo" +
+      "nseB\022\n\016com.grpc.protoP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -67,15 +74,21 @@ public final class Pessoa {
     internal_static_PessoaDTO_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PessoaDTO_descriptor,
-        new java.lang.String[] { "Id", "Nome", "Rg", "Email", "Logradouro", "Numero", "Complemento", "Bairro", "Cep", "IdCidade", "Ativo", });
+        new java.lang.String[] { "Id", "Nome", "Cpf", "Rg", "Email", "Logradouro", "Numero", "Complemento", "Bairro", "Cep", "Cidade", "Estado", "Ativo", "Telefone", });
     internal_static_PessoaRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_PessoaRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PessoaRequest_descriptor,
         new java.lang.String[] { "Codigo", });
-    internal_static_PessoaResponse_descriptor =
+    internal_static_PessoasResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_PessoasResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_PessoasResponse_descriptor,
+        new java.lang.String[] { "Pessoa", });
+    internal_static_PessoaResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_PessoaResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PessoaResponse_descriptor,

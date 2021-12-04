@@ -9,6 +9,7 @@ import { environment } from '../../environments/environment'
 })
 export class ClienteService {
 
+
   constructor(private http:HttpClient) { }
 
   get():Observable<any[]> {
@@ -17,6 +18,11 @@ export class ClienteService {
 
   getPorId(id:number):Observable<any[]> {
     return this.http.get<any[]>(`${environment.url}/clientes/${id}`)
+  }
+
+
+  salvar(cliente: any):Observable<any> {
+    return this.http.post(`${environment.url}/clientes/salvar`,cliente)
   }
 
 }

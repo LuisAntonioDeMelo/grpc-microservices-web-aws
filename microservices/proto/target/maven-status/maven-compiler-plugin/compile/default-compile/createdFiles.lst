@@ -57,6 +57,7 @@ com\grpc\proto\ClienteServiceGrpc$ClienteServiceMethodDescriptorSupplier.class
 com\grpc\proto\cargoDTO$1.class
 com\grpc\proto\LancamentoDTO$Builder.class
 com\grpc\proto\PagamentoResponseOrBuilder.class
+com\grpc\proto\PessoasResponse$Builder.class
 com\grpc\proto\PessoaResponseOrBuilder.class
 com\grpc\proto\ClienteServiceGrpc$MethodHandlers.class
 com\grpc\proto\departamentoRequestOrBuilder.class
@@ -80,6 +81,7 @@ com\grpc\proto\cargoDTO$Builder.class
 com\grpc\proto\DepartamentoDTO$1.class
 com\grpc\proto\ContaClienteDTO.class
 com\grpc\proto\ClienteServiceGrpc.class
+com\grpc\proto\PessoasResponse$1.class
 com\grpc\proto\CargoServiceGrpc$CargoServiceMethodDescriptorSupplier.class
 com\grpc\proto\PagamentoDTO.class
 com\grpc\proto\cargoResponse$1.class
@@ -175,6 +177,7 @@ com\grpc\proto\PessoaResponse.class
 com\grpc\proto\PagamentoDTO$1.class
 com\grpc\proto\CategoriaDTOOrBuilder.class
 com\grpc\proto\emptyPagamento.class
+com\grpc\proto\PessoasResponse.class
 com\grpc\proto\CategoriaDTO$1.class
 com\grpc\proto\ContaClienteDTOOrBuilder.class
 com\grpc\proto\DepartamentoDTOOrBuilder.class
@@ -263,6 +266,7 @@ com\grpc\proto\LancamentoResquestOrBuilder.class
 com\grpc\proto\OrcamentoServiceGrpc$OrcamentoServiceImplBase.class
 com\grpc\proto\PessoaDTO.class
 com\grpc\proto\PesquisaLancamentorResponseOrBuilder.class
+com\grpc\proto\PessoasResponseOrBuilder.class
 com\grpc\proto\ContaClienteServiceGrpc.class
 com\grpc\proto\ClienteServiceGrpc$1.class
 com\grpc\proto\LancamentoResponse$Builder.class

@@ -16,7 +16,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private PessoaResponse() {
-    pessoa_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -44,12 +43,16 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           case 10: {
-            if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-              pessoa_ = new java.util.ArrayList<com.grpc.proto.PessoaDTO>();
-              mutable_bitField0_ |= 0x00000001;
+            com.grpc.proto.PessoaDTO.Builder subBuilder = null;
+            if (pessoa_ != null) {
+              subBuilder = pessoa_.toBuilder();
             }
-            pessoa_.add(
-                input.readMessage(com.grpc.proto.PessoaDTO.parser(), extensionRegistry));
+            pessoa_ = input.readMessage(com.grpc.proto.PessoaDTO.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(pessoa_);
+              pessoa_ = subBuilder.buildPartial();
+            }
+
             break;
           }
           default: {
@@ -67,9 +70,6 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-        pessoa_ = java.util.Collections.unmodifiableList(pessoa_);
-      }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
@@ -88,38 +88,24 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PESSOA_FIELD_NUMBER = 1;
-  private java.util.List<com.grpc.proto.PessoaDTO> pessoa_;
+  private com.grpc.proto.PessoaDTO pessoa_;
   /**
-   * <code>repeated .PessoaDTO pessoa = 1;</code>
+   * <code>.PessoaDTO pessoa = 1;</code>
    */
-  public java.util.List<com.grpc.proto.PessoaDTO> getPessoaList() {
-    return pessoa_;
+  public boolean hasPessoa() {
+    return pessoa_ != null;
   }
   /**
-   * <code>repeated .PessoaDTO pessoa = 1;</code>
+   * <code>.PessoaDTO pessoa = 1;</code>
    */
-  public java.util.List<? extends com.grpc.proto.PessoaDTOOrBuilder> 
-      getPessoaOrBuilderList() {
-    return pessoa_;
+  public com.grpc.proto.PessoaDTO getPessoa() {
+    return pessoa_ == null ? com.grpc.proto.PessoaDTO.getDefaultInstance() : pessoa_;
   }
   /**
-   * <code>repeated .PessoaDTO pessoa = 1;</code>
+   * <code>.PessoaDTO pessoa = 1;</code>
    */
-  public int getPessoaCount() {
-    return pessoa_.size();
-  }
-  /**
-   * <code>repeated .PessoaDTO pessoa = 1;</code>
-   */
-  public com.grpc.proto.PessoaDTO getPessoa(int index) {
-    return pessoa_.get(index);
-  }
-  /**
-   * <code>repeated .PessoaDTO pessoa = 1;</code>
-   */
-  public com.grpc.proto.PessoaDTOOrBuilder getPessoaOrBuilder(
-      int index) {
-    return pessoa_.get(index);
+  public com.grpc.proto.PessoaDTOOrBuilder getPessoaOrBuilder() {
+    return getPessoa();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -136,8 +122,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    for (int i = 0; i < pessoa_.size(); i++) {
-      output.writeMessage(1, pessoa_.get(i));
+    if (pessoa_ != null) {
+      output.writeMessage(1, getPessoa());
     }
     unknownFields.writeTo(output);
   }
@@ -148,9 +134,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    for (int i = 0; i < pessoa_.size(); i++) {
+    if (pessoa_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, pessoa_.get(i));
+        .computeMessageSize(1, getPessoa());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -168,8 +154,11 @@ private static final long serialVersionUID = 0L;
     com.grpc.proto.PessoaResponse other = (com.grpc.proto.PessoaResponse) obj;
 
     boolean result = true;
-    result = result && getPessoaList()
-        .equals(other.getPessoaList());
+    result = result && (hasPessoa() == other.hasPessoa());
+    if (hasPessoa()) {
+      result = result && getPessoa()
+          .equals(other.getPessoa());
+    }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -181,9 +170,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (getPessoaCount() > 0) {
+    if (hasPessoa()) {
       hash = (37 * hash) + PESSOA_FIELD_NUMBER;
-      hash = (53 * hash) + getPessoaList().hashCode();
+      hash = (53 * hash) + getPessoa().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -313,17 +302,16 @@ private static final long serialVersionUID = 0L;
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
-        getPessoaFieldBuilder();
       }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
       if (pessoaBuilder_ == null) {
-        pessoa_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        pessoa_ = null;
       } else {
-        pessoaBuilder_.clear();
+        pessoa_ = null;
+        pessoaBuilder_ = null;
       }
       return this;
     }
@@ -351,12 +339,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.grpc.proto.PessoaResponse buildPartial() {
       com.grpc.proto.PessoaResponse result = new com.grpc.proto.PessoaResponse(this);
-      int from_bitField0_ = bitField0_;
       if (pessoaBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          pessoa_ = java.util.Collections.unmodifiableList(pessoa_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
         result.pessoa_ = pessoa_;
       } else {
         result.pessoa_ = pessoaBuilder_.build();
@@ -409,31 +392,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.grpc.proto.PessoaResponse other) {
       if (other == com.grpc.proto.PessoaResponse.getDefaultInstance()) return this;
-      if (pessoaBuilder_ == null) {
-        if (!other.pessoa_.isEmpty()) {
-          if (pessoa_.isEmpty()) {
-            pessoa_ = other.pessoa_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensurePessoaIsMutable();
-            pessoa_.addAll(other.pessoa_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.pessoa_.isEmpty()) {
-          if (pessoaBuilder_.isEmpty()) {
-            pessoaBuilder_.dispose();
-            pessoaBuilder_ = null;
-            pessoa_ = other.pessoa_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-            pessoaBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getPessoaFieldBuilder() : null;
-          } else {
-            pessoaBuilder_.addAllMessages(other.pessoa_);
-          }
-        }
+      if (other.hasPessoa()) {
+        mergePessoa(other.getPessoa());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -463,241 +423,117 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
-    private int bitField0_;
 
-    private java.util.List<com.grpc.proto.PessoaDTO> pessoa_ =
-      java.util.Collections.emptyList();
-    private void ensurePessoaIsMutable() {
-      if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-        pessoa_ = new java.util.ArrayList<com.grpc.proto.PessoaDTO>(pessoa_);
-        bitField0_ |= 0x00000001;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
+    private com.grpc.proto.PessoaDTO pessoa_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
         com.grpc.proto.PessoaDTO, com.grpc.proto.PessoaDTO.Builder, com.grpc.proto.PessoaDTOOrBuilder> pessoaBuilder_;
+    /**
+     * <code>.PessoaDTO pessoa = 1;</code>
+     */
+    public boolean hasPessoa() {
+      return pessoaBuilder_ != null || pessoa_ != null;
+    }
+    /**
+     * <code>.PessoaDTO pessoa = 1;</code>
+     */
+    public com.grpc.proto.PessoaDTO getPessoa() {
+      if (pessoaBuilder_ == null) {
+        return pessoa_ == null ? com.grpc.proto.PessoaDTO.getDefaultInstance() : pessoa_;
+      } else {
+        return pessoaBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.PessoaDTO pessoa = 1;</code>
+     */
+    public Builder setPessoa(com.grpc.proto.PessoaDTO value) {
+      if (pessoaBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        pessoa_ = value;
+        onChanged();
+      } else {
+        pessoaBuilder_.setMessage(value);
+      }
 
-    /**
-     * <code>repeated .PessoaDTO pessoa = 1;</code>
-     */
-    public java.util.List<com.grpc.proto.PessoaDTO> getPessoaList() {
-      if (pessoaBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(pessoa_);
-      } else {
-        return pessoaBuilder_.getMessageList();
-      }
+      return this;
     }
     /**
-     * <code>repeated .PessoaDTO pessoa = 1;</code>
-     */
-    public int getPessoaCount() {
-      if (pessoaBuilder_ == null) {
-        return pessoa_.size();
-      } else {
-        return pessoaBuilder_.getCount();
-      }
-    }
-    /**
-     * <code>repeated .PessoaDTO pessoa = 1;</code>
-     */
-    public com.grpc.proto.PessoaDTO getPessoa(int index) {
-      if (pessoaBuilder_ == null) {
-        return pessoa_.get(index);
-      } else {
-        return pessoaBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <code>repeated .PessoaDTO pessoa = 1;</code>
+     * <code>.PessoaDTO pessoa = 1;</code>
      */
     public Builder setPessoa(
-        int index, com.grpc.proto.PessoaDTO value) {
-      if (pessoaBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensurePessoaIsMutable();
-        pessoa_.set(index, value);
-        onChanged();
-      } else {
-        pessoaBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .PessoaDTO pessoa = 1;</code>
-     */
-    public Builder setPessoa(
-        int index, com.grpc.proto.PessoaDTO.Builder builderForValue) {
-      if (pessoaBuilder_ == null) {
-        ensurePessoaIsMutable();
-        pessoa_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        pessoaBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .PessoaDTO pessoa = 1;</code>
-     */
-    public Builder addPessoa(com.grpc.proto.PessoaDTO value) {
-      if (pessoaBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensurePessoaIsMutable();
-        pessoa_.add(value);
-        onChanged();
-      } else {
-        pessoaBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .PessoaDTO pessoa = 1;</code>
-     */
-    public Builder addPessoa(
-        int index, com.grpc.proto.PessoaDTO value) {
-      if (pessoaBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensurePessoaIsMutable();
-        pessoa_.add(index, value);
-        onChanged();
-      } else {
-        pessoaBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .PessoaDTO pessoa = 1;</code>
-     */
-    public Builder addPessoa(
         com.grpc.proto.PessoaDTO.Builder builderForValue) {
       if (pessoaBuilder_ == null) {
-        ensurePessoaIsMutable();
-        pessoa_.add(builderForValue.build());
+        pessoa_ = builderForValue.build();
         onChanged();
       } else {
-        pessoaBuilder_.addMessage(builderForValue.build());
+        pessoaBuilder_.setMessage(builderForValue.build());
       }
+
       return this;
     }
     /**
-     * <code>repeated .PessoaDTO pessoa = 1;</code>
+     * <code>.PessoaDTO pessoa = 1;</code>
      */
-    public Builder addPessoa(
-        int index, com.grpc.proto.PessoaDTO.Builder builderForValue) {
+    public Builder mergePessoa(com.grpc.proto.PessoaDTO value) {
       if (pessoaBuilder_ == null) {
-        ensurePessoaIsMutable();
-        pessoa_.add(index, builderForValue.build());
+        if (pessoa_ != null) {
+          pessoa_ =
+            com.grpc.proto.PessoaDTO.newBuilder(pessoa_).mergeFrom(value).buildPartial();
+        } else {
+          pessoa_ = value;
+        }
         onChanged();
       } else {
-        pessoaBuilder_.addMessage(index, builderForValue.build());
+        pessoaBuilder_.mergeFrom(value);
       }
+
       return this;
     }
     /**
-     * <code>repeated .PessoaDTO pessoa = 1;</code>
-     */
-    public Builder addAllPessoa(
-        java.lang.Iterable<? extends com.grpc.proto.PessoaDTO> values) {
-      if (pessoaBuilder_ == null) {
-        ensurePessoaIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, pessoa_);
-        onChanged();
-      } else {
-        pessoaBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .PessoaDTO pessoa = 1;</code>
+     * <code>.PessoaDTO pessoa = 1;</code>
      */
     public Builder clearPessoa() {
       if (pessoaBuilder_ == null) {
-        pessoa_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        pessoa_ = null;
         onChanged();
       } else {
-        pessoaBuilder_.clear();
+        pessoa_ = null;
+        pessoaBuilder_ = null;
       }
+
       return this;
     }
     /**
-     * <code>repeated .PessoaDTO pessoa = 1;</code>
+     * <code>.PessoaDTO pessoa = 1;</code>
      */
-    public Builder removePessoa(int index) {
-      if (pessoaBuilder_ == null) {
-        ensurePessoaIsMutable();
-        pessoa_.remove(index);
-        onChanged();
-      } else {
-        pessoaBuilder_.remove(index);
-      }
-      return this;
+    public com.grpc.proto.PessoaDTO.Builder getPessoaBuilder() {
+      
+      onChanged();
+      return getPessoaFieldBuilder().getBuilder();
     }
     /**
-     * <code>repeated .PessoaDTO pessoa = 1;</code>
+     * <code>.PessoaDTO pessoa = 1;</code>
      */
-    public com.grpc.proto.PessoaDTO.Builder getPessoaBuilder(
-        int index) {
-      return getPessoaFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <code>repeated .PessoaDTO pessoa = 1;</code>
-     */
-    public com.grpc.proto.PessoaDTOOrBuilder getPessoaOrBuilder(
-        int index) {
-      if (pessoaBuilder_ == null) {
-        return pessoa_.get(index);  } else {
-        return pessoaBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <code>repeated .PessoaDTO pessoa = 1;</code>
-     */
-    public java.util.List<? extends com.grpc.proto.PessoaDTOOrBuilder> 
-         getPessoaOrBuilderList() {
+    public com.grpc.proto.PessoaDTOOrBuilder getPessoaOrBuilder() {
       if (pessoaBuilder_ != null) {
-        return pessoaBuilder_.getMessageOrBuilderList();
+        return pessoaBuilder_.getMessageOrBuilder();
       } else {
-        return java.util.Collections.unmodifiableList(pessoa_);
+        return pessoa_ == null ?
+            com.grpc.proto.PessoaDTO.getDefaultInstance() : pessoa_;
       }
     }
     /**
-     * <code>repeated .PessoaDTO pessoa = 1;</code>
+     * <code>.PessoaDTO pessoa = 1;</code>
      */
-    public com.grpc.proto.PessoaDTO.Builder addPessoaBuilder() {
-      return getPessoaFieldBuilder().addBuilder(
-          com.grpc.proto.PessoaDTO.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .PessoaDTO pessoa = 1;</code>
-     */
-    public com.grpc.proto.PessoaDTO.Builder addPessoaBuilder(
-        int index) {
-      return getPessoaFieldBuilder().addBuilder(
-          index, com.grpc.proto.PessoaDTO.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .PessoaDTO pessoa = 1;</code>
-     */
-    public java.util.List<com.grpc.proto.PessoaDTO.Builder> 
-         getPessoaBuilderList() {
-      return getPessoaFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
+    private com.google.protobuf.SingleFieldBuilderV3<
         com.grpc.proto.PessoaDTO, com.grpc.proto.PessoaDTO.Builder, com.grpc.proto.PessoaDTOOrBuilder> 
         getPessoaFieldBuilder() {
       if (pessoaBuilder_ == null) {
-        pessoaBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+        pessoaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.grpc.proto.PessoaDTO, com.grpc.proto.PessoaDTO.Builder, com.grpc.proto.PessoaDTOOrBuilder>(
-                pessoa_,
-                ((bitField0_ & 0x00000001) == 0x00000001),
+                getPessoa(),
                 getParentForChildren(),
                 isClean());
         pessoa_ = null;

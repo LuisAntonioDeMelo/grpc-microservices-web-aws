@@ -1,4 +1,4 @@
-package com.financeiro.corporative.model;
+package com.gf.financeiro.gestao.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,16 +12,11 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
-public class Cidade {
+@Table(name="cliente")
+public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long codigo;
+    private Long id;
 
-    private String sigla;
-    private String nome;
-
-    @ManyToOne
-    @JoinColumn(name="codigo_estado")
-    private Estado estado;
 }

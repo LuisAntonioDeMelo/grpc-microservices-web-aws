@@ -13,7 +13,7 @@ import net.devh.boot.grpc.server.service.GrpcService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
 import utils.Utils;
-
+import com.gf.financeiro.gestao.model.Cliente;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;

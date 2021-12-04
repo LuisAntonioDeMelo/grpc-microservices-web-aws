@@ -23,77 +23,107 @@ public interface PessoaDTOOrBuilder extends
       getNomeBytes();
 
   /**
-   * <code>string rg = 3;</code>
+   * <code>string cpf = 3;</code>
+   */
+  java.lang.String getCpf();
+  /**
+   * <code>string cpf = 3;</code>
+   */
+  com.google.protobuf.ByteString
+      getCpfBytes();
+
+  /**
+   * <code>string rg = 4;</code>
    */
   java.lang.String getRg();
   /**
-   * <code>string rg = 3;</code>
+   * <code>string rg = 4;</code>
    */
   com.google.protobuf.ByteString
       getRgBytes();
 
   /**
-   * <code>double email = 4;</code>
+   * <code>string email = 5;</code>
    */
-  double getEmail();
+  java.lang.String getEmail();
+  /**
+   * <code>string email = 5;</code>
+   */
+  com.google.protobuf.ByteString
+      getEmailBytes();
 
   /**
-   * <code>string logradouro = 5;</code>
+   * <code>string logradouro = 6;</code>
    */
   java.lang.String getLogradouro();
   /**
-   * <code>string logradouro = 5;</code>
+   * <code>string logradouro = 6;</code>
    */
   com.google.protobuf.ByteString
       getLogradouroBytes();
 
   /**
-   * <code>string numero = 6;</code>
+   * <code>string numero = 7;</code>
    */
   java.lang.String getNumero();
   /**
-   * <code>string numero = 6;</code>
+   * <code>string numero = 7;</code>
    */
   com.google.protobuf.ByteString
       getNumeroBytes();
 
   /**
-   * <code>string complemento = 7;</code>
+   * <code>string complemento = 8;</code>
    */
   java.lang.String getComplemento();
   /**
-   * <code>string complemento = 7;</code>
+   * <code>string complemento = 8;</code>
    */
   com.google.protobuf.ByteString
       getComplementoBytes();
 
   /**
-   * <code>string bairro = 8;</code>
+   * <code>string bairro = 9;</code>
    */
   java.lang.String getBairro();
   /**
-   * <code>string bairro = 8;</code>
+   * <code>string bairro = 9;</code>
    */
   com.google.protobuf.ByteString
       getBairroBytes();
 
   /**
-   * <code>string cep = 9;</code>
+   * <code>string cep = 10;</code>
    */
   java.lang.String getCep();
   /**
-   * <code>string cep = 9;</code>
+   * <code>string cep = 10;</code>
    */
   com.google.protobuf.ByteString
       getCepBytes();
 
   /**
-   * <code>int64 idCidade = 10;</code>
+   * <code>int64 cidade = 11;</code>
    */
-  long getIdCidade();
+  long getCidade();
 
   /**
-   * <code>bool ativo = 11;</code>
+   * <code>int64 estado = 12;</code>
+   */
+  long getEstado();
+
+  /**
+   * <code>bool ativo = 13;</code>
    */
   boolean getAtivo();
+
+  /**
+   * <code>string telefone = 14;</code>
+   */
+  java.lang.String getTelefone();
+  /**
+   * <code>string telefone = 14;</code>
+   */
+  com.google.protobuf.ByteString
+      getTelefoneBytes();
 }

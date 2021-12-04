@@ -18,15 +18,18 @@ private static final long serialVersionUID = 0L;
   private PessoaDTO() {
     id_ = 0L;
     nome_ = "";
+    cpf_ = "";
     rg_ = "";
-    email_ = 0D;
+    email_ = "";
     logradouro_ = "";
     numero_ = "";
     complemento_ = "";
     bairro_ = "";
     cep_ = "";
-    idCidade_ = 0L;
+    cidade_ = 0L;
+    estado_ = 0L;
     ativo_ = false;
+    telefone_ = "";
   }
 
   @java.lang.Override
@@ -67,52 +70,70 @@ private static final long serialVersionUID = 0L;
           case 26: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            rg_ = s;
+            cpf_ = s;
             break;
           }
-          case 33: {
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-            email_ = input.readDouble();
+            rg_ = s;
             break;
           }
           case 42: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            logradouro_ = s;
+            email_ = s;
             break;
           }
           case 50: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            numero_ = s;
+            logradouro_ = s;
             break;
           }
           case 58: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            complemento_ = s;
+            numero_ = s;
             break;
           }
           case 66: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            bairro_ = s;
+            complemento_ = s;
             break;
           }
           case 74: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            cep_ = s;
+            bairro_ = s;
             break;
           }
-          case 80: {
+          case 82: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-            idCidade_ = input.readInt64();
+            cep_ = s;
             break;
           }
           case 88: {
 
+            cidade_ = input.readInt64();
+            break;
+          }
+          case 96: {
+
+            estado_ = input.readInt64();
+            break;
+          }
+          case 104: {
+
             ativo_ = input.readBool();
+            break;
+          }
+          case 114: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            telefone_ = s;
             break;
           }
           default: {
@@ -190,10 +211,44 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int RG_FIELD_NUMBER = 3;
+  public static final int CPF_FIELD_NUMBER = 3;
+  private volatile java.lang.Object cpf_;
+  /**
+   * <code>string cpf = 3;</code>
+   */
+  public java.lang.String getCpf() {
+    java.lang.Object ref = cpf_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      cpf_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string cpf = 3;</code>
+   */
+  public com.google.protobuf.ByteString
+      getCpfBytes() {
+    java.lang.Object ref = cpf_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      cpf_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int RG_FIELD_NUMBER = 4;
   private volatile java.lang.Object rg_;
   /**
-   * <code>string rg = 3;</code>
+   * <code>string rg = 4;</code>
    */
   public java.lang.String getRg() {
     java.lang.Object ref = rg_;
@@ -208,7 +263,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string rg = 3;</code>
+   * <code>string rg = 4;</code>
    */
   public com.google.protobuf.ByteString
       getRgBytes() {
@@ -224,19 +279,44 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int EMAIL_FIELD_NUMBER = 4;
-  private double email_;
+  public static final int EMAIL_FIELD_NUMBER = 5;
+  private volatile java.lang.Object email_;
   /**
-   * <code>double email = 4;</code>
+   * <code>string email = 5;</code>
    */
-  public double getEmail() {
-    return email_;
+  public java.lang.String getEmail() {
+    java.lang.Object ref = email_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      email_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string email = 5;</code>
+   */
+  public com.google.protobuf.ByteString
+      getEmailBytes() {
+    java.lang.Object ref = email_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      email_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
-  public static final int LOGRADOURO_FIELD_NUMBER = 5;
+  public static final int LOGRADOURO_FIELD_NUMBER = 6;
   private volatile java.lang.Object logradouro_;
   /**
-   * <code>string logradouro = 5;</code>
+   * <code>string logradouro = 6;</code>
    */
   public java.lang.String getLogradouro() {
     java.lang.Object ref = logradouro_;
@@ -251,7 +331,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string logradouro = 5;</code>
+   * <code>string logradouro = 6;</code>
    */
   public com.google.protobuf.ByteString
       getLogradouroBytes() {
@@ -267,10 +347,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int NUMERO_FIELD_NUMBER = 6;
+  public static final int NUMERO_FIELD_NUMBER = 7;
   private volatile java.lang.Object numero_;
   /**
-   * <code>string numero = 6;</code>
+   * <code>string numero = 7;</code>
    */
   public java.lang.String getNumero() {
     java.lang.Object ref = numero_;
@@ -285,7 +365,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string numero = 6;</code>
+   * <code>string numero = 7;</code>
    */
   public com.google.protobuf.ByteString
       getNumeroBytes() {
@@ -301,10 +381,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int COMPLEMENTO_FIELD_NUMBER = 7;
+  public static final int COMPLEMENTO_FIELD_NUMBER = 8;
   private volatile java.lang.Object complemento_;
   /**
-   * <code>string complemento = 7;</code>
+   * <code>string complemento = 8;</code>
    */
   public java.lang.String getComplemento() {
     java.lang.Object ref = complemento_;
@@ -319,7 +399,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string complemento = 7;</code>
+   * <code>string complemento = 8;</code>
    */
   public com.google.protobuf.ByteString
       getComplementoBytes() {
@@ -335,10 +415,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int BAIRRO_FIELD_NUMBER = 8;
+  public static final int BAIRRO_FIELD_NUMBER = 9;
   private volatile java.lang.Object bairro_;
   /**
-   * <code>string bairro = 8;</code>
+   * <code>string bairro = 9;</code>
    */
   public java.lang.String getBairro() {
     java.lang.Object ref = bairro_;
@@ -353,7 +433,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string bairro = 8;</code>
+   * <code>string bairro = 9;</code>
    */
   public com.google.protobuf.ByteString
       getBairroBytes() {
@@ -369,10 +449,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int CEP_FIELD_NUMBER = 9;
+  public static final int CEP_FIELD_NUMBER = 10;
   private volatile java.lang.Object cep_;
   /**
-   * <code>string cep = 9;</code>
+   * <code>string cep = 10;</code>
    */
   public java.lang.String getCep() {
     java.lang.Object ref = cep_;
@@ -387,7 +467,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string cep = 9;</code>
+   * <code>string cep = 10;</code>
    */
   public com.google.protobuf.ByteString
       getCepBytes() {
@@ -403,22 +483,65 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int IDCIDADE_FIELD_NUMBER = 10;
-  private long idCidade_;
+  public static final int CIDADE_FIELD_NUMBER = 11;
+  private long cidade_;
   /**
-   * <code>int64 idCidade = 10;</code>
+   * <code>int64 cidade = 11;</code>
    */
-  public long getIdCidade() {
-    return idCidade_;
+  public long getCidade() {
+    return cidade_;
   }
 
-  public static final int ATIVO_FIELD_NUMBER = 11;
+  public static final int ESTADO_FIELD_NUMBER = 12;
+  private long estado_;
+  /**
+   * <code>int64 estado = 12;</code>
+   */
+  public long getEstado() {
+    return estado_;
+  }
+
+  public static final int ATIVO_FIELD_NUMBER = 13;
   private boolean ativo_;
   /**
-   * <code>bool ativo = 11;</code>
+   * <code>bool ativo = 13;</code>
    */
   public boolean getAtivo() {
     return ativo_;
+  }
+
+  public static final int TELEFONE_FIELD_NUMBER = 14;
+  private volatile java.lang.Object telefone_;
+  /**
+   * <code>string telefone = 14;</code>
+   */
+  public java.lang.String getTelefone() {
+    java.lang.Object ref = telefone_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      telefone_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string telefone = 14;</code>
+   */
+  public com.google.protobuf.ByteString
+      getTelefoneBytes() {
+    java.lang.Object ref = telefone_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      telefone_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   private byte memoizedIsInitialized = -1;
@@ -441,32 +564,41 @@ private static final long serialVersionUID = 0L;
     if (!getNomeBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nome_);
     }
-    if (!getRgBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, rg_);
+    if (!getCpfBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, cpf_);
     }
-    if (email_ != 0D) {
-      output.writeDouble(4, email_);
+    if (!getRgBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, rg_);
+    }
+    if (!getEmailBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, email_);
     }
     if (!getLogradouroBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, logradouro_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, logradouro_);
     }
     if (!getNumeroBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, numero_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, numero_);
     }
     if (!getComplementoBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, complemento_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, complemento_);
     }
     if (!getBairroBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, bairro_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, bairro_);
     }
     if (!getCepBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, cep_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 10, cep_);
     }
-    if (idCidade_ != 0L) {
-      output.writeInt64(10, idCidade_);
+    if (cidade_ != 0L) {
+      output.writeInt64(11, cidade_);
+    }
+    if (estado_ != 0L) {
+      output.writeInt64(12, estado_);
     }
     if (ativo_ != false) {
-      output.writeBool(11, ativo_);
+      output.writeBool(13, ativo_);
+    }
+    if (!getTelefoneBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 14, telefone_);
     }
     unknownFields.writeTo(output);
   }
@@ -484,35 +616,44 @@ private static final long serialVersionUID = 0L;
     if (!getNomeBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nome_);
     }
-    if (!getRgBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, rg_);
+    if (!getCpfBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, cpf_);
     }
-    if (email_ != 0D) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(4, email_);
+    if (!getRgBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, rg_);
+    }
+    if (!getEmailBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, email_);
     }
     if (!getLogradouroBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, logradouro_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, logradouro_);
     }
     if (!getNumeroBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, numero_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, numero_);
     }
     if (!getComplementoBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, complemento_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, complemento_);
     }
     if (!getBairroBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, bairro_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, bairro_);
     }
     if (!getCepBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, cep_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, cep_);
     }
-    if (idCidade_ != 0L) {
+    if (cidade_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(10, idCidade_);
+        .computeInt64Size(11, cidade_);
+    }
+    if (estado_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(12, estado_);
     }
     if (ativo_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(11, ativo_);
+        .computeBoolSize(13, ativo_);
+    }
+    if (!getTelefoneBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, telefone_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -534,12 +675,12 @@ private static final long serialVersionUID = 0L;
         == other.getId());
     result = result && getNome()
         .equals(other.getNome());
+    result = result && getCpf()
+        .equals(other.getCpf());
     result = result && getRg()
         .equals(other.getRg());
-    result = result && (
-        java.lang.Double.doubleToLongBits(getEmail())
-        == java.lang.Double.doubleToLongBits(
-            other.getEmail()));
+    result = result && getEmail()
+        .equals(other.getEmail());
     result = result && getLogradouro()
         .equals(other.getLogradouro());
     result = result && getNumero()
@@ -550,10 +691,14 @@ private static final long serialVersionUID = 0L;
         .equals(other.getBairro());
     result = result && getCep()
         .equals(other.getCep());
-    result = result && (getIdCidade()
-        == other.getIdCidade());
+    result = result && (getCidade()
+        == other.getCidade());
+    result = result && (getEstado()
+        == other.getEstado());
     result = result && (getAtivo()
         == other.getAtivo());
+    result = result && getTelefone()
+        .equals(other.getTelefone());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -570,11 +715,12 @@ private static final long serialVersionUID = 0L;
         getId());
     hash = (37 * hash) + NOME_FIELD_NUMBER;
     hash = (53 * hash) + getNome().hashCode();
+    hash = (37 * hash) + CPF_FIELD_NUMBER;
+    hash = (53 * hash) + getCpf().hashCode();
     hash = (37 * hash) + RG_FIELD_NUMBER;
     hash = (53 * hash) + getRg().hashCode();
     hash = (37 * hash) + EMAIL_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        java.lang.Double.doubleToLongBits(getEmail()));
+    hash = (53 * hash) + getEmail().hashCode();
     hash = (37 * hash) + LOGRADOURO_FIELD_NUMBER;
     hash = (53 * hash) + getLogradouro().hashCode();
     hash = (37 * hash) + NUMERO_FIELD_NUMBER;
@@ -585,12 +731,17 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getBairro().hashCode();
     hash = (37 * hash) + CEP_FIELD_NUMBER;
     hash = (53 * hash) + getCep().hashCode();
-    hash = (37 * hash) + IDCIDADE_FIELD_NUMBER;
+    hash = (37 * hash) + CIDADE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getIdCidade());
+        getCidade());
+    hash = (37 * hash) + ESTADO_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getEstado());
     hash = (37 * hash) + ATIVO_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getAtivo());
+    hash = (37 * hash) + TELEFONE_FIELD_NUMBER;
+    hash = (53 * hash) + getTelefone().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -728,9 +879,11 @@ private static final long serialVersionUID = 0L;
 
       nome_ = "";
 
+      cpf_ = "";
+
       rg_ = "";
 
-      email_ = 0D;
+      email_ = "";
 
       logradouro_ = "";
 
@@ -742,9 +895,13 @@ private static final long serialVersionUID = 0L;
 
       cep_ = "";
 
-      idCidade_ = 0L;
+      cidade_ = 0L;
+
+      estado_ = 0L;
 
       ativo_ = false;
+
+      telefone_ = "";
 
       return this;
     }
@@ -774,6 +931,7 @@ private static final long serialVersionUID = 0L;
       com.grpc.proto.PessoaDTO result = new com.grpc.proto.PessoaDTO(this);
       result.id_ = id_;
       result.nome_ = nome_;
+      result.cpf_ = cpf_;
       result.rg_ = rg_;
       result.email_ = email_;
       result.logradouro_ = logradouro_;
@@ -781,8 +939,10 @@ private static final long serialVersionUID = 0L;
       result.complemento_ = complemento_;
       result.bairro_ = bairro_;
       result.cep_ = cep_;
-      result.idCidade_ = idCidade_;
+      result.cidade_ = cidade_;
+      result.estado_ = estado_;
       result.ativo_ = ativo_;
+      result.telefone_ = telefone_;
       onBuilt();
       return result;
     }
@@ -838,12 +998,17 @@ private static final long serialVersionUID = 0L;
         nome_ = other.nome_;
         onChanged();
       }
+      if (!other.getCpf().isEmpty()) {
+        cpf_ = other.cpf_;
+        onChanged();
+      }
       if (!other.getRg().isEmpty()) {
         rg_ = other.rg_;
         onChanged();
       }
-      if (other.getEmail() != 0D) {
-        setEmail(other.getEmail());
+      if (!other.getEmail().isEmpty()) {
+        email_ = other.email_;
+        onChanged();
       }
       if (!other.getLogradouro().isEmpty()) {
         logradouro_ = other.logradouro_;
@@ -865,11 +1030,18 @@ private static final long serialVersionUID = 0L;
         cep_ = other.cep_;
         onChanged();
       }
-      if (other.getIdCidade() != 0L) {
-        setIdCidade(other.getIdCidade());
+      if (other.getCidade() != 0L) {
+        setCidade(other.getCidade());
+      }
+      if (other.getEstado() != 0L) {
+        setEstado(other.getEstado());
       }
       if (other.getAtivo() != false) {
         setAtivo(other.getAtivo());
+      }
+      if (!other.getTelefone().isEmpty()) {
+        telefone_ = other.telefone_;
+        onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -995,9 +1167,78 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private java.lang.Object cpf_ = "";
+    /**
+     * <code>string cpf = 3;</code>
+     */
+    public java.lang.String getCpf() {
+      java.lang.Object ref = cpf_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cpf_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string cpf = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCpfBytes() {
+      java.lang.Object ref = cpf_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cpf_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string cpf = 3;</code>
+     */
+    public Builder setCpf(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      cpf_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string cpf = 3;</code>
+     */
+    public Builder clearCpf() {
+      
+      cpf_ = getDefaultInstance().getCpf();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string cpf = 3;</code>
+     */
+    public Builder setCpfBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      cpf_ = value;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object rg_ = "";
     /**
-     * <code>string rg = 3;</code>
+     * <code>string rg = 4;</code>
      */
     public java.lang.String getRg() {
       java.lang.Object ref = rg_;
@@ -1012,7 +1253,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string rg = 3;</code>
+     * <code>string rg = 4;</code>
      */
     public com.google.protobuf.ByteString
         getRgBytes() {
@@ -1028,7 +1269,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string rg = 3;</code>
+     * <code>string rg = 4;</code>
      */
     public Builder setRg(
         java.lang.String value) {
@@ -1041,7 +1282,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string rg = 3;</code>
+     * <code>string rg = 4;</code>
      */
     public Builder clearRg() {
       
@@ -1050,7 +1291,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string rg = 3;</code>
+     * <code>string rg = 4;</code>
      */
     public Builder setRgBytes(
         com.google.protobuf.ByteString value) {
@@ -1064,35 +1305,78 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private double email_ ;
+    private java.lang.Object email_ = "";
     /**
-     * <code>double email = 4;</code>
+     * <code>string email = 5;</code>
      */
-    public double getEmail() {
-      return email_;
+    public java.lang.String getEmail() {
+      java.lang.Object ref = email_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        email_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
     }
     /**
-     * <code>double email = 4;</code>
+     * <code>string email = 5;</code>
      */
-    public Builder setEmail(double value) {
-      
+    public com.google.protobuf.ByteString
+        getEmailBytes() {
+      java.lang.Object ref = email_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        email_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string email = 5;</code>
+     */
+    public Builder setEmail(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       email_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>double email = 4;</code>
+     * <code>string email = 5;</code>
      */
     public Builder clearEmail() {
       
-      email_ = 0D;
+      email_ = getDefaultInstance().getEmail();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string email = 5;</code>
+     */
+    public Builder setEmailBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      email_ = value;
       onChanged();
       return this;
     }
 
     private java.lang.Object logradouro_ = "";
     /**
-     * <code>string logradouro = 5;</code>
+     * <code>string logradouro = 6;</code>
      */
     public java.lang.String getLogradouro() {
       java.lang.Object ref = logradouro_;
@@ -1107,7 +1391,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string logradouro = 5;</code>
+     * <code>string logradouro = 6;</code>
      */
     public com.google.protobuf.ByteString
         getLogradouroBytes() {
@@ -1123,7 +1407,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string logradouro = 5;</code>
+     * <code>string logradouro = 6;</code>
      */
     public Builder setLogradouro(
         java.lang.String value) {
@@ -1136,7 +1420,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string logradouro = 5;</code>
+     * <code>string logradouro = 6;</code>
      */
     public Builder clearLogradouro() {
       
@@ -1145,7 +1429,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string logradouro = 5;</code>
+     * <code>string logradouro = 6;</code>
      */
     public Builder setLogradouroBytes(
         com.google.protobuf.ByteString value) {
@@ -1161,7 +1445,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object numero_ = "";
     /**
-     * <code>string numero = 6;</code>
+     * <code>string numero = 7;</code>
      */
     public java.lang.String getNumero() {
       java.lang.Object ref = numero_;
@@ -1176,7 +1460,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string numero = 6;</code>
+     * <code>string numero = 7;</code>
      */
     public com.google.protobuf.ByteString
         getNumeroBytes() {
@@ -1192,7 +1476,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string numero = 6;</code>
+     * <code>string numero = 7;</code>
      */
     public Builder setNumero(
         java.lang.String value) {
@@ -1205,7 +1489,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string numero = 6;</code>
+     * <code>string numero = 7;</code>
      */
     public Builder clearNumero() {
       
@@ -1214,7 +1498,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string numero = 6;</code>
+     * <code>string numero = 7;</code>
      */
     public Builder setNumeroBytes(
         com.google.protobuf.ByteString value) {
@@ -1230,7 +1514,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object complemento_ = "";
     /**
-     * <code>string complemento = 7;</code>
+     * <code>string complemento = 8;</code>
      */
     public java.lang.String getComplemento() {
       java.lang.Object ref = complemento_;
@@ -1245,7 +1529,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string complemento = 7;</code>
+     * <code>string complemento = 8;</code>
      */
     public com.google.protobuf.ByteString
         getComplementoBytes() {
@@ -1261,7 +1545,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string complemento = 7;</code>
+     * <code>string complemento = 8;</code>
      */
     public Builder setComplemento(
         java.lang.String value) {
@@ -1274,7 +1558,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string complemento = 7;</code>
+     * <code>string complemento = 8;</code>
      */
     public Builder clearComplemento() {
       
@@ -1283,7 +1567,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string complemento = 7;</code>
+     * <code>string complemento = 8;</code>
      */
     public Builder setComplementoBytes(
         com.google.protobuf.ByteString value) {
@@ -1299,7 +1583,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object bairro_ = "";
     /**
-     * <code>string bairro = 8;</code>
+     * <code>string bairro = 9;</code>
      */
     public java.lang.String getBairro() {
       java.lang.Object ref = bairro_;
@@ -1314,7 +1598,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string bairro = 8;</code>
+     * <code>string bairro = 9;</code>
      */
     public com.google.protobuf.ByteString
         getBairroBytes() {
@@ -1330,7 +1614,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string bairro = 8;</code>
+     * <code>string bairro = 9;</code>
      */
     public Builder setBairro(
         java.lang.String value) {
@@ -1343,7 +1627,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string bairro = 8;</code>
+     * <code>string bairro = 9;</code>
      */
     public Builder clearBairro() {
       
@@ -1352,7 +1636,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string bairro = 8;</code>
+     * <code>string bairro = 9;</code>
      */
     public Builder setBairroBytes(
         com.google.protobuf.ByteString value) {
@@ -1368,7 +1652,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object cep_ = "";
     /**
-     * <code>string cep = 9;</code>
+     * <code>string cep = 10;</code>
      */
     public java.lang.String getCep() {
       java.lang.Object ref = cep_;
@@ -1383,7 +1667,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string cep = 9;</code>
+     * <code>string cep = 10;</code>
      */
     public com.google.protobuf.ByteString
         getCepBytes() {
@@ -1399,7 +1683,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string cep = 9;</code>
+     * <code>string cep = 10;</code>
      */
     public Builder setCep(
         java.lang.String value) {
@@ -1412,7 +1696,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string cep = 9;</code>
+     * <code>string cep = 10;</code>
      */
     public Builder clearCep() {
       
@@ -1421,7 +1705,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string cep = 9;</code>
+     * <code>string cep = 10;</code>
      */
     public Builder setCepBytes(
         com.google.protobuf.ByteString value) {
@@ -1435,41 +1719,67 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private long idCidade_ ;
+    private long cidade_ ;
     /**
-     * <code>int64 idCidade = 10;</code>
+     * <code>int64 cidade = 11;</code>
      */
-    public long getIdCidade() {
-      return idCidade_;
+    public long getCidade() {
+      return cidade_;
     }
     /**
-     * <code>int64 idCidade = 10;</code>
+     * <code>int64 cidade = 11;</code>
      */
-    public Builder setIdCidade(long value) {
+    public Builder setCidade(long value) {
       
-      idCidade_ = value;
+      cidade_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>int64 idCidade = 10;</code>
+     * <code>int64 cidade = 11;</code>
      */
-    public Builder clearIdCidade() {
+    public Builder clearCidade() {
       
-      idCidade_ = 0L;
+      cidade_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long estado_ ;
+    /**
+     * <code>int64 estado = 12;</code>
+     */
+    public long getEstado() {
+      return estado_;
+    }
+    /**
+     * <code>int64 estado = 12;</code>
+     */
+    public Builder setEstado(long value) {
+      
+      estado_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 estado = 12;</code>
+     */
+    public Builder clearEstado() {
+      
+      estado_ = 0L;
       onChanged();
       return this;
     }
 
     private boolean ativo_ ;
     /**
-     * <code>bool ativo = 11;</code>
+     * <code>bool ativo = 13;</code>
      */
     public boolean getAtivo() {
       return ativo_;
     }
     /**
-     * <code>bool ativo = 11;</code>
+     * <code>bool ativo = 13;</code>
      */
     public Builder setAtivo(boolean value) {
       
@@ -1478,11 +1788,80 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bool ativo = 11;</code>
+     * <code>bool ativo = 13;</code>
      */
     public Builder clearAtivo() {
       
       ativo_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object telefone_ = "";
+    /**
+     * <code>string telefone = 14;</code>
+     */
+    public java.lang.String getTelefone() {
+      java.lang.Object ref = telefone_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        telefone_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string telefone = 14;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTelefoneBytes() {
+      java.lang.Object ref = telefone_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        telefone_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string telefone = 14;</code>
+     */
+    public Builder setTelefone(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      telefone_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string telefone = 14;</code>
+     */
+    public Builder clearTelefone() {
+      
+      telefone_ = getDefaultInstance().getTelefone();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string telefone = 14;</code>
+     */
+    public Builder setTelefoneBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      telefone_ = value;
       onChanged();
       return this;
     }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cliente-lista',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClienteListaComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private snack: MatSnackBar,
+    private router: Router,
+    private fb: FormBuilder) { }
 
   ngOnInit(): void {
+  }
+
+  editar(){
+    this.router.navigate(['/home/painel-gestao/cliente/cliente-form']);
   }
 
 }

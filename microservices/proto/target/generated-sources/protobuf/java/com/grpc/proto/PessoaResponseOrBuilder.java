@@ -8,26 +8,15 @@ public interface PessoaResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .PessoaDTO pessoa = 1;</code>
+   * <code>.PessoaDTO pessoa = 1;</code>
    */
-  java.util.List<com.grpc.proto.PessoaDTO> 
-      getPessoaList();
+  boolean hasPessoa();
   /**
-   * <code>repeated .PessoaDTO pessoa = 1;</code>
+   * <code>.PessoaDTO pessoa = 1;</code>
    */
-  com.grpc.proto.PessoaDTO getPessoa(int index);
+  com.grpc.proto.PessoaDTO getPessoa();
   /**
-   * <code>repeated .PessoaDTO pessoa = 1;</code>
+   * <code>.PessoaDTO pessoa = 1;</code>
    */
-  int getPessoaCount();
-  /**
-   * <code>repeated .PessoaDTO pessoa = 1;</code>
-   */
-  java.util.List<? extends com.grpc.proto.PessoaDTOOrBuilder> 
-      getPessoaOrBuilderList();
-  /**
-   * <code>repeated .PessoaDTO pessoa = 1;</code>
-   */
-  com.grpc.proto.PessoaDTOOrBuilder getPessoaOrBuilder(
-      int index);
+  com.grpc.proto.PessoaDTOOrBuilder getPessoaOrBuilder();
 }

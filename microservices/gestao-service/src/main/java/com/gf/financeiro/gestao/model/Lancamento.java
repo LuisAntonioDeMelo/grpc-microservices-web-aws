@@ -6,7 +6,6 @@ import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Data
@@ -51,4 +50,5 @@ public class Lancamento {
 
     @NotNull
     private TipoLancamento tipoLancamento;
+
 }
