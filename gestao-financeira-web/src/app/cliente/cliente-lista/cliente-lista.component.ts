@@ -23,8 +23,8 @@ export class ClienteListaComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    const idCliente = this.auth.currentUserValue.id;
-    this.clienteService.getPorId(idCliente).subscribe(res => {
+    const idPessoa = this.auth.currentUserValue.idPessoa;
+    this.clienteService.getPorId(idPessoa).subscribe(res => {
       console.log(res)
       this.cliente = res;
     })

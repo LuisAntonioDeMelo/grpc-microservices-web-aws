@@ -11,7 +11,7 @@ import java.util.OptionalInt;
 public interface ClienteRepository extends JpaRepository<Cliente,Long> {
 
     @Query("select c from Cliente c " +
-            "inner join fetch c.pessoa p " +
-            "where c.id = :id ")
+            "inner join c.pessoa p " +
+            "where p.id = :id ")
     public Optional<Cliente> obterPorId(@Param("id") Long id);
 }

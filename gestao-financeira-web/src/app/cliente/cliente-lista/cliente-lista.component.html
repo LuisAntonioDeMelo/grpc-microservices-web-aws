@@ -1,19 +1,63 @@
 <mat-card>
   <mat-card-title>
-    <h3> Nome : 'Luis Antonio'</h3>
+    <h4>Nome : {{ cliente?.nome }}</h4>
   </mat-card-title>
   <mat-card-content>
     <mat-list>
-      <mat-list-item> idade : F </mat-list-item>
-      <mat-list-item> Endereço > </mat-list-item>
-      <mat-list-item> Cep </mat-list-item>
-     </mat-list>
+      <mat-list-item>
+        <b>CPF :</b>
+        {{ cliente?.cpf }}
+        <b style="margin-left: 20%;">RG</b>
+        {{ cliente?.rg }}
+      </mat-list-item>
+      <mat-list-item>
+        <b>E-mail :</b>
+        {{ cliente?.email }}
+        <b style="margin-left: 20%;">Data Cadastro :</b>
+        {{ cliente?.dataCadastro }}
+      </mat-list-item>
+      <mat-list-item>
+        <b>Telefone :</b>
+        {{ cliente?.telefone }}
+      </mat-list-item>
+    </mat-list>
+    <mat-list>
+      <h3><b>Cliente</b></h3>
+      <mat-list-item>
+        <b>Limite :</b>
+        {{ cliente.limite }} -
+        <b style="margin-left: 20%;">Dia Vencimento :</b>
+        {{ cliente.diaVencimento }}
+      </mat-list-item>
+    </mat-list>
+    <mat-list>
+      <h3><b>Endereço</b></h3>
+      <mat-list-item>
+        <b>Logradouro :</b>
+        {{ cliente.logradouro }} -
+        <b style="margin-left: 20%;">Número :</b>
+        {{ cliente.numero }}
+      </mat-list-item>
+      <mat-list-item>
+        <b>Complemento :</b>
+        {{ cliente.complemento }}
+      </mat-list-item>
+      <mat-list-item>
+        <b>Complemento :</b>
+        {{ cliente.complemento }}
+      </mat-list-item>
+    </mat-list>
   </mat-card-content>
   <div flexLayout="flex">
-    <div fxFlex="70">
-    </div>
+    <div fxFlex="70"></div>
     <div fxFlex="30">
-      <button id="btn-novo" (click)="editar()" mat-raised-button color="primary" class="">
+      <button
+        id="btn-novo"
+        (click)="editar()"
+        mat-raised-button
+        color="primary"
+        class=""
+      >
         Editar Dados
       </button>
     </div>

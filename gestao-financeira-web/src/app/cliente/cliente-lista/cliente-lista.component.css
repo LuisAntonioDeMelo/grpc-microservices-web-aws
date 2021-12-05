@@ -29,3 +29,7 @@ h4 {
 div {
   padding-right: 10px;
 }
+
+mat-list-item  {
+ padding-left: 2%;
+}

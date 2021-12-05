@@ -61,6 +61,11 @@ export class ClienteFormComponent implements OnInit {
     this.estadoService.get().subscribe(res => {
       this.estados = res;
     })
+    this.clienteService.getPorId(this.auth.currentUserValue.idPessoa).subscribe(res => {
+      console.log(res)
+      this.clienteForm.setValue(res);
+    })
+
   }
 
   public limpar() {
