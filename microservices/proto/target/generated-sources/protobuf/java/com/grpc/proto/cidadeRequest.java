@@ -4,18 +4,18 @@
 package com.grpc.proto;
 
 /**
- * Protobuf type {@code cidadeRequest}
+ * Protobuf type {@code CidadeRequest}
  */
-public  final class cidadeRequest extends
+public  final class CidadeRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:cidadeRequest)
-    cidadeRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:CidadeRequest)
+    CidadeRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use cidadeRequest.newBuilder() to construct.
-  private cidadeRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use CidadeRequest.newBuilder() to construct.
+  private CidadeRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private cidadeRequest() {
+  private CidadeRequest() {
     a_ = 0L;
   }
 
@@ -24,7 +24,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private cidadeRequest(
+  private CidadeRequest(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -69,15 +69,15 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.grpc.proto.Cidade.internal_static_cidadeRequest_descriptor;
+    return com.grpc.proto.Cidade.internal_static_CidadeRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.grpc.proto.Cidade.internal_static_cidadeRequest_fieldAccessorTable
+    return com.grpc.proto.Cidade.internal_static_CidadeRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.grpc.proto.cidadeRequest.class, com.grpc.proto.cidadeRequest.Builder.class);
+            com.grpc.proto.CidadeRequest.class, com.grpc.proto.CidadeRequest.Builder.class);
   }
 
   public static final int A_FIELD_NUMBER = 1;
@@ -129,10 +129,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.grpc.proto.cidadeRequest)) {
+    if (!(obj instanceof com.grpc.proto.CidadeRequest)) {
       return super.equals(obj);
     }
-    com.grpc.proto.cidadeRequest other = (com.grpc.proto.cidadeRequest) obj;
+    com.grpc.proto.CidadeRequest other = (com.grpc.proto.CidadeRequest) obj;
 
     boolean result = true;
     result = result && (getA()
@@ -156,69 +156,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.grpc.proto.cidadeRequest parseFrom(
+  public static com.grpc.proto.CidadeRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.grpc.proto.cidadeRequest parseFrom(
+  public static com.grpc.proto.CidadeRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.grpc.proto.cidadeRequest parseFrom(
+  public static com.grpc.proto.CidadeRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.grpc.proto.cidadeRequest parseFrom(
+  public static com.grpc.proto.CidadeRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.grpc.proto.cidadeRequest parseFrom(byte[] data)
+  public static com.grpc.proto.CidadeRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.grpc.proto.cidadeRequest parseFrom(
+  public static com.grpc.proto.CidadeRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.grpc.proto.cidadeRequest parseFrom(java.io.InputStream input)
+  public static com.grpc.proto.CidadeRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.grpc.proto.cidadeRequest parseFrom(
+  public static com.grpc.proto.CidadeRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.grpc.proto.cidadeRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.grpc.proto.CidadeRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.grpc.proto.cidadeRequest parseDelimitedFrom(
+  public static com.grpc.proto.CidadeRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.grpc.proto.cidadeRequest parseFrom(
+  public static com.grpc.proto.CidadeRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.grpc.proto.cidadeRequest parseFrom(
+  public static com.grpc.proto.CidadeRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -231,7 +231,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.grpc.proto.cidadeRequest prototype) {
+  public static Builder newBuilder(com.grpc.proto.CidadeRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -247,26 +247,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code cidadeRequest}
+   * Protobuf type {@code CidadeRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:cidadeRequest)
-      com.grpc.proto.cidadeRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:CidadeRequest)
+      com.grpc.proto.CidadeRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.grpc.proto.Cidade.internal_static_cidadeRequest_descriptor;
+      return com.grpc.proto.Cidade.internal_static_CidadeRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.grpc.proto.Cidade.internal_static_cidadeRequest_fieldAccessorTable
+      return com.grpc.proto.Cidade.internal_static_CidadeRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.grpc.proto.cidadeRequest.class, com.grpc.proto.cidadeRequest.Builder.class);
+              com.grpc.proto.CidadeRequest.class, com.grpc.proto.CidadeRequest.Builder.class);
     }
 
-    // Construct using com.grpc.proto.cidadeRequest.newBuilder()
+    // Construct using com.grpc.proto.CidadeRequest.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -292,17 +292,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.grpc.proto.Cidade.internal_static_cidadeRequest_descriptor;
+      return com.grpc.proto.Cidade.internal_static_CidadeRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.grpc.proto.cidadeRequest getDefaultInstanceForType() {
-      return com.grpc.proto.cidadeRequest.getDefaultInstance();
+    public com.grpc.proto.CidadeRequest getDefaultInstanceForType() {
+      return com.grpc.proto.CidadeRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.grpc.proto.cidadeRequest build() {
-      com.grpc.proto.cidadeRequest result = buildPartial();
+    public com.grpc.proto.CidadeRequest build() {
+      com.grpc.proto.CidadeRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -310,8 +310,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.grpc.proto.cidadeRequest buildPartial() {
-      com.grpc.proto.cidadeRequest result = new com.grpc.proto.cidadeRequest(this);
+    public com.grpc.proto.CidadeRequest buildPartial() {
+      com.grpc.proto.CidadeRequest result = new com.grpc.proto.CidadeRequest(this);
       result.a_ = a_;
       onBuilt();
       return result;
@@ -351,16 +351,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.grpc.proto.cidadeRequest) {
-        return mergeFrom((com.grpc.proto.cidadeRequest)other);
+      if (other instanceof com.grpc.proto.CidadeRequest) {
+        return mergeFrom((com.grpc.proto.CidadeRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.grpc.proto.cidadeRequest other) {
-      if (other == com.grpc.proto.cidadeRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.grpc.proto.CidadeRequest other) {
+      if (other == com.grpc.proto.CidadeRequest.getDefaultInstance()) return this;
       if (other.getA() != 0L) {
         setA(other.getA());
       }
@@ -379,11 +379,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.grpc.proto.cidadeRequest parsedMessage = null;
+      com.grpc.proto.CidadeRequest parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.grpc.proto.cidadeRequest) e.getUnfinishedMessage();
+        parsedMessage = (com.grpc.proto.CidadeRequest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -431,41 +431,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:cidadeRequest)
+    // @@protoc_insertion_point(builder_scope:CidadeRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:cidadeRequest)
-  private static final com.grpc.proto.cidadeRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:CidadeRequest)
+  private static final com.grpc.proto.CidadeRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.grpc.proto.cidadeRequest();
+    DEFAULT_INSTANCE = new com.grpc.proto.CidadeRequest();
   }
 
-  public static com.grpc.proto.cidadeRequest getDefaultInstance() {
+  public static com.grpc.proto.CidadeRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<cidadeRequest>
-      PARSER = new com.google.protobuf.AbstractParser<cidadeRequest>() {
+  private static final com.google.protobuf.Parser<CidadeRequest>
+      PARSER = new com.google.protobuf.AbstractParser<CidadeRequest>() {
     @java.lang.Override
-    public cidadeRequest parsePartialFrom(
+    public CidadeRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new cidadeRequest(input, extensionRegistry);
+      return new CidadeRequest(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<cidadeRequest> parser() {
+  public static com.google.protobuf.Parser<CidadeRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<cidadeRequest> getParserForType() {
+  public com.google.protobuf.Parser<CidadeRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.grpc.proto.cidadeRequest getDefaultInstanceForType() {
+  public com.grpc.proto.CidadeRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

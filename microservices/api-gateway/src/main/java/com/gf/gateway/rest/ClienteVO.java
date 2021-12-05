@@ -5,7 +5,6 @@ import com.grpc.proto.PessoaDTO;
 import lombok.Builder;
 import lombok.Data;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,21 +31,39 @@ public class ClienteVO {
     private Long cidade;
     private Long estado;
 
-
-    public static List<ClienteVO> toList(List<ClienteDTO> clientesList) {
-        List<ClienteVO> clienteVOS = new ArrayList<>();
-        clientesList.stream().forEach(c -> {
-            clienteVOS.add(toVO(c));
-        });
-        return clienteVOS;
+    public static ClienteVO toVO(ClienteDTO dto, PessoaDTO pessoaDto) {
+        return getClienteVO(dto, pessoaDto);
     }
 
-    public ClienteDTO buildProto() {
+    private static ClienteVO getClienteVO(ClienteDTO dto, PessoaDTO pessoaDto) {
+        return ClienteVO
+                .builder()
+                .id(dto.getId())
+                .idPessoa(pessoaDto.getId())
+                .nome(pessoaDto.getNome())
+                .dataCadastro(dto.getDataCadastro())
+                // .credito(dto.getCredito())
+                .limite(dto.getLimite())
+                .rg(pessoaDto.getRg())
+                .cidade(pessoaDto.getCidade())
+                .estado(pessoaDto.getEstado())
+                .complemento(pessoaDto.getComplemento())
+                .email(pessoaDto.getEmail())
+                .telefone(pessoaDto.getTelefone())
+                .cpf(pessoaDto.getCpf())
+                .bairro(pessoaDto.getBairro())
+                .numero(pessoaDto.getNumero())
+                .diaVencimento(dto.getDiaVencimento())
+                .logradouro(pessoaDto.getLogradouro())
+                .build();
+    }
+
+    public ClienteDTO buildNewProto() {
         return ClienteDTO.newBuilder()
-                .setId(id)
+                //.setId(id)
                 .setIdPessoa(idPessoa)
                 .setLimite(limite)
-                .setCredito(credito)
+               // .setCredito(credito)
                 .setDiaVencimento(diaVencimento)
                 .build();
     }
@@ -61,25 +78,16 @@ public class ClienteVO {
                 .setComplemento(complemento)
                 .setEmail(email)
                 .setNumero(numero)
-                .setEstado(estado)
                 .setCpf(cpf)
-                .setCidade(cidade)
                 .setRg(rg)
                 .setTelefone(telefone)
+                .setEstado(estado)
+                .setCidade(cidade)
                 .build();
     }
 
-    public static ClienteVO toVO(ClienteDTO dto) {
-        return ClienteVO
-                .builder()
-                .id(dto.getId())
-                .idPessoa(dto.getIdPessoa())
-                .nome(dto.getNomeCliente())
-                .dataCadastro(dto.getDataCadastro())
-                .limite(dto.getLimite())
-                .credito(dto.getCredito())
-                .diaVencimento(dto.getDiaVencimento())
-                .build();
+    public static ClienteVO toNewVO(ClienteDTO dto, PessoaDTO pessoaDto) {
+        return getClienteVO(dto, pessoaDto);
     }
 
 }

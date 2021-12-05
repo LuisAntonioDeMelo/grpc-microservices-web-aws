@@ -2,6 +2,7 @@ package com.authentication.service.controller;
 
 import com.authentication.service.model.Usuario;
 import com.authentication.service.model.dto.UsuarioDTO;
+import com.authentication.service.model.dto.UsuarioRestDTO;
 import com.authentication.service.repository.Usuarios;
 import com.authentication.service.services.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,8 +34,8 @@ public class UserController {
 
     //login ..... melhor para auth gateway dps
     @PostMapping("/auth")
-    public ResponseEntity<Usuario> logar(@RequestBody UsuarioDTO dto) {
-        Usuario usuario = service.logar(dto);
+    public ResponseEntity<UsuarioRestDTO> logar(@RequestBody UsuarioDTO dto) {
+        UsuarioRestDTO usuario = service.logar(dto);
         return usuario != null ? ResponseEntity.ok(usuario) : ResponseEntity.notFound().build();
     }
 

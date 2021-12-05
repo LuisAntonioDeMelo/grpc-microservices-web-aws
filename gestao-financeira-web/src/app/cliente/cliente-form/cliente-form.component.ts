@@ -1,3 +1,5 @@
+import { EstadoService } from './../../services/estado.service';
+import { CidadeService } from './../../services/cidade.service';
 import { ClienteService } from './../../services/cliente.service';
 import { Component, OnInit } from '@angular/core'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
@@ -11,8 +13,8 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./cliente-form.component.css'],
 })
 export class ClienteFormComponent implements OnInit {
-  cidades: [];
-  estados: [];
+  cidades = [];
+  estados = [];
   dias = [
     5,
     10,
@@ -44,12 +46,21 @@ export class ClienteFormComponent implements OnInit {
     private router: Router,
     private fb: FormBuilder,
     private clienteService: ClienteService,
-    private auth: AuthService
+    private auth: AuthService,
+    private cidadeService:CidadeService,
+    private estadoService: EstadoService
   ) {}
 
   ngOnInit(): void {
-    this.clienteForm.get('id').setValue(this.auth.currentUserValue.id);
+    this.clienteForm.get('idPessoa').setValue(this.auth.currentUserValue.idPessoa);
     this.clienteForm.get('nome').setValue(this.auth.currentUserValue.nome);
+    this.cidadeService.get().subscribe(res => {
+      console.log(res)
+      this.cidades = res;
+    })
+    this.estadoService.get().subscribe(res => {
+      this.estados = res;
+    })
   }
 
   public limpar() {

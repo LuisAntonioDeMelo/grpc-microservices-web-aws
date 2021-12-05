@@ -3,6 +3,7 @@ package com.authentication.service.services;
 import com.authentication.service.model.Pessoa;
 import com.authentication.service.model.Usuario;
 import com.authentication.service.model.dto.UsuarioDTO;
+import com.authentication.service.model.dto.UsuarioRestDTO;
 import com.authentication.service.repository.Pessoas;
 import com.authentication.service.repository.Usuarios;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UsuarioService {
+
     @Autowired
     private Usuarios usuarios;
 
@@ -30,14 +32,14 @@ public class UsuarioService {
         return usuarioSaved;
     }
 
-    public Usuario logar(UsuarioDTO dto) {
-        Usuario usuario = usuarios.findByLogin(dto.getUsername());
-        if(usuario != null){
+    public UsuarioRestDTO logar(UsuarioDTO dto) {
+        UsuarioRestDTO usuarioRestDTO = usuarios.obterUser(dto.getUsername());
+        if(usuarioRestDTO != null){
 
             BCryptPasswordEncoder cryptPasswordEncoder = new BCryptPasswordEncoder();
-            if (cryptPasswordEncoder.matches(dto.getPassword(),usuario.getSenha())) {
+            if (cryptPasswordEncoder.matches(dto.getPassword(),usuarioRestDTO.getSenha())) {
 //            userDetailsService.loadUserByUsername(dto.getUsername());
-                return usuario;
+                return usuarioRestDTO;
             }
         }
         return null;

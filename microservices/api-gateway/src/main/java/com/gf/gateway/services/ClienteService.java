@@ -2,7 +2,6 @@ package com.gf.gateway.services;
 
 import com.gf.gateway.rest.ClienteVO;
 import com.grpc.proto.*;
-import com.netflix.discovery.converters.Auto;
 import net.devh.boot.grpc.client.inject.GrpcClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,32 +9,33 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ClienteService extends ClienteServiceGrpc.ClienteServiceImplBase {
+public class ClienteService {
 
     @GrpcClient("corporative-service")
     private ClienteServiceGrpc.ClienteServiceBlockingStub clienteServiceBlockingStub;
 
+    @GrpcClient("corporative-service")
+    private PessoaServiceGrpc.PessoaServiceBlockingStub pessoaServiceBlockingStub;
+
+
     @Autowired
     private PessoaService pessoaService;
 
-    public ClienteVO obterPorCodigo(Long codigo){
-        ClienteRequest request =  ClienteRequest.newBuilder().setCodigo(codigo).build();
-        ClienteResponse response =  clienteServiceBlockingStub.obterPorId(request);
-        ClienteDTO dto  = response.getCliente();
-        return ClienteVO.toVO(dto);
+    public ClienteVO obterPorCodigo(Long codigo) {
+        ClienteRequest request = ClienteRequest.newBuilder().setCodigo(codigo).build();
+        ClienteResponse response = clienteServiceBlockingStub.obterPorId(request);
+        PessoaResponse pessoaResponse =
+                pessoaServiceBlockingStub.obterPorId(
+                    PessoaRequest.newBuilder().setCodigo(response.getCliente().getIdPessoa())
+                .build());
+        return ClienteVO.toVO(response.getCliente(), pessoaResponse.getPessoa());
     }
 
-
-    public List<ClienteVO> obterClientes() {
-        ClientesResponse response = clienteServiceBlockingStub.obterClientes(emptyCliente.newBuilder().build());
-        return ClienteVO.toList(response.getClientesList());
-    }
-
-    public ClienteVO salvarCliente(ClienteVO clienteVO){
-        PessoaDTO  pessoaDTO = pessoaService.enviarClientePessoa(clienteVO);
+    public ClienteVO salvarCliente(ClienteVO clienteVO) {
+        PessoaDTO pessoaDTO = pessoaService.enviarClientePessoa(clienteVO);
         clienteVO.setIdPessoa(pessoaDTO.getId());
-        ClienteResponse clienteResponse = clienteServiceBlockingStub.salvarCliente(clienteVO.buildProto());
-        return ClienteVO.toVO(clienteResponse.getCliente());
+        ClienteResponse clienteResponse = clienteServiceBlockingStub.salvarCliente(clienteVO.buildNewProto());
+        return ClienteVO.toNewVO(clienteResponse.getCliente(), pessoaDTO);
     }
 
 

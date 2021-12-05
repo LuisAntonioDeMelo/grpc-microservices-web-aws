@@ -13,7 +13,6 @@ import io.grpc.StatusRuntimeException;
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
 import org.springframework.beans.factory.annotation.Autowired;
-import utils.Utils;
 
 import java.util.Optional;
 
@@ -30,7 +29,13 @@ public class ClienteService extends ClienteServiceGrpc.ClienteServiceImplBase {
     public void obterPorId(ClienteRequest request, StreamObserver<ClienteResponse> responseObserver) {
         Optional<Cliente> cliente = clienteRepository.obterPorId(request.getCodigo());
         if (cliente.isPresent()) {
-            ClienteDTO dto = getBuild(cliente.get());
+            ClienteDTO dto = ClienteDTO.newBuilder()
+                    .setId(cliente.get().getId())
+                    .setLimite(cliente.get().getLimite())
+                    .setDataCadastro(cliente.get().getDataCadastro().toString())
+                    .setDiaVencimento(cliente.get().getDiaVencimento())
+                    .setIdPessoa(cliente.get().getPessoa().getId())
+                    .build();
             responseObserver.onNext(ClienteResponse.newBuilder().setCliente(dto).build());
         }
         responseObserver.onCompleted();
@@ -62,12 +67,9 @@ public class ClienteService extends ClienteServiceGrpc.ClienteServiceImplBase {
     private ClienteDTO getBuild(Cliente cliente) {
         return ClienteDTO.newBuilder()
                 .setId(cliente.getId())
-                .setIdPessoa(cliente.getPessoa().getId())
-                 .setNomeCliente(cliente.getPessoa().getNome())
                 .setLimite(cliente.getLimite())
                 .setDataCadastro(cliente.getDataCadastro().toString())
                 .setDiaVencimento(cliente.getDiaVencimento())
-                .setCredito(cliente.getCredito())
                 .build();
     }
 }

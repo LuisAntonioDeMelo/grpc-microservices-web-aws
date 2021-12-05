@@ -20,15 +20,15 @@ public final class Cidade {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cidadeDTO_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_cidadeRequest_descriptor;
+    internal_static_CidadeRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_cidadeRequest_fieldAccessorTable;
+      internal_static_CidadeRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_cidadeResponse_descriptor;
+    internal_static_CidadesResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_cidadeResponse_fieldAccessorTable;
+      internal_static_CidadesResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_emptyCidade_descriptor;
   static final 
@@ -43,12 +43,13 @@ public final class Cidade {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\014cidade.proto\"*\n\tcidadeDTO\022\n\n\002id\030\001 \001(\003\022" +
-      "\021\n\tdescricao\030\002 \001(\t\"\032\n\rcidadeRequest\022\t\n\001a" +
-      "\030\001 \001(\003\"-\n\016cidadeResponse\022\033\n\007cidades\030\001 \003(" +
-      "\0132\n.cidadeDTO\"\r\n\013emptyCidade29\n\rCidadeSe" +
-      "rvice\022(\n\014obterCidades\022\014.emptyCidade\032\n.ci" +
-      "dadeDTOB\022\n\016com.grpc.protoP\001b\006proto3"
+      "\n\014cidade.proto\")\n\tcidadeDTO\022\016\n\006codigo\030\001 " +
+      "\001(\003\022\014\n\004nome\030\002 \001(\t\"\032\n\rCidadeRequest\022\t\n\001a\030" +
+      "\001 \001(\003\".\n\017CidadesResponse\022\033\n\007cidades\030\001 \003(" +
+      "\0132\n.cidadeDTO\"\r\n\013emptyCidade2?\n\rCidadeSe" +
+      "rvice\022.\n\014obterCidades\022\014.emptyCidade\032\020.Ci" +
+      "dadesResponseB\022\n\016com.grpc.protoP\001b\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -67,18 +68,18 @@ public final class Cidade {
     internal_static_cidadeDTO_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cidadeDTO_descriptor,
-        new java.lang.String[] { "Id", "Descricao", });
-    internal_static_cidadeRequest_descriptor =
+        new java.lang.String[] { "Codigo", "Nome", });
+    internal_static_CidadeRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_cidadeRequest_fieldAccessorTable = new
+    internal_static_CidadeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_cidadeRequest_descriptor,
+        internal_static_CidadeRequest_descriptor,
         new java.lang.String[] { "A", });
-    internal_static_cidadeResponse_descriptor =
+    internal_static_CidadesResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_cidadeResponse_fieldAccessorTable = new
+    internal_static_CidadesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_cidadeResponse_descriptor,
+        internal_static_CidadesResponse_descriptor,
         new java.lang.String[] { "Cidades", });
     internal_static_emptyCidade_descriptor =
       getDescriptor().getMessageTypes().get(3);

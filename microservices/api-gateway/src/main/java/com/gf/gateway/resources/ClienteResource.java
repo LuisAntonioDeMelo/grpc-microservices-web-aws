@@ -16,11 +16,6 @@ public class ClienteResource {
     @Autowired
     private ClienteService clienteService;
 
-    @GetMapping
-    public List<ClienteVO> findAll(){
-        return clienteService.obterClientes();
-    }
-
     @GetMapping(value = "/{codigo}")
     public ClienteVO obterPorCodigo(@PathVariable Long codigo) {
         return clienteService.obterPorCodigo(codigo);
@@ -33,4 +28,6 @@ public class ClienteResource {
         ClienteVO clienteVO = clienteService.salvarCliente(cliente);
         return ResponseEntity.status(HttpStatus.CREATED).body(clienteVO);
     }
+
+
 }

@@ -65,89 +65,79 @@
         </mat-form-field>
       </div>
     </div>
-    <div style="margin-top:20px;" flexLayout="flex" >
-      <h3 fxFlex="70" >Endereço</h3>
+    <div style="margin-top: 20px;" flexLayout="flex">
+      <h3 fxFlex="70">Endereço</h3>
     </div>
-    <hr>
+    <hr />
     <div flexLayout="flex">
-      <br>
+      <br />
       <div fxFlex="70">
         <h4>Logradouro</h4>
         <mat-form-field appearance="fill">
           <mat-label>Logradouro</mat-label>
-          <input
-            id="observacao"
-            matInput
-            formControlName="logradouro"
-          >
+          <input id="observacao" matInput formControlName="logradouro" />
         </mat-form-field>
       </div>
       <div fxFlex="30">
         <h4>Número</h4>
         <mat-form-field appearance="fill">
           <mat-label>Número</mat-label>
-          <input
-            id="observacao"
-            matInput
-            formControlName="numero"
-          >
+          <input id="observacao" matInput formControlName="numero" />
         </mat-form-field>
       </div>
       <div flexLayout="flex">
-        <div fxFlex="50">
-          <h4>Cidade</h4>
-          <mat-form-field appearance="fill">
-            <mat-label>Cidade</mat-label>
-            <mat-select id="categoria" formControlName="cidade">
-              <mat-option value="">---</mat-option>
-              <mat-option *ngFor="let cidade of cidades" [value]="cidade">
-                {{ cidade.nome }}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-        </div>
         <div fxFlex="50">
           <h4>Estado</h4>
           <mat-form-field appearance="fill">
             <mat-label>Estado</mat-label>
             <mat-select id="cliente" formControlName="estado">
               <mat-option value="">---</mat-option>
-              <mat-option *ngFor="let estado of estados" [value]="estado">
+              <mat-option
+                *ngFor="let estado of estados"
+                [value]="estado.codigo"
+              >
                 {{ estado.nome }}
               </mat-option>
             </mat-select>
           </mat-form-field>
         </div>
+        <div fxFlex="50">
+          <h4>Cidade</h4>
+          <mat-form-field appearance="fill">
+            <mat-label>Cidade</mat-label>
+            <mat-select id="categoria" formControlName="cidade">
+              <mat-option value="">---</mat-option>
+              <mat-option
+                *ngFor="let cidade of cidades"
+                [value]="cidade.codigo"
+              >
+                {{ cidade.nome }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
       </div>
-      </div>
-      <div flexLayout="flex">
+    </div>
+    <div flexLayout="flex">
       <div fxFlex="70">
         <h4>Complemento</h4>
         <mat-form-field appearance="fill">
           <mat-label>Complemento</mat-label>
-          <input
-            id="complemento"
-            matInput
-            formControlName="complemento"
-          >
+          <input id="complemento" matInput formControlName="complemento" />
         </mat-form-field>
       </div>
       <div fxFlex="30">
         <h4>Bairro</h4>
         <mat-form-field appearance="fill">
           <mat-label>bairro</mat-label>
-          <input
-            id="observacao"
-            matInput
-            formControlName="bairro"
-          >
+          <input id="observacao" matInput formControlName="bairro" />
         </mat-form-field>
       </div>
       <div fxFlex="40">
         <h4>Cep</h4>
         <mat-form-field appearance="fill">
           <mat-label>cep</mat-label>
-          <input id="observacao" matInput formControlName="cep">
+          <input id="observacao" matInput formControlName="cep" />
         </mat-form-field>
       </div>
     </div>

@@ -64,8 +64,10 @@ export class RegisterComponent implements OnInit {
       login: this.f.username.value,
       nome: this.f.nome.value,
       senha: this.f.password.value,
+      email: this.f.email.value,
       ativo: true,
-      id: null
+      id: null,
+      idPessoa: null
     }
 
     this.loading = true

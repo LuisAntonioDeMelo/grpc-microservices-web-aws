@@ -8,17 +8,17 @@ public interface cidadeDTOOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 id = 1;</code>
+   * <code>int64 codigo = 1;</code>
    */
-  long getId();
+  long getCodigo();
 
   /**
-   * <code>string descricao = 2;</code>
+   * <code>string nome = 2;</code>
    */
-  java.lang.String getDescricao();
+  java.lang.String getNome();
   /**
-   * <code>string descricao = 2;</code>
+   * <code>string nome = 2;</code>
    */
   com.google.protobuf.ByteString
-      getDescricaoBytes();
+      getNomeBytes();
 }

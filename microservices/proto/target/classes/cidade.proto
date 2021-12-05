@@ -4,19 +4,19 @@ option java_multiple_files = true;
 option java_package = "com.grpc.proto";
 
 message cidadeDTO {
-  int64 id = 1;
-  string descricao = 2;
+  int64 codigo = 1;
+  string nome = 2;
 }
 
-message cidadeRequest {
+message CidadeRequest {
   int64 a = 1;
 }
-message cidadeResponse {
+message CidadesResponse {
   repeated cidadeDTO cidades = 1;
 }
 
 message emptyCidade {}
 
 service CidadeService {
-  rpc obterCidades(emptyCidade) returns (cidadeDTO);
+  rpc obterCidades(emptyCidade) returns (CidadesResponse);
 }

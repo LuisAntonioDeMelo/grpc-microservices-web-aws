@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.grpc.proto";
+
+
+message EstadoDTO {
+  int64 codigo = 1;
+  string nome = 2;
+}
+
+message EstadoRequest {
+  int64 a = 1;
+}
+message EstadosResponse {
+  repeated EstadoDTO estados = 1;
+}
+
+message emptyEstado {}
+
+service EstadoService {
+  rpc obterEstados(emptyEstado) returns (EstadosResponse);
+}

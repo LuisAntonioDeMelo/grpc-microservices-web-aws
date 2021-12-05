@@ -3,8 +3,8 @@
 
 package com.grpc.proto;
 
-public interface cidadeRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:cidadeRequest)
+public interface CidadeRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:CidadeRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**

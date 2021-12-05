@@ -16,8 +16,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private cidadeDTO() {
-    id_ = 0L;
-    descricao_ = "";
+    codigo_ = 0L;
+    nome_ = "";
   }
 
   @java.lang.Override
@@ -46,13 +46,13 @@ private static final long serialVersionUID = 0L;
             break;
           case 8: {
 
-            id_ = input.readInt64();
+            codigo_ = input.readInt64();
             break;
           }
           case 18: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            descricao_ = s;
+            nome_ = s;
             break;
           }
           default: {
@@ -87,43 +87,43 @@ private static final long serialVersionUID = 0L;
             com.grpc.proto.cidadeDTO.class, com.grpc.proto.cidadeDTO.Builder.class);
   }
 
-  public static final int ID_FIELD_NUMBER = 1;
-  private long id_;
+  public static final int CODIGO_FIELD_NUMBER = 1;
+  private long codigo_;
   /**
-   * <code>int64 id = 1;</code>
+   * <code>int64 codigo = 1;</code>
    */
-  public long getId() {
-    return id_;
+  public long getCodigo() {
+    return codigo_;
   }
 
-  public static final int DESCRICAO_FIELD_NUMBER = 2;
-  private volatile java.lang.Object descricao_;
+  public static final int NOME_FIELD_NUMBER = 2;
+  private volatile java.lang.Object nome_;
   /**
-   * <code>string descricao = 2;</code>
+   * <code>string nome = 2;</code>
    */
-  public java.lang.String getDescricao() {
-    java.lang.Object ref = descricao_;
+  public java.lang.String getNome() {
+    java.lang.Object ref = nome_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      descricao_ = s;
+      nome_ = s;
       return s;
     }
   }
   /**
-   * <code>string descricao = 2;</code>
+   * <code>string nome = 2;</code>
    */
   public com.google.protobuf.ByteString
-      getDescricaoBytes() {
-    java.lang.Object ref = descricao_;
+      getNomeBytes() {
+    java.lang.Object ref = nome_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      descricao_ = b;
+      nome_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -144,11 +144,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (id_ != 0L) {
-      output.writeInt64(1, id_);
+    if (codigo_ != 0L) {
+      output.writeInt64(1, codigo_);
     }
-    if (!getDescricaoBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, descricao_);
+    if (!getNomeBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nome_);
     }
     unknownFields.writeTo(output);
   }
@@ -159,12 +159,12 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (id_ != 0L) {
+    if (codigo_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, id_);
+        .computeInt64Size(1, codigo_);
     }
-    if (!getDescricaoBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, descricao_);
+    if (!getNomeBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nome_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -182,10 +182,10 @@ private static final long serialVersionUID = 0L;
     com.grpc.proto.cidadeDTO other = (com.grpc.proto.cidadeDTO) obj;
 
     boolean result = true;
-    result = result && (getId()
-        == other.getId());
-    result = result && getDescricao()
-        .equals(other.getDescricao());
+    result = result && (getCodigo()
+        == other.getCodigo());
+    result = result && getNome()
+        .equals(other.getNome());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -197,11 +197,11 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + ID_FIELD_NUMBER;
+    hash = (37 * hash) + CODIGO_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getId());
-    hash = (37 * hash) + DESCRICAO_FIELD_NUMBER;
-    hash = (53 * hash) + getDescricao().hashCode();
+        getCodigo());
+    hash = (37 * hash) + NOME_FIELD_NUMBER;
+    hash = (53 * hash) + getNome().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -335,9 +335,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      id_ = 0L;
+      codigo_ = 0L;
 
-      descricao_ = "";
+      nome_ = "";
 
       return this;
     }
@@ -365,8 +365,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.grpc.proto.cidadeDTO buildPartial() {
       com.grpc.proto.cidadeDTO result = new com.grpc.proto.cidadeDTO(this);
-      result.id_ = id_;
-      result.descricao_ = descricao_;
+      result.codigo_ = codigo_;
+      result.nome_ = nome_;
       onBuilt();
       return result;
     }
@@ -415,11 +415,11 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.grpc.proto.cidadeDTO other) {
       if (other == com.grpc.proto.cidadeDTO.getDefaultInstance()) return this;
-      if (other.getId() != 0L) {
-        setId(other.getId());
+      if (other.getCodigo() != 0L) {
+        setCodigo(other.getCodigo());
       }
-      if (!other.getDescricao().isEmpty()) {
-        descricao_ = other.descricao_;
+      if (!other.getNome().isEmpty()) {
+        nome_ = other.nome_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -451,97 +451,97 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private long id_ ;
+    private long codigo_ ;
     /**
-     * <code>int64 id = 1;</code>
+     * <code>int64 codigo = 1;</code>
      */
-    public long getId() {
-      return id_;
+    public long getCodigo() {
+      return codigo_;
     }
     /**
-     * <code>int64 id = 1;</code>
+     * <code>int64 codigo = 1;</code>
      */
-    public Builder setId(long value) {
+    public Builder setCodigo(long value) {
       
-      id_ = value;
+      codigo_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>int64 id = 1;</code>
+     * <code>int64 codigo = 1;</code>
      */
-    public Builder clearId() {
+    public Builder clearCodigo() {
       
-      id_ = 0L;
+      codigo_ = 0L;
       onChanged();
       return this;
     }
 
-    private java.lang.Object descricao_ = "";
+    private java.lang.Object nome_ = "";
     /**
-     * <code>string descricao = 2;</code>
+     * <code>string nome = 2;</code>
      */
-    public java.lang.String getDescricao() {
-      java.lang.Object ref = descricao_;
+    public java.lang.String getNome() {
+      java.lang.Object ref = nome_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        descricao_ = s;
+        nome_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string descricao = 2;</code>
+     * <code>string nome = 2;</code>
      */
     public com.google.protobuf.ByteString
-        getDescricaoBytes() {
-      java.lang.Object ref = descricao_;
+        getNomeBytes() {
+      java.lang.Object ref = nome_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        descricao_ = b;
+        nome_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string descricao = 2;</code>
+     * <code>string nome = 2;</code>
      */
-    public Builder setDescricao(
+    public Builder setNome(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      descricao_ = value;
+      nome_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>string descricao = 2;</code>
+     * <code>string nome = 2;</code>
      */
-    public Builder clearDescricao() {
+    public Builder clearNome() {
       
-      descricao_ = getDefaultInstance().getDescricao();
+      nome_ = getDefaultInstance().getNome();
       onChanged();
       return this;
     }
     /**
-     * <code>string descricao = 2;</code>
+     * <code>string nome = 2;</code>
      */
-    public Builder setDescricaoBytes(
+    public Builder setNomeBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      descricao_ = value;
+      nome_ = value;
       onChanged();
       return this;
     }

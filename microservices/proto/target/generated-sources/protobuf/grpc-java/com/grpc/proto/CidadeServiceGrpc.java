@@ -28,21 +28,21 @@ public final class CidadeServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.grpc.proto.emptyCidade,
-      com.grpc.proto.cidadeDTO> getObterCidadesMethod;
+      com.grpc.proto.CidadesResponse> getObterCidadesMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "obterCidades",
       requestType = com.grpc.proto.emptyCidade.class,
-      responseType = com.grpc.proto.cidadeDTO.class,
+      responseType = com.grpc.proto.CidadesResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.grpc.proto.emptyCidade,
-      com.grpc.proto.cidadeDTO> getObterCidadesMethod() {
-    io.grpc.MethodDescriptor<com.grpc.proto.emptyCidade, com.grpc.proto.cidadeDTO> getObterCidadesMethod;
+      com.grpc.proto.CidadesResponse> getObterCidadesMethod() {
+    io.grpc.MethodDescriptor<com.grpc.proto.emptyCidade, com.grpc.proto.CidadesResponse> getObterCidadesMethod;
     if ((getObterCidadesMethod = CidadeServiceGrpc.getObterCidadesMethod) == null) {
       synchronized (CidadeServiceGrpc.class) {
         if ((getObterCidadesMethod = CidadeServiceGrpc.getObterCidadesMethod) == null) {
           CidadeServiceGrpc.getObterCidadesMethod = getObterCidadesMethod = 
-              io.grpc.MethodDescriptor.<com.grpc.proto.emptyCidade, com.grpc.proto.cidadeDTO>newBuilder()
+              io.grpc.MethodDescriptor.<com.grpc.proto.emptyCidade, com.grpc.proto.CidadesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "CidadeService", "obterCidades"))
@@ -50,7 +50,7 @@ public final class CidadeServiceGrpc {
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.grpc.proto.emptyCidade.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.grpc.proto.cidadeDTO.getDefaultInstance()))
+                  com.grpc.proto.CidadesResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new CidadeServiceMethodDescriptorSupplier("obterCidades"))
                   .build();
           }
@@ -89,7 +89,7 @@ public final class CidadeServiceGrpc {
     /**
      */
     public void obterCidades(com.grpc.proto.emptyCidade request,
-        io.grpc.stub.StreamObserver<com.grpc.proto.cidadeDTO> responseObserver) {
+        io.grpc.stub.StreamObserver<com.grpc.proto.CidadesResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getObterCidadesMethod(), responseObserver);
     }
 
@@ -100,7 +100,7 @@ public final class CidadeServiceGrpc {
             asyncUnaryCall(
               new MethodHandlers<
                 com.grpc.proto.emptyCidade,
-                com.grpc.proto.cidadeDTO>(
+                com.grpc.proto.CidadesResponse>(
                   this, METHODID_OBTER_CIDADES)))
           .build();
     }
@@ -127,7 +127,7 @@ public final class CidadeServiceGrpc {
     /**
      */
     public void obterCidades(com.grpc.proto.emptyCidade request,
-        io.grpc.stub.StreamObserver<com.grpc.proto.cidadeDTO> responseObserver) {
+        io.grpc.stub.StreamObserver<com.grpc.proto.CidadesResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getObterCidadesMethod(), getCallOptions()), request, responseObserver);
     }
@@ -153,7 +153,7 @@ public final class CidadeServiceGrpc {
 
     /**
      */
-    public com.grpc.proto.cidadeDTO obterCidades(com.grpc.proto.emptyCidade request) {
+    public com.grpc.proto.CidadesResponse obterCidades(com.grpc.proto.emptyCidade request) {
       return blockingUnaryCall(
           getChannel(), getObterCidadesMethod(), getCallOptions(), request);
     }
@@ -179,7 +179,7 @@ public final class CidadeServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.grpc.proto.cidadeDTO> obterCidades(
+    public com.google.common.util.concurrent.ListenableFuture<com.grpc.proto.CidadesResponse> obterCidades(
         com.grpc.proto.emptyCidade request) {
       return futureUnaryCall(
           getChannel().newCall(getObterCidadesMethod(), getCallOptions()), request);
@@ -207,7 +207,7 @@ public final class CidadeServiceGrpc {
       switch (methodId) {
         case METHODID_OBTER_CIDADES:
           serviceImpl.obterCidades((com.grpc.proto.emptyCidade) request,
-              (io.grpc.stub.StreamObserver<com.grpc.proto.cidadeDTO>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.grpc.proto.CidadesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
