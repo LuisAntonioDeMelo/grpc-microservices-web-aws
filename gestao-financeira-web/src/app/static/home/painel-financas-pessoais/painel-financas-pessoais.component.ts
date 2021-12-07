@@ -11,7 +11,7 @@ export class PainelFinancasPessoaisComponent implements OnInit {
   constructor(public route: ActivatedRoute) {}
   items = [
     { nome: 'Lançamentos', link: '/home/painel-financas-pessoais/lancamentos' },
-    { nome: 'Orçamentos', link: '/home/painel-financas-pessoais/painel-gestao' },
+    // { nome: 'Orçamentos', link: '/home/painel-financas-pessoais/painel-gestao' },
     {
       nome: 'Extrato de Gastos',
       link: 'painel-financas-pessoais/painel-investimentos',

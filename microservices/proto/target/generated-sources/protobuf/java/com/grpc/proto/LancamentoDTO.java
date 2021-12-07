@@ -17,14 +17,14 @@ private static final long serialVersionUID = 0L;
   }
   private LancamentoDTO() {
     codigo_ = 0L;
-    clienteId_ = 0L;
+    idCliente_ = 0L;
     descricao_ = "";
     dataPagamento_ = "";
     dataVencimento_ = "";
     valor_ = 0D;
     observacao_ = "";
     tipo_ = 0;
-    nomeCategoria_ = "";
+    idCategoria_ = 0L;
     nomeCliente_ = "";
   }
 
@@ -59,7 +59,7 @@ private static final long serialVersionUID = 0L;
           }
           case 16: {
 
-            clienteId_ = input.readInt64();
+            idCliente_ = input.readInt64();
             break;
           }
           case 26: {
@@ -97,10 +97,9 @@ private static final long serialVersionUID = 0L;
             tipo_ = rawValue;
             break;
           }
-          case 74: {
-            java.lang.String s = input.readStringRequireUtf8();
+          case 72: {
 
-            nomeCategoria_ = s;
+            idCategoria_ = input.readInt64();
             break;
           }
           case 82: {
@@ -150,13 +149,13 @@ private static final long serialVersionUID = 0L;
     return codigo_;
   }
 
-  public static final int CLIENTEID_FIELD_NUMBER = 2;
-  private long clienteId_;
+  public static final int IDCLIENTE_FIELD_NUMBER = 2;
+  private long idCliente_;
   /**
-   * <code>int64 clienteId = 2;</code>
+   * <code>int64 idCliente = 2;</code>
    */
-  public long getClienteId() {
-    return clienteId_;
+  public long getIdCliente() {
+    return idCliente_;
   }
 
   public static final int DESCRICAO_FIELD_NUMBER = 3;
@@ -321,38 +320,13 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.grpc.proto.TipoLancamento.UNRECOGNIZED : result;
   }
 
-  public static final int NOMECATEGORIA_FIELD_NUMBER = 9;
-  private volatile java.lang.Object nomeCategoria_;
+  public static final int IDCATEGORIA_FIELD_NUMBER = 9;
+  private long idCategoria_;
   /**
-   * <code>string nomeCategoria = 9;</code>
+   * <code>int64 idCategoria = 9;</code>
    */
-  public java.lang.String getNomeCategoria() {
-    java.lang.Object ref = nomeCategoria_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      nomeCategoria_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string nomeCategoria = 9;</code>
-   */
-  public com.google.protobuf.ByteString
-      getNomeCategoriaBytes() {
-    java.lang.Object ref = nomeCategoria_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      nomeCategoria_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public long getIdCategoria() {
+    return idCategoria_;
   }
 
   public static final int NOMECLIENTE_FIELD_NUMBER = 10;
@@ -406,8 +380,8 @@ private static final long serialVersionUID = 0L;
     if (codigo_ != 0L) {
       output.writeInt64(1, codigo_);
     }
-    if (clienteId_ != 0L) {
-      output.writeInt64(2, clienteId_);
+    if (idCliente_ != 0L) {
+      output.writeInt64(2, idCliente_);
     }
     if (!getDescricaoBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, descricao_);
@@ -427,8 +401,8 @@ private static final long serialVersionUID = 0L;
     if (tipo_ != com.grpc.proto.TipoLancamento.DEFAULT.getNumber()) {
       output.writeEnum(8, tipo_);
     }
-    if (!getNomeCategoriaBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, nomeCategoria_);
+    if (idCategoria_ != 0L) {
+      output.writeInt64(9, idCategoria_);
     }
     if (!getNomeClienteBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 10, nomeCliente_);
@@ -446,9 +420,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, codigo_);
     }
-    if (clienteId_ != 0L) {
+    if (idCliente_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(2, clienteId_);
+        .computeInt64Size(2, idCliente_);
     }
     if (!getDescricaoBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, descricao_);
@@ -470,8 +444,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(8, tipo_);
     }
-    if (!getNomeCategoriaBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, nomeCategoria_);
+    if (idCategoria_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(9, idCategoria_);
     }
     if (!getNomeClienteBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, nomeCliente_);
@@ -494,8 +469,8 @@ private static final long serialVersionUID = 0L;
     boolean result = true;
     result = result && (getCodigo()
         == other.getCodigo());
-    result = result && (getClienteId()
-        == other.getClienteId());
+    result = result && (getIdCliente()
+        == other.getIdCliente());
     result = result && getDescricao()
         .equals(other.getDescricao());
     result = result && getDataPagamento()
@@ -509,8 +484,8 @@ private static final long serialVersionUID = 0L;
     result = result && getObservacao()
         .equals(other.getObservacao());
     result = result && tipo_ == other.tipo_;
-    result = result && getNomeCategoria()
-        .equals(other.getNomeCategoria());
+    result = result && (getIdCategoria()
+        == other.getIdCategoria());
     result = result && getNomeCliente()
         .equals(other.getNomeCliente());
     result = result && unknownFields.equals(other.unknownFields);
@@ -527,9 +502,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + CODIGO_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getCodigo());
-    hash = (37 * hash) + CLIENTEID_FIELD_NUMBER;
+    hash = (37 * hash) + IDCLIENTE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getClienteId());
+        getIdCliente());
     hash = (37 * hash) + DESCRICAO_FIELD_NUMBER;
     hash = (53 * hash) + getDescricao().hashCode();
     hash = (37 * hash) + DATAPAGAMENTO_FIELD_NUMBER;
@@ -543,8 +518,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getObservacao().hashCode();
     hash = (37 * hash) + TIPO_FIELD_NUMBER;
     hash = (53 * hash) + tipo_;
-    hash = (37 * hash) + NOMECATEGORIA_FIELD_NUMBER;
-    hash = (53 * hash) + getNomeCategoria().hashCode();
+    hash = (37 * hash) + IDCATEGORIA_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getIdCategoria());
     hash = (37 * hash) + NOMECLIENTE_FIELD_NUMBER;
     hash = (53 * hash) + getNomeCliente().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
@@ -682,7 +658,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       codigo_ = 0L;
 
-      clienteId_ = 0L;
+      idCliente_ = 0L;
 
       descricao_ = "";
 
@@ -696,7 +672,7 @@ private static final long serialVersionUID = 0L;
 
       tipo_ = 0;
 
-      nomeCategoria_ = "";
+      idCategoria_ = 0L;
 
       nomeCliente_ = "";
 
@@ -727,14 +703,14 @@ private static final long serialVersionUID = 0L;
     public com.grpc.proto.LancamentoDTO buildPartial() {
       com.grpc.proto.LancamentoDTO result = new com.grpc.proto.LancamentoDTO(this);
       result.codigo_ = codigo_;
-      result.clienteId_ = clienteId_;
+      result.idCliente_ = idCliente_;
       result.descricao_ = descricao_;
       result.dataPagamento_ = dataPagamento_;
       result.dataVencimento_ = dataVencimento_;
       result.valor_ = valor_;
       result.observacao_ = observacao_;
       result.tipo_ = tipo_;
-      result.nomeCategoria_ = nomeCategoria_;
+      result.idCategoria_ = idCategoria_;
       result.nomeCliente_ = nomeCliente_;
       onBuilt();
       return result;
@@ -787,8 +763,8 @@ private static final long serialVersionUID = 0L;
       if (other.getCodigo() != 0L) {
         setCodigo(other.getCodigo());
       }
-      if (other.getClienteId() != 0L) {
-        setClienteId(other.getClienteId());
+      if (other.getIdCliente() != 0L) {
+        setIdCliente(other.getIdCliente());
       }
       if (!other.getDescricao().isEmpty()) {
         descricao_ = other.descricao_;
@@ -812,9 +788,8 @@ private static final long serialVersionUID = 0L;
       if (other.tipo_ != 0) {
         setTipoValue(other.getTipoValue());
       }
-      if (!other.getNomeCategoria().isEmpty()) {
-        nomeCategoria_ = other.nomeCategoria_;
-        onChanged();
+      if (other.getIdCategoria() != 0L) {
+        setIdCategoria(other.getIdCategoria());
       }
       if (!other.getNomeCliente().isEmpty()) {
         nomeCliente_ = other.nomeCliente_;
@@ -875,28 +850,28 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private long clienteId_ ;
+    private long idCliente_ ;
     /**
-     * <code>int64 clienteId = 2;</code>
+     * <code>int64 idCliente = 2;</code>
      */
-    public long getClienteId() {
-      return clienteId_;
+    public long getIdCliente() {
+      return idCliente_;
     }
     /**
-     * <code>int64 clienteId = 2;</code>
+     * <code>int64 idCliente = 2;</code>
      */
-    public Builder setClienteId(long value) {
+    public Builder setIdCliente(long value) {
       
-      clienteId_ = value;
+      idCliente_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>int64 clienteId = 2;</code>
+     * <code>int64 idCliente = 2;</code>
      */
-    public Builder clearClienteId() {
+    public Builder clearIdCliente() {
       
-      clienteId_ = 0L;
+      idCliente_ = 0L;
       onChanged();
       return this;
     }
@@ -1248,71 +1223,28 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object nomeCategoria_ = "";
+    private long idCategoria_ ;
     /**
-     * <code>string nomeCategoria = 9;</code>
+     * <code>int64 idCategoria = 9;</code>
      */
-    public java.lang.String getNomeCategoria() {
-      java.lang.Object ref = nomeCategoria_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        nomeCategoria_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+    public long getIdCategoria() {
+      return idCategoria_;
     }
     /**
-     * <code>string nomeCategoria = 9;</code>
+     * <code>int64 idCategoria = 9;</code>
      */
-    public com.google.protobuf.ByteString
-        getNomeCategoriaBytes() {
-      java.lang.Object ref = nomeCategoria_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        nomeCategoria_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string nomeCategoria = 9;</code>
-     */
-    public Builder setNomeCategoria(
-        java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      nomeCategoria_ = value;
+    public Builder setIdCategoria(long value) {
+      
+      idCategoria_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>string nomeCategoria = 9;</code>
+     * <code>int64 idCategoria = 9;</code>
      */
-    public Builder clearNomeCategoria() {
+    public Builder clearIdCategoria() {
       
-      nomeCategoria_ = getDefaultInstance().getNomeCategoria();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string nomeCategoria = 9;</code>
-     */
-    public Builder setNomeCategoriaBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
-      nomeCategoria_ = value;
+      idCategoria_ = 0L;
       onChanged();
       return this;
     }

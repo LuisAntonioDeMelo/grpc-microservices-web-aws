@@ -17,8 +17,8 @@ public class LancamentoVO {
     private String descricao;
     private String dataPagamento;
     private String dataVencimento;
-    private Long clienteId;
-    private Long categoriaId;
+    private Long idCliente;
+    private Long idCategoria;
     private Double valor;
     private String observacao;
     private int tipo;
@@ -26,8 +26,9 @@ public class LancamentoVO {
 
     public LancamentoDTO buildProto() {
         return LancamentoDTO.newBuilder()
-                .setClienteId(this.getClienteId())
+                .setIdCliente(this.getIdCliente())
                 .setObservacao(this.getObservacao())
+                .setIdCategoria(this.idCategoria)
                 .setDescricao(this.getDescricao())
                 .setValor(this.getValor())
                 .setDataPagamento(this.getDataPagamento())
@@ -42,7 +43,8 @@ public class LancamentoVO {
                 .descricao(dto.getDescricao())
                 .observacao(dto.getObservacao())
                 .valor(dto.getValor())
-                .clienteId(dto.getClienteId())
+                .idCliente(dto.getIdCliente())
+                .idCategoria(dto.getIdCategoria())
                 .dataPagamento(dto.getDataPagamento())
                 .tipo(dto.getTipo().getNumber())
                 .build();

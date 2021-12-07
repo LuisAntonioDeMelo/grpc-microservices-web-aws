@@ -38,8 +38,7 @@ export class HomeComponent implements OnInit {
     ]},
     {icon:'request_quote',nome:'Investimentos', link: '/home/painel-investimentos',
       submenu: [
-        {titulo: 'Produtos '},
-        {titulo: 'Vendas'}
+        {titulo: 'Ativos Financeiros '},
       ]
     }
   ]

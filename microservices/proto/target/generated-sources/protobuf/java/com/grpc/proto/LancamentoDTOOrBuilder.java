@@ -13,9 +13,9 @@ public interface LancamentoDTOOrBuilder extends
   long getCodigo();
 
   /**
-   * <code>int64 clienteId = 2;</code>
+   * <code>int64 idCliente = 2;</code>
    */
-  long getClienteId();
+  long getIdCliente();
 
   /**
    * <code>string descricao = 3;</code>
@@ -72,14 +72,9 @@ public interface LancamentoDTOOrBuilder extends
   com.grpc.proto.TipoLancamento getTipo();
 
   /**
-   * <code>string nomeCategoria = 9;</code>
+   * <code>int64 idCategoria = 9;</code>
    */
-  java.lang.String getNomeCategoria();
-  /**
-   * <code>string nomeCategoria = 9;</code>
-   */
-  com.google.protobuf.ByteString
-      getNomeCategoriaBytes();
+  long getIdCategoria();
 
   /**
    * <code>string nomeCliente = 10;</code>

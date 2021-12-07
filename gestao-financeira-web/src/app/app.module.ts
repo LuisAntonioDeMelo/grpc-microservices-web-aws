@@ -17,7 +17,6 @@ import { DepartamentoComponent } from './departamento/departamento.component';
 import { ClienteComponent } from './cliente/cliente.component';
 import { FornecedorComponent } from './fornecedor/fornecedor.component';
 import { FuncionarioComponent } from './funcionario/funcionario.component';
-import { ContasComponent } from './contas/contas.component';
 import { PainelFinancasPessoaisComponent } from './static/home/painel-financas-pessoais/painel-financas-pessoais.component';
 import { PainelInvestimentosComponent } from './static/home/painel-investimentos/painel-investimentos.component';
 import { PainelGestaoComponent } from './static/home/painel-gestao/painel-gestao.component';
@@ -41,6 +40,12 @@ import { LoginComponent } from './static/login/login.component';
 import { RegisterComponent } from './static/register/register.component';
 import { ErrorInterceptor } from './helpers/error.interceptor';
 import { DadosUsuarioComponent } from './static/home/dados-usuario/dados-usuario.component';
+import { ContaClienteComponent } from './conta-cliente/conta-cliente.component';
+import { ContaClienteFormComponent } from './conta-cliente/conta-cliente-form/conta-cliente-form.component';
+import { ContaClienteDadosComponent } from './conta-cliente/conta-cliente-dados/conta-cliente-dados.component';
+import { AtivosFinanceirosComponent } from './ativos-financeiros/ativos-financeiros.component';
+import { RedimentosComponent } from './ativos-financeiros/redimentos/redimentos.component';
+import { AtivosComponent } from './ativos-financeiros/ativos/ativos.component';
 
 
 @NgModule({
@@ -54,7 +59,6 @@ import { DadosUsuarioComponent } from './static/home/dados-usuario/dados-usuario
     ClienteComponent,
     FornecedorComponent,
     FuncionarioComponent,
-    ContasComponent,
     PainelFinancasPessoaisComponent,
     PainelInvestimentosComponent,
     PainelGestaoComponent,
@@ -76,7 +80,13 @@ import { DadosUsuarioComponent } from './static/home/dados-usuario/dados-usuario
     CategoriaFormComponent,
     LoginComponent,
     RegisterComponent,
-    DadosUsuarioComponent
+    DadosUsuarioComponent,
+    ContaClienteComponent,
+    ContaClienteFormComponent,
+    ContaClienteDadosComponent,
+    AtivosFinanceirosComponent,
+    RedimentosComponent,
+    AtivosComponent
  ],
   imports: [
     BrowserModule,

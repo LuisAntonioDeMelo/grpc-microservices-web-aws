@@ -47,7 +47,7 @@ public class LancamentoService extends LancamentoServiceGrpc.LancamentoServiceIm
             lancamento.setTipoLancamento(TipoLancamento.getByValue(request.getTipoValue()));
             lancamento.setDescricao(request.getDescricao());
             lancamento.setObservacao(request.getObservacao());
-            lancamento.setCliente(new Cliente(request.getClienteId()));
+            lancamento.setCliente(new Cliente(request.getIdCliente()));
             lancamento.setDataPagamento(Utils.formatDateTime(request.getDataPagamento()));
             lancamento.setDataVencimento(Utils.formatDateTime(request.getDataVencimento()));
             lancamento.setValor(request.getValor());
@@ -63,7 +63,7 @@ public class LancamentoService extends LancamentoServiceGrpc.LancamentoServiceIm
     }
 
     private void obterCliente(LancamentoDTO request, Lancamento lancamento) {
-        ClienteRequest clienteRequest = ClienteRequest.newBuilder().setCodigo(request.getClienteId()).build();
+        ClienteRequest clienteRequest = ClienteRequest.newBuilder().setCodigo(request.getIdCliente()).build();
         ClienteResponse clienteResponse = clienteServiceBlockingStub.obterPorId(clienteRequest);
         lancamento.setCliente(new Cliente(clienteResponse.getCliente().getId()));
     }
@@ -89,7 +89,7 @@ public class LancamentoService extends LancamentoServiceGrpc.LancamentoServiceIm
                 newBuilder()
                 .setCodigo(lancamento.getCodigo())
                 .setValor(lancamento.getValor())
-                .setClienteId(lancamento.getCliente().getId())
+                .setIdCliente(lancamento.getCliente().getId())
                 .setDescricao(lancamento.getDescricao())
                 .setDataVencimento(lancamento.getDataVencimento() != null ? lancamento.getDataVencimento().toString() : "")
                 .setDataPagamento(lancamento.getDataPagamento() != null ? lancamento.getDataPagamento().toString() : "")

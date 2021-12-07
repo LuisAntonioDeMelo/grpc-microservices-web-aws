@@ -1,3 +1,4 @@
+import { AuthService } from 'src/app/services/auth.service';
 import { ClienteService } from './../../services/cliente.service';
 import { Component, OnInit, ViewChild } from '@angular/core'
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms'
@@ -19,8 +20,8 @@ import { LancamentoService } from 'src/app/services/lancamento.service'
 export class LancamentoFormComponent implements OnInit {
   lancamentos: Lancamento[]
   categorias: Categoria[]
-  clientes: any[]
   tipoLancamento: typeof TipoLancamento = TipoLancamento
+  idPessoa:any
 
   @ViewChild('form') form: NgForm
 
@@ -30,15 +31,14 @@ export class LancamentoFormComponent implements OnInit {
     private categoriaService: CategoriaService,
     private clienteService:ClienteService,
     private snack: MatSnackBar,
+    private authService: AuthService
   ) {}
 
   ngOnInit(): void {
-    this.clienteService.get().subscribe(res => {
-      this.clientes = res;
-    })
     this.categoriaService.get().subscribe(res => {
       this.categorias = res;
     })
+    this.idPessoa = this.authService.currentUserValue.idPessoa
   }
 
   lancamentoForm: FormGroup = this.fb.group({
@@ -49,13 +49,14 @@ export class LancamentoFormComponent implements OnInit {
     descricao: ['', [Validators.required]],
     valor: [null, [Validators.required]],
     categoria: ['', [Validators.required]],
-    pessoa: ['', [Validators.required]],
     observacao: ['', [Validators.required]],
   })
 
   public salvar() {
     if (this.lancamentoForm.valid) {
       let values = this.lancamentoForm.value
+      values.clienteId = this.idPessoa;
+      console.log(values)
       this.lancamentoService.add(values).subscribe(
         (ok) => {
           this.notificacao('Lançamento Salvo com Sucesso.')
@@ -65,8 +66,10 @@ export class LancamentoFormComponent implements OnInit {
           this.notificacao('Erro ao Salvar - :' + error.message)
         },
       )
+    }else {
+      this.notificacao('Preencha todos os campos ');
     }
-    this.limpar()
+   // this.limpar()
   }
 
   editar(lancamento: Lancamento) {
@@ -81,7 +84,6 @@ export class LancamentoFormComponent implements OnInit {
       descricao: '',
       valor: '',
       categoria: '',
-      pessoa: '',
       observacao: '',
     })
     this.lancamentoForm.reset()
