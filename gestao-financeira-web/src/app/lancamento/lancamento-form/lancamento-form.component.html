@@ -1,10 +1,10 @@
 <mat-card>
   <form [formGroup]="lancamentoForm" #form="ngForm">
     <h4>Tipo Lançamento</h4>
-    <mat-button-toggle-group id="tipoLancamento" formControlName="tipoLancamento" appearance="legacy" name="fontStyle"
+    <mat-button-toggle-group id="tipoLancamento" formControlName="tipo" appearance="legacy" name="fontStyle"
       aria-label="Font Style">
-      <mat-button-toggle id="despesa" value="0">Despesa</mat-button-toggle>
-      <mat-button-toggle id="receita" value="1">Receita</mat-button-toggle>
+      <mat-button-toggle id="despesa" value="1">Despesa</mat-button-toggle>
+      <mat-button-toggle id="receita" value="2">Receita</mat-button-toggle>
     </mat-button-toggle-group>
     <br />
     <br />
@@ -49,9 +49,9 @@
         <h4>Categoria</h4>
         <mat-form-field appearance="fill">
           <mat-label>Selecione uma categoria</mat-label>
-          <mat-select id="categoria" formControlName="categoria">
+          <mat-select id="categoria" formControlName="idCategoria">
             <mat-option value="">---</mat-option>
-            <mat-option [id]="categoria.codigo" *ngFor="let categoria of categorias" [value]="categoria">
+            <mat-option [id]="categoria.id" *ngFor="let categoria of categorias" [value]="categoria.id">
               {{ categoria.nome }}
             </mat-option>
           </mat-select>

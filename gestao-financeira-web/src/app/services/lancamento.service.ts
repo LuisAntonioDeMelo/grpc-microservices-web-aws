@@ -10,44 +10,21 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class LancamentoService {
-  private lancamentosSubject$ :BehaviorSubject<Lancamento[]> = new BehaviorSubject<Lancamento[]>([]);
+  private lancamentosSubject$ :BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
   private isCarregado: boolean = false;
 
-  constructor(private http:HttpClient) {
-    this.lancamentosSubject$.asObservable().subscribe(ok => {
-      console.log(ok);
-    })
-   }
+  constructor(private http:HttpClient) {}
 
-  get():Observable<Lancamento[]> {
-    if(!this.isCarregado){
-      this.http.get<Lancamento[]>(`${environment.url}/lancamentos`).subscribe(this.lancamentosSubject$);
-      this.isCarregado = true;
-    }
-    return this.lancamentosSubject$.asObservable();
+  get():Observable<any[]> {
+    return this.http.get<any[]>(`${environment.url}/lancamentos`);
   }
 
-  add(lancamento:Lancamento):Observable<Lancamento> {
-    return this.http.post<Lancamento>(`${environment.url}/lancamentos`,lancamento)
-     .pipe(
-      tap((lan )=> {
-        console.log(lan)
-        this.lancamentosSubject$.getValue().push(lancamento)
-      })
-     );
+  add(lancamento):Observable<any> {
+    return this.http.post<any>(`${environment.url}/lancamentos`,lancamento)
   }
 
   delete(codigo: number):Observable<any> {
     return this.http.delete(`${environment.url}/lancamentos/${codigo}`)
-    .pipe(
-      tap(() =>{
-        let lancamentos = this.lancamentosSubject$.getValue();
-        let index = lancamentos.findIndex(lanc => lanc.codigo === codigo);
-        if(index >= 0){
-          lancamentos.splice(index,1);
-        }
-      })
-    )
   }
 
 }

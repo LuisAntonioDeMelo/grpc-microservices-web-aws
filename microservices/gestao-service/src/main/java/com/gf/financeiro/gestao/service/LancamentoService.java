@@ -1,5 +1,7 @@
 package com.gf.financeiro.gestao.service;
 
+import com.gf.financeiro.gestao.model.Categoria;
+import com.gf.financeiro.gestao.model.Cliente;
 import com.gf.financeiro.gestao.model.Lancamento;
 import com.gf.financeiro.gestao.model.enums.TipoLancamento;
 import com.gf.financeiro.gestao.repository.LancamentoRepository;
@@ -13,12 +15,10 @@ import net.devh.boot.grpc.server.service.GrpcService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
 import utils.Utils;
-import com.gf.financeiro.gestao.model.Cliente;
+
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
-import static com.grpc.proto.TipoLancamento.forNumber;
 
 @GrpcService
 public class LancamentoService extends LancamentoServiceGrpc.LancamentoServiceImplBase {
@@ -44,12 +44,13 @@ public class LancamentoService extends LancamentoServiceGrpc.LancamentoServiceIm
     public void salvarLancamento(LancamentoDTO request, StreamObserver<LancamentoResponse> responseObserver) {
         try {
             Lancamento lancamento = new Lancamento();
-            lancamento.setTipoLancamento(TipoLancamento.getByValue(request.getTipoValue()));
+            lancamento.setTipoLancamento(TipoLancamento.getByValue((int) request.getTipo()));
             lancamento.setDescricao(request.getDescricao());
             lancamento.setObservacao(request.getObservacao());
             lancamento.setCliente(new Cliente(request.getIdCliente()));
             lancamento.setDataPagamento(Utils.formatDateTime(request.getDataPagamento()));
             lancamento.setDataVencimento(Utils.formatDateTime(request.getDataVencimento()));
+            lancamento.setCategoria(new Categoria(request.getIdCategoria()));
             lancamento.setValor(request.getValor());
             obterCliente(request, lancamento);
             Lancamento lancamentoSalvo = lancamentoRepository.save(lancamento);
@@ -91,9 +92,10 @@ public class LancamentoService extends LancamentoServiceGrpc.LancamentoServiceIm
                 .setValor(lancamento.getValor())
                 .setIdCliente(lancamento.getCliente().getId())
                 .setDescricao(lancamento.getDescricao())
+                .setIdCategoria(lancamento.getCategoria().getCodigo())
                 .setDataVencimento(lancamento.getDataVencimento() != null ? lancamento.getDataVencimento().toString() : "")
                 .setDataPagamento(lancamento.getDataPagamento() != null ? lancamento.getDataPagamento().toString() : "")
-                .setTipo(forNumber(lancamento.getTipoLancamento().getCodigo()))
+                .setTipo(lancamento.getTipoLancamento().getCodigo())
                 .setObservacao(lancamento.getObservacao())
                 .build();
     }

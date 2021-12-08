@@ -63,13 +63,9 @@ public interface LancamentoDTOOrBuilder extends
       getObservacaoBytes();
 
   /**
-   * <code>.TipoLancamento tipo = 8;</code>
+   * <code>int64 tipo = 8;</code>
    */
-  int getTipoValue();
-  /**
-   * <code>.TipoLancamento tipo = 8;</code>
-   */
-  com.grpc.proto.TipoLancamento getTipo();
+  long getTipo();
 
   /**
    * <code>int64 idCategoria = 9;</code>

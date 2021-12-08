@@ -17,7 +17,7 @@ message LancamentoDTO {
   string dataVencimento = 5;
   double valor = 6;
   string observacao = 7;
-  TipoLancamento tipo = 8;
+  int64 tipo = 8;
   int64 idCategoria = 9;
   string nomeCliente = 10;
 }
@@ -47,11 +47,13 @@ message PesquisaLancamentorResponse {
   int32 result_per_page = 3;
 }
 
-message emptyRequest {}
+message pesquisaRequest {
+  int64 idPessoa = 1;
+}
 
 service LancamentoService {
   rpc obterLancamento(LancamentoResquest) returns (LancamentoResponse);
   rpc salvarLancamento(LancamentoDTO) returns (LancamentoResponse);
-  rpc listar(emptyRequest) returns (LancamentosResponse);
+  rpc listar(pesquisaRequest) returns (LancamentosResponse);
   rpc pesquisarLancamentoPorCliente(PesquisaLancamentoQuery) returns (PesquisaLancamentorResponse);
 }

@@ -1,6 +1,6 @@
 
   <mat-drawer-container class="example-container" [hasBackdrop]="false" >
-    <mat-drawer [opened]="false" #drawer [mode]="'side'">
+    <mat-drawer [opened]="true" #drawer [mode]="'side'">
      <div class="mat-elevation-z8 opt">
       <button mat-icon-button (click)="drawer.toggle()">
       <mat-icon>keyboard_backspace</mat-icon>
@@ -45,7 +45,9 @@
             <app-dados-usuario></app-dados-usuario>
           </div>
           <mat-card>
-            <h4> <b>Modulos</b> </h4>
+            <br>
+            <h3> <b>Modulos</b> </h3>
+            <br>
             <app-card [itemsCard]="itemsCard"></app-card>
           </mat-card>
         </div>

@@ -5,23 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1ba3415-752c-464f-a98d-758759a43552" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_10_13.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/cliente/cliente-lista/cliente-lista.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/cliente/cliente-lista/cliente-lista.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/contas/contas.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/contas/contas.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/contas/contas.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/contas/contas.component.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/lancamento/lancamento-form/lancamento-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/lancamento/lancamento-form/lancamento-form.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/lancamento/lancamento-form/lancamento-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/lancamento/lancamento-form/lancamento-form.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/home/painel-financas-pessoais/painel-financas-pessoais.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/home/painel-financas-pessoais/painel-financas-pessoais.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/lancamento/lancamento-lista/lancamento-lista.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/lancamento/lancamento-lista/lancamento-lista.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/lancamento/lancamento-lista/lancamento-lista.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/lancamento/lancamento-lista/lancamento-lista.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/models/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/models/models.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/services/lancamento.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/services/lancamento.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/com/gf/gateway/rest/LancamentoVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/com/gf/gateway/rest/LancamentoVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gestao-service/src/main/java/com/gf/financeiro/gestao/model/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gestao-service/src/main/java/com/gf/financeiro/gestao/model/Categoria.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gestao-service/src/main/java/com/gf/financeiro/gestao/service/LancamentoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gestao-service/src/main/java/com/gf/financeiro/gestao/service/LancamentoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/proto.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/proto/lancamento-service.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/lancamento-service.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoDTO$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoDTO$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoDTO$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoDTO$Builder.class" afterDir="false" />
@@ -29,7 +22,6 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoDTOOrBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoDTOOrBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoServiceOuterClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoServiceOuterClass.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/lancamento-service.proto" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lancamento-service.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/Utils.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/LancamentoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/LancamentoDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/LancamentoDTOOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/LancamentoDTOOrBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/LancamentoServiceOuterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/LancamentoServiceOuterClass.java" afterDir="false" />
@@ -134,6 +126,7 @@
       <workItem from="1638400559768" duration="1554000" />
       <workItem from="1638640655479" duration="7831000" />
       <workItem from="1638831723115" duration="3950000" />
+      <workItem from="1638921530596" duration="2362000" />
     </task>
     <servers />
   </component>

@@ -58,32 +58,32 @@ public final class LancamentoServiceOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\030lancamento-service.proto\"\340\001\n\rLancament" +
+      "\n\030lancamento-service.proto\"\317\001\n\rLancament" +
       "oDTO\022\016\n\006codigo\030\001 \001(\003\022\021\n\tidCliente\030\002 \001(\003\022" +
       "\021\n\tdescricao\030\003 \001(\t\022\025\n\rdataPagamento\030\004 \001(" +
       "\t\022\026\n\016dataVencimento\030\005 \001(\t\022\r\n\005valor\030\006 \001(\001" +
-      "\022\022\n\nobservacao\030\007 \001(\t\022\035\n\004tipo\030\010 \001(\0162\017.Tip" +
-      "oLancamento\022\023\n\013idCategoria\030\t \001(\003\022\023\n\013nome" +
-      "Cliente\030\n \001(\t\"$\n\022LancamentoResquest\022\016\n\006c" +
-      "odigo\030\001 \001(\005\"8\n\022LancamentoResponse\022\"\n\nlan" +
-      "camento\030\001 \001(\0132\016.LancamentoDTO\":\n\023Lancame" +
-      "ntosResponse\022#\n\013lancamentos\030\001 \003(\0132\016.Lanc" +
-      "amentoDTO\"u\n\027PesquisaLancamentoQuery\022\026\n\016" +
-      "tipoLancamento\030\001 \001(\005\022\025\n\rdataPagamento\030\002 " +
-      "\001(\t\022\026\n\016dataVencimento\030\003 \001(\t\022\023\n\013nomeClien" +
-      "te\030\004 \001(\t\"p\n\033PesquisaLancamentorResponse\022" +
-      "#\n\013lancamentos\030\001 \003(\0132\016.LancamentoDTO\022\023\n\013" +
-      "page_number\030\002 \001(\005\022\027\n\017result_per_page\030\003 \001" +
-      "(\005\"\016\n\014emptyRequest*7\n\016TipoLancamento\022\013\n\007" +
-      "DEFAULT\020\000\022\013\n\007DESPESA\020\001\022\013\n\007RECEITA\020\0022\221\002\n\021" +
-      "LancamentoService\022;\n\017obterLancamento\022\023.L" +
-      "ancamentoResquest\032\023.LancamentoResponse\0227" +
-      "\n\020salvarLancamento\022\016.LancamentoDTO\032\023.Lan" +
-      "camentoResponse\022-\n\006listar\022\r.emptyRequest" +
-      "\032\024.LancamentosResponse\022W\n\035pesquisarLanca" +
-      "mentoPorCliente\022\030.PesquisaLancamentoQuer" +
-      "y\032\034.PesquisaLancamentorResponseB\022\n\016com.g" +
-      "rpc.protoP\001b\006proto3"
+      "\022\022\n\nobservacao\030\007 \001(\t\022\014\n\004tipo\030\010 \001(\003\022\023\n\013id" +
+      "Categoria\030\t \001(\003\022\023\n\013nomeCliente\030\n \001(\t\"$\n\022" +
+      "LancamentoResquest\022\016\n\006codigo\030\001 \001(\005\"8\n\022La" +
+      "ncamentoResponse\022\"\n\nlancamento\030\001 \001(\0132\016.L" +
+      "ancamentoDTO\":\n\023LancamentosResponse\022#\n\013l" +
+      "ancamentos\030\001 \003(\0132\016.LancamentoDTO\"u\n\027Pesq" +
+      "uisaLancamentoQuery\022\026\n\016tipoLancamento\030\001 " +
+      "\001(\005\022\025\n\rdataPagamento\030\002 \001(\t\022\026\n\016dataVencim" +
+      "ento\030\003 \001(\t\022\023\n\013nomeCliente\030\004 \001(\t\"p\n\033Pesqu" +
+      "isaLancamentorResponse\022#\n\013lancamentos\030\001 " +
+      "\003(\0132\016.LancamentoDTO\022\023\n\013page_number\030\002 \001(\005" +
+      "\022\027\n\017result_per_page\030\003 \001(\005\"\016\n\014emptyReques" +
+      "t*7\n\016TipoLancamento\022\013\n\007DEFAULT\020\000\022\013\n\007DESP" +
+      "ESA\020\001\022\013\n\007RECEITA\020\0022\221\002\n\021LancamentoService" +
+      "\022;\n\017obterLancamento\022\023.LancamentoResquest" +
+      "\032\023.LancamentoResponse\0227\n\020salvarLancament" +
+      "o\022\016.LancamentoDTO\032\023.LancamentoResponse\022-" +
+      "\n\006listar\022\r.emptyRequest\032\024.LancamentosRes" +
+      "ponse\022W\n\035pesquisarLancamentoPorCliente\022\030" +
+      ".PesquisaLancamentoQuery\032\034.PesquisaLanca" +
+      "mentorResponseB\022\n\016com.grpc.protoP\001b\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DadosUsuarioComponent implements OnInit {
 
+  cards = [{icon:'money',nome:'',content:'$10000'}]
   constructor() { }
 
   ngOnInit(): void {

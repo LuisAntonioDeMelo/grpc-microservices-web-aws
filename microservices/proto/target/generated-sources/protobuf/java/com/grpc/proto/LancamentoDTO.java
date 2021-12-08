@@ -23,7 +23,7 @@ private static final long serialVersionUID = 0L;
     dataVencimento_ = "";
     valor_ = 0D;
     observacao_ = "";
-    tipo_ = 0;
+    tipo_ = 0L;
     idCategoria_ = 0L;
     nomeCliente_ = "";
   }
@@ -92,9 +92,8 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 64: {
-            int rawValue = input.readEnum();
 
-            tipo_ = rawValue;
+            tipo_ = input.readInt64();
             break;
           }
           case 72: {
@@ -304,20 +303,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TIPO_FIELD_NUMBER = 8;
-  private int tipo_;
+  private long tipo_;
   /**
-   * <code>.TipoLancamento tipo = 8;</code>
+   * <code>int64 tipo = 8;</code>
    */
-  public int getTipoValue() {
+  public long getTipo() {
     return tipo_;
-  }
-  /**
-   * <code>.TipoLancamento tipo = 8;</code>
-   */
-  public com.grpc.proto.TipoLancamento getTipo() {
-    @SuppressWarnings("deprecation")
-    com.grpc.proto.TipoLancamento result = com.grpc.proto.TipoLancamento.valueOf(tipo_);
-    return result == null ? com.grpc.proto.TipoLancamento.UNRECOGNIZED : result;
   }
 
   public static final int IDCATEGORIA_FIELD_NUMBER = 9;
@@ -398,8 +389,8 @@ private static final long serialVersionUID = 0L;
     if (!getObservacaoBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, observacao_);
     }
-    if (tipo_ != com.grpc.proto.TipoLancamento.DEFAULT.getNumber()) {
-      output.writeEnum(8, tipo_);
+    if (tipo_ != 0L) {
+      output.writeInt64(8, tipo_);
     }
     if (idCategoria_ != 0L) {
       output.writeInt64(9, idCategoria_);
@@ -440,9 +431,9 @@ private static final long serialVersionUID = 0L;
     if (!getObservacaoBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, observacao_);
     }
-    if (tipo_ != com.grpc.proto.TipoLancamento.DEFAULT.getNumber()) {
+    if (tipo_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(8, tipo_);
+        .computeInt64Size(8, tipo_);
     }
     if (idCategoria_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
@@ -483,7 +474,8 @@ private static final long serialVersionUID = 0L;
             other.getValor()));
     result = result && getObservacao()
         .equals(other.getObservacao());
-    result = result && tipo_ == other.tipo_;
+    result = result && (getTipo()
+        == other.getTipo());
     result = result && (getIdCategoria()
         == other.getIdCategoria());
     result = result && getNomeCliente()
@@ -517,7 +509,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + OBSERVACAO_FIELD_NUMBER;
     hash = (53 * hash) + getObservacao().hashCode();
     hash = (37 * hash) + TIPO_FIELD_NUMBER;
-    hash = (53 * hash) + tipo_;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getTipo());
     hash = (37 * hash) + IDCATEGORIA_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getIdCategoria());
@@ -670,7 +663,7 @@ private static final long serialVersionUID = 0L;
 
       observacao_ = "";
 
-      tipo_ = 0;
+      tipo_ = 0L;
 
       idCategoria_ = 0L;
 
@@ -785,8 +778,8 @@ private static final long serialVersionUID = 0L;
         observacao_ = other.observacao_;
         onChanged();
       }
-      if (other.tipo_ != 0) {
-        setTipoValue(other.getTipoValue());
+      if (other.getTipo() != 0L) {
+        setTipo(other.getTipo());
       }
       if (other.getIdCategoria() != 0L) {
         setIdCategoria(other.getIdCategoria());
@@ -1178,47 +1171,28 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int tipo_ = 0;
+    private long tipo_ ;
     /**
-     * <code>.TipoLancamento tipo = 8;</code>
+     * <code>int64 tipo = 8;</code>
      */
-    public int getTipoValue() {
+    public long getTipo() {
       return tipo_;
     }
     /**
-     * <code>.TipoLancamento tipo = 8;</code>
+     * <code>int64 tipo = 8;</code>
      */
-    public Builder setTipoValue(int value) {
+    public Builder setTipo(long value) {
+      
       tipo_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>.TipoLancamento tipo = 8;</code>
-     */
-    public com.grpc.proto.TipoLancamento getTipo() {
-      @SuppressWarnings("deprecation")
-      com.grpc.proto.TipoLancamento result = com.grpc.proto.TipoLancamento.valueOf(tipo_);
-      return result == null ? com.grpc.proto.TipoLancamento.UNRECOGNIZED : result;
-    }
-    /**
-     * <code>.TipoLancamento tipo = 8;</code>
-     */
-    public Builder setTipo(com.grpc.proto.TipoLancamento value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      
-      tipo_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.TipoLancamento tipo = 8;</code>
+     * <code>int64 tipo = 8;</code>
      */
     public Builder clearTipo() {
       
-      tipo_ = 0;
+      tipo_ = 0L;
       onChanged();
       return this;
     }

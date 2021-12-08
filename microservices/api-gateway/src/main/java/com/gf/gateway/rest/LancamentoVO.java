@@ -21,19 +21,19 @@ public class LancamentoVO {
     private Long idCategoria;
     private Double valor;
     private String observacao;
-    private int tipo;
+    private Long tipo;
 
 
     public LancamentoDTO buildProto() {
         return LancamentoDTO.newBuilder()
                 .setIdCliente(this.getIdCliente())
                 .setObservacao(this.getObservacao())
-                .setIdCategoria(this.idCategoria)
+                .setIdCategoria(this.getIdCategoria())
                 .setDescricao(this.getDescricao())
                 .setValor(this.getValor())
                 .setDataPagamento(this.getDataPagamento())
                 .setDataVencimento(this.getDataVencimento())
-                .setTipo(TipoLancamento.forNumber(tipo))
+                .setTipo(this.getTipo())
                 .build();
     }
 
@@ -46,7 +46,8 @@ public class LancamentoVO {
                 .idCliente(dto.getIdCliente())
                 .idCategoria(dto.getIdCategoria())
                 .dataPagamento(dto.getDataPagamento())
-                .tipo(dto.getTipo().getNumber())
+                .dataVencimento(dto.getDataVencimento())
+                .tipo(dto.getTipo())
                 .build();
     }
 

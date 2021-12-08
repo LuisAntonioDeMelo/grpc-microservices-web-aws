@@ -29,10 +29,9 @@ export class LancamentoListaComponent implements OnInit {
     'codigo',
     'descricao',
     'dataPagamento',
-    'dataVencimento',
+    'diaVencimento',
     'valor',
     'categoria',
-    'pessoa',
     'observação',
     'editar',
     'excluir',
@@ -41,34 +40,33 @@ export class LancamentoListaComponent implements OnInit {
 
   formPesquisa: FormGroup = this.fb.group({
     codigo: [null, []],
-    tipoLancamento: [null, [Validators.required]],
-    dataVencimento: [null, [Validators.required]],
-    dataPagamento: [null, [Validators.required]]
+    tipoLancamento: [null, ''],
+    dataVencimento: [null, ''],
+    dataPagamento: [null, '']
   })
 
   constructor(
     private fb: FormBuilder,
     private lancamentoService: LancamentoService,
     private categoriaService: CategoriaService,
-    private pesssoaService: PessoaService,
     private snack: MatSnackBar,
     private router: Router
   ) {}
 
   ngOnInit(): void {
+
+    this.categoriaService.get()
+      .subscribe((categorias) => (this.categorias = categorias))
+
     this.lancamentoService
       .get()
-      .pipe(takeUntil(this.unsubscribed$))
       .subscribe((lancamentos) => {
+        console.log(lancamentos)
         this.lancamentos = lancamentos
         this.dataSource = lancamentos
       })
 
-    this.categoriaService
-      .get()
-      .subscribe((categorias) => (this.categorias = categorias))
 
-    this.pesssoaService.get().subscribe((pessoas) => (this.pessoas = pessoas))
   }
 
   public pesquisa() {
@@ -76,6 +74,9 @@ export class LancamentoListaComponent implements OnInit {
       .get()
       .pipe(takeUntil(this.unsubscribed$))
       .subscribe((lancamentos) => {
+        lancamentos.forEach(l => {
+          l.nomeCategoria = this.categorias.find(c => c.codigo === l.idCategoria).nome
+        })
         this.lancamentos = lancamentos
         this.dataSource = lancamentos
       })
@@ -87,7 +88,7 @@ export class LancamentoListaComponent implements OnInit {
   limpar(){}
 
   editar(lancamento: Lancamento) {
-    this.router.navigate(['/home/painel-financas-pessoais/lancamentos/lancamento-form/', lancamento.codigo]);
+    this.router.navigate(['/home/painel-financas-pessoais/lancamentos/lancamento-form', lancamento.codigo]);
   }
 
   excluir(lancamento: Lancamento) {
@@ -103,7 +104,15 @@ export class LancamentoListaComponent implements OnInit {
     this.snack.open(msg, 'ok', { duration: 3000 })
   }
 
-  ngOnDestroy(): void {
-    this.unsubscribed$.next()
+  // ngOnDestroy(): void {
+  //   this.unsubscribed$.next()
+  // }
+
+   setNameCategoria(value ){
+     console.log(value)
+      return  this.categorias.find(c => c.codigo == value)
   }
+
+
+
 }

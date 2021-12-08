@@ -1,0 +1,28 @@
+.container {
+  flex-direction: row;
+  display: flex;
+}
+
+.first-card {
+  width: 120px;
+  height: 80px;
+  background-color: #782aff;
+  color: #fff;
+  justify-content: center;
+}
+
+mat-icon {
+  margin-right: 5%;
+}
+
+.mat-card-title {
+  display: block;
+  margin-bottom: 30px;
+}
+
+mat-card-subtitle {
+  color:#fff;
+}
+a {
+  text-decoration: none;
+}

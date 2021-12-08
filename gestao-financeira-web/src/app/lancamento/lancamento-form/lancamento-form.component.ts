@@ -36,6 +36,7 @@ export class LancamentoFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.categoriaService.get().subscribe(res => {
+      console.log(res)
       this.categorias = res;
     })
     this.idPessoa = this.authService.currentUserValue.idPessoa
@@ -43,21 +44,20 @@ export class LancamentoFormComponent implements OnInit {
 
   lancamentoForm: FormGroup = this.fb.group({
     codigo: [null, []],
-    tipoLancamento: [null, [Validators.required]],
+    tipo: [null, [Validators.required]],
     dataVencimento: [null, [Validators.required]],
     dataPagamento: [null, [Validators.required]],
     descricao: ['', [Validators.required]],
     valor: [null, [Validators.required]],
-    categoria: ['', [Validators.required]],
+    idCategoria: ['', [Validators.required]],
     observacao: ['', [Validators.required]],
   })
 
   public salvar() {
     if (this.lancamentoForm.valid) {
-      let values = this.lancamentoForm.value
-      values.clienteId = this.idPessoa;
-      console.log(values)
-      this.lancamentoService.add(values).subscribe(
+      let lancamento = this.lancamentoForm.value;
+      lancamento.idCliente = this.authService.currentUserValue.idPessoa;
+      this.lancamentoService.add(lancamento).subscribe(
         (ok) => {
           this.notificacao('Lançamento Salvo com Sucesso.')
         },

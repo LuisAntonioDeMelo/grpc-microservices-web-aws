@@ -17,14 +17,16 @@ export class Pessoa {
 
 export class Lancamento {
   codigo: number
+  idCliente: number
+  idCategoria: number
   descricao: string
-  dataVencimento: Date
   dataLancamento: Date
-  pessoa: Pessoa
-  categoria: Categoria
+  dataVencimento: Date
+  //pessoa: Pessoa
+  //categoria: Categoria
   valor: number
   observacao: string
-  tipoLancamento: TipoLancamento
+  tipoLancamento: number
 }
 
 export class Cidade {
@@ -69,4 +71,9 @@ export class Cliente {
   complemento: string
   bairo: string
   cep: string
+}
+
+export enum TipoLancamento {
+  DESPESA = 1,
+  RECEITA = 2
 }
