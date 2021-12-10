@@ -23,21 +23,32 @@ public interface ContaClienteDTOOrBuilder extends
   double getSaldo();
 
   /**
-   * <code>double limitePagamento = 4;</code>
+   * <code>int32 banco = 4;</code>
    */
-  double getLimitePagamento();
+  int getBanco();
 
   /**
-   * <code>double debitoPendente = 5;</code>
+   * <code>string numeroConta = 5;</code>
    */
-  double getDebitoPendente();
+  java.lang.String getNumeroConta();
+  /**
+   * <code>string numeroConta = 5;</code>
+   */
+  com.google.protobuf.ByteString
+      getNumeroContaBytes();
 
   /**
-   * <code>.TipoConta tipoConta = 6;</code>
+   * <code>string digito = 6;</code>
    */
-  int getTipoContaValue();
+  java.lang.String getDigito();
   /**
-   * <code>.TipoConta tipoConta = 6;</code>
+   * <code>string digito = 6;</code>
    */
-  com.grpc.proto.TipoConta getTipoConta();
+  com.google.protobuf.ByteString
+      getDigitoBytes();
+
+  /**
+   * <code>int32 tipoConta = 7;</code>
+   */
+  int getTipoConta();
 }

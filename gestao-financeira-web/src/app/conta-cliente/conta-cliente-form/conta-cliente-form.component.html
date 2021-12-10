@@ -1,1 +1,62 @@
-<p>conta-cliente-form works!</p>
+<mat-card>
+  <form [formGroup]="contaClienteForm" #form="ngForm">
+    <h4>Tipo da Conta</h4>
+    <mat-button-toggle-group id="tipoConta" formControlName="tipoConta" appearance="legacy" name="fontStyle"
+      aria-label="Font Style">
+      <mat-button-toggle id="corrente" value="1">Corrente</mat-button-toggle>
+      <mat-button-toggle id="poupanca" value="2">Poupança</mat-button-toggle>
+    </mat-button-toggle-group>
+    <br />
+    <br />
+    <div flexLayout="flex">
+      <div fxFlex="50">
+        <h4>Selecione o Banco</h4>
+        <mat-form-field appearance="fill">
+          <mat-label>Selecione uma categoria</mat-label>
+          <mat-select id="banco" formControlName="banco">
+            <mat-option value=""></mat-option>
+            <mat-option value="1">Caixa Econômica Federal</mat-option>
+            <mat-option value="2">Banco do Brasil</mat-option>
+            <mat-option value="3">Bradesco</mat-option>
+            <mat-option value="4">NU Bank</mat-option>
+            <mat-option value="5">Banco Inter</mat-option>
+            <mat-option value="6">Santander</mat-option>
+            <mat-option value="7">Banco PAN</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div fxFlex="40">
+        <h4>Número da Conta</h4>
+        <mat-form-field appearance="fill">
+          <mat-label>Número conta</mat-label>
+          <input matInput id="valor" formControlName="numeroConta" />
+        </mat-form-field>
+      </div>
+      <div fxFlex="10">
+        <h4>Digito</h4>
+        <mat-form-field appearance="fill">
+          <mat-label>D - </mat-label>
+          <input matInput id="valor" formControlName="digito" />
+        </mat-form-field>
+      </div>
+    </div>
+    <div flexLayout="flex">
+      <div fxFlex="50">
+        <h4>Saldo</h4>
+        <mat-form-field appearance="fill">
+          <mat-label>Insira o valor</mat-label>
+          <input matInput id="valor" formControlName="saldo" />
+        </mat-form-field>
+      </div>
+    </div>
+    <div>
+      <button id="btn-limpar" (click)="limpar()" mat-raised-button color="primary" style="margin-right: 20px;">
+        Limpar
+      </button>
+      <button id="btn-salvar" (click)="salvar()" mat-raised-button color="primary" class="">
+        Salvar
+      </button>
+    </div>
+  </form>
+
+</mat-card>

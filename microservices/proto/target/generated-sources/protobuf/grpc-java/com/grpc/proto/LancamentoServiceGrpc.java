@@ -27,28 +27,28 @@ public final class LancamentoServiceGrpc {
   public static final String SERVICE_NAME = "LancamentoService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.grpc.proto.LancamentoResquest,
+  private static volatile io.grpc.MethodDescriptor<com.grpc.proto.LancamentoRequest,
       com.grpc.proto.LancamentoResponse> getObterLancamentoMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "obterLancamento",
-      requestType = com.grpc.proto.LancamentoResquest.class,
+      requestType = com.grpc.proto.LancamentoRequest.class,
       responseType = com.grpc.proto.LancamentoResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.grpc.proto.LancamentoResquest,
+  public static io.grpc.MethodDescriptor<com.grpc.proto.LancamentoRequest,
       com.grpc.proto.LancamentoResponse> getObterLancamentoMethod() {
-    io.grpc.MethodDescriptor<com.grpc.proto.LancamentoResquest, com.grpc.proto.LancamentoResponse> getObterLancamentoMethod;
+    io.grpc.MethodDescriptor<com.grpc.proto.LancamentoRequest, com.grpc.proto.LancamentoResponse> getObterLancamentoMethod;
     if ((getObterLancamentoMethod = LancamentoServiceGrpc.getObterLancamentoMethod) == null) {
       synchronized (LancamentoServiceGrpc.class) {
         if ((getObterLancamentoMethod = LancamentoServiceGrpc.getObterLancamentoMethod) == null) {
           LancamentoServiceGrpc.getObterLancamentoMethod = getObterLancamentoMethod = 
-              io.grpc.MethodDescriptor.<com.grpc.proto.LancamentoResquest, com.grpc.proto.LancamentoResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.grpc.proto.LancamentoRequest, com.grpc.proto.LancamentoResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "LancamentoService", "obterLancamento"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.grpc.proto.LancamentoResquest.getDefaultInstance()))
+                  com.grpc.proto.LancamentoRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.grpc.proto.LancamentoResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new LancamentoServiceMethodDescriptorSupplier("obterLancamento"))
@@ -91,28 +91,28 @@ public final class LancamentoServiceGrpc {
      return getSalvarLancamentoMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.grpc.proto.emptyRequest,
+  private static volatile io.grpc.MethodDescriptor<com.grpc.proto.pesquisaRequest,
       com.grpc.proto.LancamentosResponse> getListarMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "listar",
-      requestType = com.grpc.proto.emptyRequest.class,
+      requestType = com.grpc.proto.pesquisaRequest.class,
       responseType = com.grpc.proto.LancamentosResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.grpc.proto.emptyRequest,
+  public static io.grpc.MethodDescriptor<com.grpc.proto.pesquisaRequest,
       com.grpc.proto.LancamentosResponse> getListarMethod() {
-    io.grpc.MethodDescriptor<com.grpc.proto.emptyRequest, com.grpc.proto.LancamentosResponse> getListarMethod;
+    io.grpc.MethodDescriptor<com.grpc.proto.pesquisaRequest, com.grpc.proto.LancamentosResponse> getListarMethod;
     if ((getListarMethod = LancamentoServiceGrpc.getListarMethod) == null) {
       synchronized (LancamentoServiceGrpc.class) {
         if ((getListarMethod = LancamentoServiceGrpc.getListarMethod) == null) {
           LancamentoServiceGrpc.getListarMethod = getListarMethod = 
-              io.grpc.MethodDescriptor.<com.grpc.proto.emptyRequest, com.grpc.proto.LancamentosResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.grpc.proto.pesquisaRequest, com.grpc.proto.LancamentosResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "LancamentoService", "listar"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.grpc.proto.emptyRequest.getDefaultInstance()))
+                  com.grpc.proto.pesquisaRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.grpc.proto.LancamentosResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new LancamentoServiceMethodDescriptorSupplier("listar"))
@@ -155,6 +155,38 @@ public final class LancamentoServiceGrpc {
      return getPesquisarLancamentoPorClienteMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.grpc.proto.LancamentoRequest,
+      com.grpc.proto.returnMessage> getDeletarLancamentoMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "deletarLancamento",
+      requestType = com.grpc.proto.LancamentoRequest.class,
+      responseType = com.grpc.proto.returnMessage.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.grpc.proto.LancamentoRequest,
+      com.grpc.proto.returnMessage> getDeletarLancamentoMethod() {
+    io.grpc.MethodDescriptor<com.grpc.proto.LancamentoRequest, com.grpc.proto.returnMessage> getDeletarLancamentoMethod;
+    if ((getDeletarLancamentoMethod = LancamentoServiceGrpc.getDeletarLancamentoMethod) == null) {
+      synchronized (LancamentoServiceGrpc.class) {
+        if ((getDeletarLancamentoMethod = LancamentoServiceGrpc.getDeletarLancamentoMethod) == null) {
+          LancamentoServiceGrpc.getDeletarLancamentoMethod = getDeletarLancamentoMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.proto.LancamentoRequest, com.grpc.proto.returnMessage>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "LancamentoService", "deletarLancamento"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.proto.LancamentoRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.proto.returnMessage.getDefaultInstance()))
+                  .setSchemaDescriptor(new LancamentoServiceMethodDescriptorSupplier("deletarLancamento"))
+                  .build();
+          }
+        }
+     }
+     return getDeletarLancamentoMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -184,7 +216,7 @@ public final class LancamentoServiceGrpc {
 
     /**
      */
-    public void obterLancamento(com.grpc.proto.LancamentoResquest request,
+    public void obterLancamento(com.grpc.proto.LancamentoRequest request,
         io.grpc.stub.StreamObserver<com.grpc.proto.LancamentoResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getObterLancamentoMethod(), responseObserver);
     }
@@ -198,7 +230,7 @@ public final class LancamentoServiceGrpc {
 
     /**
      */
-    public void listar(com.grpc.proto.emptyRequest request,
+    public void listar(com.grpc.proto.pesquisaRequest request,
         io.grpc.stub.StreamObserver<com.grpc.proto.LancamentosResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getListarMethod(), responseObserver);
     }
@@ -210,13 +242,20 @@ public final class LancamentoServiceGrpc {
       asyncUnimplementedUnaryCall(getPesquisarLancamentoPorClienteMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void deletarLancamento(com.grpc.proto.LancamentoRequest request,
+        io.grpc.stub.StreamObserver<com.grpc.proto.returnMessage> responseObserver) {
+      asyncUnimplementedUnaryCall(getDeletarLancamentoMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getObterLancamentoMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.grpc.proto.LancamentoResquest,
+                com.grpc.proto.LancamentoRequest,
                 com.grpc.proto.LancamentoResponse>(
                   this, METHODID_OBTER_LANCAMENTO)))
           .addMethod(
@@ -230,7 +269,7 @@ public final class LancamentoServiceGrpc {
             getListarMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.grpc.proto.emptyRequest,
+                com.grpc.proto.pesquisaRequest,
                 com.grpc.proto.LancamentosResponse>(
                   this, METHODID_LISTAR)))
           .addMethod(
@@ -240,6 +279,13 @@ public final class LancamentoServiceGrpc {
                 com.grpc.proto.PesquisaLancamentoQuery,
                 com.grpc.proto.PesquisaLancamentorResponse>(
                   this, METHODID_PESQUISAR_LANCAMENTO_POR_CLIENTE)))
+          .addMethod(
+            getDeletarLancamentoMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.grpc.proto.LancamentoRequest,
+                com.grpc.proto.returnMessage>(
+                  this, METHODID_DELETAR_LANCAMENTO)))
           .build();
     }
   }
@@ -264,7 +310,7 @@ public final class LancamentoServiceGrpc {
 
     /**
      */
-    public void obterLancamento(com.grpc.proto.LancamentoResquest request,
+    public void obterLancamento(com.grpc.proto.LancamentoRequest request,
         io.grpc.stub.StreamObserver<com.grpc.proto.LancamentoResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getObterLancamentoMethod(), getCallOptions()), request, responseObserver);
@@ -280,7 +326,7 @@ public final class LancamentoServiceGrpc {
 
     /**
      */
-    public void listar(com.grpc.proto.emptyRequest request,
+    public void listar(com.grpc.proto.pesquisaRequest request,
         io.grpc.stub.StreamObserver<com.grpc.proto.LancamentosResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getListarMethod(), getCallOptions()), request, responseObserver);
@@ -292,6 +338,14 @@ public final class LancamentoServiceGrpc {
         io.grpc.stub.StreamObserver<com.grpc.proto.PesquisaLancamentorResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getPesquisarLancamentoPorClienteMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void deletarLancamento(com.grpc.proto.LancamentoRequest request,
+        io.grpc.stub.StreamObserver<com.grpc.proto.returnMessage> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getDeletarLancamentoMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -315,7 +369,7 @@ public final class LancamentoServiceGrpc {
 
     /**
      */
-    public com.grpc.proto.LancamentoResponse obterLancamento(com.grpc.proto.LancamentoResquest request) {
+    public com.grpc.proto.LancamentoResponse obterLancamento(com.grpc.proto.LancamentoRequest request) {
       return blockingUnaryCall(
           getChannel(), getObterLancamentoMethod(), getCallOptions(), request);
     }
@@ -329,7 +383,7 @@ public final class LancamentoServiceGrpc {
 
     /**
      */
-    public com.grpc.proto.LancamentosResponse listar(com.grpc.proto.emptyRequest request) {
+    public com.grpc.proto.LancamentosResponse listar(com.grpc.proto.pesquisaRequest request) {
       return blockingUnaryCall(
           getChannel(), getListarMethod(), getCallOptions(), request);
     }
@@ -339,6 +393,13 @@ public final class LancamentoServiceGrpc {
     public com.grpc.proto.PesquisaLancamentorResponse pesquisarLancamentoPorCliente(com.grpc.proto.PesquisaLancamentoQuery request) {
       return blockingUnaryCall(
           getChannel(), getPesquisarLancamentoPorClienteMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.grpc.proto.returnMessage deletarLancamento(com.grpc.proto.LancamentoRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getDeletarLancamentoMethod(), getCallOptions(), request);
     }
   }
 
@@ -363,7 +424,7 @@ public final class LancamentoServiceGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.proto.LancamentoResponse> obterLancamento(
-        com.grpc.proto.LancamentoResquest request) {
+        com.grpc.proto.LancamentoRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getObterLancamentoMethod(), getCallOptions()), request);
     }
@@ -379,7 +440,7 @@ public final class LancamentoServiceGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<com.grpc.proto.LancamentosResponse> listar(
-        com.grpc.proto.emptyRequest request) {
+        com.grpc.proto.pesquisaRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getListarMethod(), getCallOptions()), request);
     }
@@ -391,12 +452,21 @@ public final class LancamentoServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getPesquisarLancamentoPorClienteMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.grpc.proto.returnMessage> deletarLancamento(
+        com.grpc.proto.LancamentoRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getDeletarLancamentoMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_OBTER_LANCAMENTO = 0;
   private static final int METHODID_SALVAR_LANCAMENTO = 1;
   private static final int METHODID_LISTAR = 2;
   private static final int METHODID_PESQUISAR_LANCAMENTO_POR_CLIENTE = 3;
+  private static final int METHODID_DELETAR_LANCAMENTO = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -416,7 +486,7 @@ public final class LancamentoServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_OBTER_LANCAMENTO:
-          serviceImpl.obterLancamento((com.grpc.proto.LancamentoResquest) request,
+          serviceImpl.obterLancamento((com.grpc.proto.LancamentoRequest) request,
               (io.grpc.stub.StreamObserver<com.grpc.proto.LancamentoResponse>) responseObserver);
           break;
         case METHODID_SALVAR_LANCAMENTO:
@@ -424,12 +494,16 @@ public final class LancamentoServiceGrpc {
               (io.grpc.stub.StreamObserver<com.grpc.proto.LancamentoResponse>) responseObserver);
           break;
         case METHODID_LISTAR:
-          serviceImpl.listar((com.grpc.proto.emptyRequest) request,
+          serviceImpl.listar((com.grpc.proto.pesquisaRequest) request,
               (io.grpc.stub.StreamObserver<com.grpc.proto.LancamentosResponse>) responseObserver);
           break;
         case METHODID_PESQUISAR_LANCAMENTO_POR_CLIENTE:
           serviceImpl.pesquisarLancamentoPorCliente((com.grpc.proto.PesquisaLancamentoQuery) request,
               (io.grpc.stub.StreamObserver<com.grpc.proto.PesquisaLancamentorResponse>) responseObserver);
+          break;
+        case METHODID_DELETAR_LANCAMENTO:
+          serviceImpl.deletarLancamento((com.grpc.proto.LancamentoRequest) request,
+              (io.grpc.stub.StreamObserver<com.grpc.proto.returnMessage>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -496,6 +570,7 @@ public final class LancamentoServiceGrpc {
               .addMethod(getSalvarLancamentoMethod())
               .addMethod(getListarMethod())
               .addMethod(getPesquisarLancamentoPorClienteMethod())
+              .addMethod(getDeletarLancamentoMethod())
               .build();
         }
       }

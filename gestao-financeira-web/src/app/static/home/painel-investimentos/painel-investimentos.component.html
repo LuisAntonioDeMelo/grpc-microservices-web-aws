@@ -2,7 +2,7 @@
   <a *ngFor="let card of items" [routerLink]="card.link">
     <mat-card class="card-style">
       <mat-card-title>
-        <h4>{{ card.nome }}</h4>
+        <h4><mat-icon>{{card.icon}}</mat-icon>  {{ card.nome }}</h4>
       </mat-card-title>
     </mat-card>
   </a>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-conta-cliente-form',
@@ -7,9 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContaClienteFormComponent implements OnInit {
 
-  constructor() { }
+  contaClienteForm: FormGroup = this.fb.group({
+    banco: [null, []],
+    numeroConta: [null, []],
+    saldo: [null, ''],
+    digito: [null, ''],
+    tipoConta: [null, '']
+  })
+
+  constructor(
+    private fb: FormBuilder,
+  ) { }
 
   ngOnInit(): void {
   }
+
+  limpar(){
+
+  }
+
+  salvar(){
+
+  }
+
 
 }

@@ -31,7 +31,7 @@ public class LancamentoService extends LancamentoServiceGrpc.LancamentoServiceIm
 
     @SneakyThrows
     @Override
-    public void obterLancamento(LancamentoResquest request, StreamObserver<LancamentoResponse> responseObserver) {
+    public void obterLancamento(LancamentoRequest request, StreamObserver<LancamentoResponse> responseObserver) {
         Optional<Lancamento> lancamento = lancamentoRepository.findById(new Long(request.getCodigo()));
         if (lancamento.isPresent()) {
             LancamentoDTO lancamentoDTO = getBuild(lancamento.get());
@@ -70,7 +70,7 @@ public class LancamentoService extends LancamentoServiceGrpc.LancamentoServiceIm
     }
 
     @Override
-    public void listar(emptyRequest request, StreamObserver<LancamentosResponse> responseObserver) {
+    public void listar(pesquisaRequest request, StreamObserver<LancamentosResponse> responseObserver) {
         List<Lancamento> lancamentos = lancamentoRepository.findAll();
         if (!CollectionUtils.isEmpty(lancamentos)) {
             List<LancamentoDTO> lancamentoDTOList =

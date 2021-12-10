@@ -1,12 +1,12 @@
+import { AtivosComponent } from './ativos-financeiros/ativos/ativos.component'
+import { ContaClienteFormComponent } from './conta-cliente/conta-cliente-form/conta-cliente-form.component'
+import { ContaClienteDadosComponent } from './conta-cliente/conta-cliente-dados/conta-cliente-dados.component'
+import { ContaClienteComponent } from './conta-cliente/conta-cliente.component'
 import { ClienteFormComponent } from './cliente/cliente-form/cliente-form.component'
 import { ClienteListaComponent } from './cliente/cliente-lista/cliente-lista.component'
 import { AuthGuard } from './helpers/auth.guard'
 import { RegisterComponent } from './static/register/register.component'
 import { LoginComponent } from './static/login/login.component'
-import { DepartamentoComponent } from './departamento/departamento.component'
-import { CargoComponent } from './cargo/cargo.component'
-import { FornecedorComponent } from './fornecedor/fornecedor.component'
-import { FuncionarioComponent } from './funcionario/funcionario.component'
 import { LancamentoListaComponent } from './lancamento/lancamento-lista/lancamento-lista.component'
 import { LancamentoFormComponent } from './lancamento/lancamento-form/lancamento-form.component'
 import { PainelInvestimentosComponent } from './static/home/painel-investimentos/painel-investimentos.component'
@@ -93,97 +93,36 @@ const routes: Routes = [
               },
             ],
           },
-          {
-            path: 'conta-cliente',
-            component: ClienteComponent,
-            data: {
-              breadcrumb: 'Cliente',
-            },
+           {path: 'conta-cliente', component: ContaClienteComponent,
+            data: { breadcrumb: 'Conta Cliente',  },
             children: [
-              {
-                path: '',
-                component: ClienteListaComponent,
-                data: {
-                  breadcrumb: 'Dados Cliente',
-                },
+              { path: '', component: ContaClienteDadosComponent,
+                data: { breadcrumb: 'Contas' }
               },
-              {
-                path: 'cliente-form',
-                component: ClienteFormComponent,
-                data: {
-                  breadcrumb: 'Formulário',
-                },
+              { path: 'cliente-form',  component: ContaClienteFormComponent,
+                data: { breadcrumb: 'Cadastro Conta' }
+              },
+              { path: 'cliente-form/:id', component: ContaClienteFormComponent,
+                data: { breadcrumb: 'Alterar Conta'}
               },
             ],
           },
+        ],
+      },
+      {
+        path: 'painel-investimentos',
+        component: PainelInvestimentosComponent,
+        canActivate: [AuthGuard],
+        data: {
+          breadcrumb: 'Painel Investimentos',
+        },
+        children: [
           {
-            path: 'fornecedores',
-            component: FornecedorComponent,
+            path: 'ativos',
+            component: AtivosComponent,
             data: {
-              breadcrumb: 'Fornecedores',
+              breadcrumb: 'Ativos',
             },
-            children: [
-              {
-                path: '',
-                component: LancamentoListaComponent,
-                data: {
-                  breadcrumb: 'Listar Fornecedores',
-                },
-              },
-              {
-                path: 'fornecedor-form',
-                component: LancamentoFormComponent,
-                data: {
-                  breadcrumb: 'Formulário',
-                },
-              },
-            ],
-          },
-          {
-            path: 'cargos',
-            component: CargoComponent,
-            data: {
-              breadcrumb: 'Cargos',
-            },
-            children: [
-              {
-                path: '',
-                component: LancamentoListaComponent,
-                data: {
-                  breadcrumb: 'Listar Cargos',
-                },
-              },
-              {
-                path: 'cargo-form',
-                component: LancamentoFormComponent,
-                data: {
-                  breadcrumb: 'Formulário',
-                },
-              },
-            ],
-          },
-          {
-            path: 'departamentos',
-            component: DepartamentoComponent,
-            data: {
-              breadcrumb: 'Departamentos',
-            },
-            children: [
-              {
-                path: '',
-                component: LancamentoListaComponent,
-                data: {
-                  breadcrumb: 'Listar Lançamentos',
-                },
-              },
-              {
-                path: 'lancamento-form',
-                component: LancamentoFormComponent,
-                data: {
-                  breadcrumb: 'Formulário',
-                },
-              },
-            ],
           },
         ],
       },

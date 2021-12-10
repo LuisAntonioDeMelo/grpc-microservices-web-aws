@@ -1,5 +1,6 @@
 package com.gf.financeiro.model;
 
+import com.grpc.proto.Cliente;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -19,20 +20,14 @@ public class Produto {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "orcamento_codigo")
-    private Orcamento orcamento;
-
     private String descricao;
     private String modelo;
     private String unidade;
 
-    @OneToOne
-    @JoinColumn(name = "tributacao_id")
-    private Tributacao tributacao;
+    @ManyToOne
+    private ExtratoAtivo extratoAtivo;
 
     @ManyToOne
-    @JoinColumn(name = "fornecedor_id")
-    private Fornecedor fornecedor;
+    private Cliente idCliente;
 }
 

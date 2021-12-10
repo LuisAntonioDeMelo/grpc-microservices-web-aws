@@ -91,6 +91,38 @@ public final class ContaClienteServiceGrpc {
      return getObterContaClienteMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.grpc.proto.ContaRequest,
+      com.grpc.proto.ResponseContas> getObterContasClienteMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "obterContasCliente",
+      requestType = com.grpc.proto.ContaRequest.class,
+      responseType = com.grpc.proto.ResponseContas.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.grpc.proto.ContaRequest,
+      com.grpc.proto.ResponseContas> getObterContasClienteMethod() {
+    io.grpc.MethodDescriptor<com.grpc.proto.ContaRequest, com.grpc.proto.ResponseContas> getObterContasClienteMethod;
+    if ((getObterContasClienteMethod = ContaClienteServiceGrpc.getObterContasClienteMethod) == null) {
+      synchronized (ContaClienteServiceGrpc.class) {
+        if ((getObterContasClienteMethod = ContaClienteServiceGrpc.getObterContasClienteMethod) == null) {
+          ContaClienteServiceGrpc.getObterContasClienteMethod = getObterContasClienteMethod = 
+              io.grpc.MethodDescriptor.<com.grpc.proto.ContaRequest, com.grpc.proto.ResponseContas>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "ContaClienteService", "obterContasCliente"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.proto.ContaRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.grpc.proto.ResponseContas.getDefaultInstance()))
+                  .setSchemaDescriptor(new ContaClienteServiceMethodDescriptorSupplier("obterContasCliente"))
+                  .build();
+          }
+        }
+     }
+     return getObterContasClienteMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -132,6 +164,13 @@ public final class ContaClienteServiceGrpc {
       asyncUnimplementedUnaryCall(getObterContaClienteMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void obterContasCliente(com.grpc.proto.ContaRequest request,
+        io.grpc.stub.StreamObserver<com.grpc.proto.ResponseContas> responseObserver) {
+      asyncUnimplementedUnaryCall(getObterContasClienteMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -148,6 +187,13 @@ public final class ContaClienteServiceGrpc {
                 com.grpc.proto.ContaRequest,
                 com.grpc.proto.ContaClienteDTO>(
                   this, METHODID_OBTER_CONTA_CLIENTE)))
+          .addMethod(
+            getObterContasClienteMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.grpc.proto.ContaRequest,
+                com.grpc.proto.ResponseContas>(
+                  this, METHODID_OBTER_CONTAS_CLIENTE)))
           .build();
     }
   }
@@ -185,6 +231,14 @@ public final class ContaClienteServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getObterContaClienteMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void obterContasCliente(com.grpc.proto.ContaRequest request,
+        io.grpc.stub.StreamObserver<com.grpc.proto.ResponseContas> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getObterContasClienteMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -217,6 +271,13 @@ public final class ContaClienteServiceGrpc {
     public com.grpc.proto.ContaClienteDTO obterContaCliente(com.grpc.proto.ContaRequest request) {
       return blockingUnaryCall(
           getChannel(), getObterContaClienteMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.grpc.proto.ResponseContas obterContasCliente(com.grpc.proto.ContaRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getObterContasClienteMethod(), getCallOptions(), request);
     }
   }
 
@@ -253,10 +314,19 @@ public final class ContaClienteServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getObterContaClienteMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.grpc.proto.ResponseContas> obterContasCliente(
+        com.grpc.proto.ContaRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getObterContasClienteMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CADASTRAR_CONTA = 0;
   private static final int METHODID_OBTER_CONTA_CLIENTE = 1;
+  private static final int METHODID_OBTER_CONTAS_CLIENTE = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -282,6 +352,10 @@ public final class ContaClienteServiceGrpc {
         case METHODID_OBTER_CONTA_CLIENTE:
           serviceImpl.obterContaCliente((com.grpc.proto.ContaRequest) request,
               (io.grpc.stub.StreamObserver<com.grpc.proto.ContaClienteDTO>) responseObserver);
+          break;
+        case METHODID_OBTER_CONTAS_CLIENTE:
+          serviceImpl.obterContasCliente((com.grpc.proto.ContaRequest) request,
+              (io.grpc.stub.StreamObserver<com.grpc.proto.ResponseContas>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -346,6 +420,7 @@ public final class ContaClienteServiceGrpc {
               .setSchemaDescriptor(new ContaClienteServiceFileDescriptorSupplier())
               .addMethod(getCadastrarContaMethod())
               .addMethod(getObterContaClienteMethod())
+              .addMethod(getObterContasClienteMethod())
               .build();
         }
       }

@@ -10,12 +10,9 @@ import { Subject } from 'rxjs'
 export class PainelFinancasPessoaisComponent implements OnInit {
   constructor(public route: ActivatedRoute) {}
   items = [
-    { nome: 'Lançamentos', link: '/home/painel-financas-pessoais/lancamentos' },
+    {icon:'view_agenda', nome: 'Lançamentos', link: '/home/painel-financas-pessoais/lancamentos'},
     // { nome: 'Orçamentos', link: '/home/painel-financas-pessoais/painel-gestao' },
-    {
-      nome: 'Extrato de Gastos',
-      link: 'painel-financas-pessoais/painel-investimentos',
-    },
+    {icon:'price_change', nome: 'Extrato de Gastos', link: 'painel-financas-pessoais/painel-investimentos'},
   ]
 
   ngOnInit(): void {}

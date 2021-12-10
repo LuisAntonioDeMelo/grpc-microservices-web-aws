@@ -16,9 +16,9 @@ public class LancamentoResource {
     @Autowired
     private LancamentoService lancamentoService;
 
-    @GetMapping
-    public ResponseEntity<List<LancamentoVO>> findAll(){
-        return ResponseEntity.ok(lancamentoService.listarTodos());
+    @GetMapping(value="/listar/{id}")
+    public ResponseEntity<List<LancamentoVO>> findAll(@PathVariable Long id){
+        return ResponseEntity.ok(lancamentoService.listarTodos(id));
     }
 
     @GetMapping(value = "/{codigo}")

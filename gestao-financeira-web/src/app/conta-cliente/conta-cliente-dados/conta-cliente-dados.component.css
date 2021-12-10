@@ -1,0 +1,35 @@
+.container {
+  flex-direction: row;
+  display: flex;
+}
+
+.first-card {
+  margin: 0.5em;
+  width: 290px;
+  height: 160px;
+  background-color: #782aff;
+  color: #fff;
+  justify-content: center;
+}
+
+mat-icon {
+  margin-right: 5%;
+}
+
+.mat-card-title {
+  display: block;
+  margin-bottom: 30px;
+}
+
+mat-card-subtitle {
+  color:#fff;
+}
+a {
+  text-decoration: none;
+}
+
+ul  {
+
+  list-style:none;
+  text-decoration: none;
+}

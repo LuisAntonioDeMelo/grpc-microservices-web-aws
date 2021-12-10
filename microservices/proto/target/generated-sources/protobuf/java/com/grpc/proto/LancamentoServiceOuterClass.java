@@ -20,10 +20,10 @@ public final class LancamentoServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_LancamentoDTO_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_LancamentoResquest_descriptor;
+    internal_static_LancamentoRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_LancamentoResquest_fieldAccessorTable;
+      internal_static_LancamentoRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_LancamentoResponse_descriptor;
   static final 
@@ -45,10 +45,15 @@ public final class LancamentoServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_PesquisaLancamentorResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_emptyRequest_descriptor;
+    internal_static_pesquisaRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_emptyRequest_fieldAccessorTable;
+      internal_static_pesquisaRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_returnMessage_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_returnMessage_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -63,27 +68,29 @@ public final class LancamentoServiceOuterClass {
       "\021\n\tdescricao\030\003 \001(\t\022\025\n\rdataPagamento\030\004 \001(" +
       "\t\022\026\n\016dataVencimento\030\005 \001(\t\022\r\n\005valor\030\006 \001(\001" +
       "\022\022\n\nobservacao\030\007 \001(\t\022\014\n\004tipo\030\010 \001(\003\022\023\n\013id" +
-      "Categoria\030\t \001(\003\022\023\n\013nomeCliente\030\n \001(\t\"$\n\022" +
-      "LancamentoResquest\022\016\n\006codigo\030\001 \001(\005\"8\n\022La" +
-      "ncamentoResponse\022\"\n\nlancamento\030\001 \001(\0132\016.L" +
-      "ancamentoDTO\":\n\023LancamentosResponse\022#\n\013l" +
-      "ancamentos\030\001 \003(\0132\016.LancamentoDTO\"u\n\027Pesq" +
-      "uisaLancamentoQuery\022\026\n\016tipoLancamento\030\001 " +
-      "\001(\005\022\025\n\rdataPagamento\030\002 \001(\t\022\026\n\016dataVencim" +
-      "ento\030\003 \001(\t\022\023\n\013nomeCliente\030\004 \001(\t\"p\n\033Pesqu" +
-      "isaLancamentorResponse\022#\n\013lancamentos\030\001 " +
-      "\003(\0132\016.LancamentoDTO\022\023\n\013page_number\030\002 \001(\005" +
-      "\022\027\n\017result_per_page\030\003 \001(\005\"\016\n\014emptyReques" +
-      "t*7\n\016TipoLancamento\022\013\n\007DEFAULT\020\000\022\013\n\007DESP" +
-      "ESA\020\001\022\013\n\007RECEITA\020\0022\221\002\n\021LancamentoService" +
-      "\022;\n\017obterLancamento\022\023.LancamentoResquest" +
-      "\032\023.LancamentoResponse\0227\n\020salvarLancament" +
-      "o\022\016.LancamentoDTO\032\023.LancamentoResponse\022-" +
-      "\n\006listar\022\r.emptyRequest\032\024.LancamentosRes" +
-      "ponse\022W\n\035pesquisarLancamentoPorCliente\022\030" +
-      ".PesquisaLancamentoQuery\032\034.PesquisaLanca" +
-      "mentorResponseB\022\n\016com.grpc.protoP\001b\006prot" +
-      "o3"
+      "Categoria\030\t \001(\003\022\023\n\013nomeCliente\030\n \001(\t\"#\n\021" +
+      "LancamentoRequest\022\016\n\006codigo\030\001 \001(\005\"8\n\022Lan" +
+      "camentoResponse\022\"\n\nlancamento\030\001 \001(\0132\016.La" +
+      "ncamentoDTO\":\n\023LancamentosResponse\022#\n\013la" +
+      "ncamentos\030\001 \003(\0132\016.LancamentoDTO\"u\n\027Pesqu" +
+      "isaLancamentoQuery\022\026\n\016tipoLancamento\030\001 \001" +
+      "(\005\022\025\n\rdataPagamento\030\002 \001(\t\022\026\n\016dataVencime" +
+      "nto\030\003 \001(\t\022\023\n\013nomeCliente\030\004 \001(\t\"p\n\033Pesqui" +
+      "saLancamentorResponse\022#\n\013lancamentos\030\001 \003" +
+      "(\0132\016.LancamentoDTO\022\023\n\013page_number\030\002 \001(\005\022" +
+      "\027\n\017result_per_page\030\003 \001(\005\"#\n\017pesquisaRequ" +
+      "est\022\020\n\010idPessoa\030\001 \001(\003\"!\n\rreturnMessage\022\020" +
+      "\n\010mensagem\030\001 \001(\t*7\n\016TipoLancamento\022\013\n\007DE" +
+      "FAULT\020\000\022\013\n\007DESPESA\020\001\022\013\n\007RECEITA\020\0022\314\002\n\021La" +
+      "ncamentoService\022:\n\017obterLancamento\022\022.Lan" +
+      "camentoRequest\032\023.LancamentoResponse\0227\n\020s" +
+      "alvarLancamento\022\016.LancamentoDTO\032\023.Lancam" +
+      "entoResponse\0220\n\006listar\022\020.pesquisaRequest" +
+      "\032\024.LancamentosResponse\022W\n\035pesquisarLanca" +
+      "mentoPorCliente\022\030.PesquisaLancamentoQuer" +
+      "y\032\034.PesquisaLancamentorResponse\0227\n\021delet" +
+      "arLancamento\022\022.LancamentoRequest\032\016.retur" +
+      "nMessageB\022\n\016com.grpc.protoP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -103,11 +110,11 @@ public final class LancamentoServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_LancamentoDTO_descriptor,
         new java.lang.String[] { "Codigo", "IdCliente", "Descricao", "DataPagamento", "DataVencimento", "Valor", "Observacao", "Tipo", "IdCategoria", "NomeCliente", });
-    internal_static_LancamentoResquest_descriptor =
+    internal_static_LancamentoRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_LancamentoResquest_fieldAccessorTable = new
+    internal_static_LancamentoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_LancamentoResquest_descriptor,
+        internal_static_LancamentoRequest_descriptor,
         new java.lang.String[] { "Codigo", });
     internal_static_LancamentoResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
@@ -133,12 +140,18 @@ public final class LancamentoServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PesquisaLancamentorResponse_descriptor,
         new java.lang.String[] { "Lancamentos", "PageNumber", "ResultPerPage", });
-    internal_static_emptyRequest_descriptor =
+    internal_static_pesquisaRequest_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_emptyRequest_fieldAccessorTable = new
+    internal_static_pesquisaRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_emptyRequest_descriptor,
-        new java.lang.String[] { });
+        internal_static_pesquisaRequest_descriptor,
+        new java.lang.String[] { "IdPessoa", });
+    internal_static_returnMessage_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_returnMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_returnMessage_descriptor,
+        new java.lang.String[] { "Mensagem", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

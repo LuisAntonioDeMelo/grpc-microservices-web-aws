@@ -13,7 +13,7 @@ public class LancamentoService extends LancamentoServiceGrpc.LancamentoServiceIm
     private LancamentoServiceGrpc.LancamentoServiceBlockingStub blockingStub;
 
     public LancamentoVO obterPorCodigo(Long codigo) {
-        LancamentoResquest resquest =  LancamentoResquest.newBuilder().setCodigo(codigo.intValue()).build();
+        LancamentoRequest resquest =  LancamentoRequest.newBuilder().setCodigo(codigo.intValue()).build();
         LancamentoResponse response =  blockingStub.obterLancamento(resquest);
         LancamentoDTO dto  = response.getLancamento();
         return LancamentoVO.toVO(dto);
@@ -24,8 +24,9 @@ public class LancamentoService extends LancamentoServiceGrpc.LancamentoServiceIm
         return LancamentoVO.toVO(response.getLancamento());
     }
 
-    public List<LancamentoVO> listarTodos() {
-        LancamentosResponse response = blockingStub.listar(emptyRequest.newBuilder().build());
+    public List<LancamentoVO> listarTodos(Long id) {
+        pesquisaRequest pesquisaRes =  pesquisaRequest.newBuilder().setIdPessoa(id).build();
+        LancamentosResponse response = blockingStub.listar(pesquisaRes);
         return LancamentoVO.toList(response.getLancamentosList());
     }
 }

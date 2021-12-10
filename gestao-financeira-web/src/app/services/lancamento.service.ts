@@ -15,8 +15,8 @@ export class LancamentoService {
 
   constructor(private http:HttpClient) {}
 
-  get():Observable<any[]> {
-    return this.http.get<any[]>(`${environment.url}/lancamentos`);
+  get(idPessoa):Observable<any[]> {
+    return this.http.get<any[]>(`${environment.url}/lancamentos/listar/${idPessoa}`);
   }
 
   add(lancamento):Observable<any> {

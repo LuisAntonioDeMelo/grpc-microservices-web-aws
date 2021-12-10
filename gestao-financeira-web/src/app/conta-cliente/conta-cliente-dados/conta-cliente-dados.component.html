@@ -1,1 +1,30 @@
-<p>conta-cliente-dados works!</p>
+<mat-card>
+  <h3>Contas Usuário</h3>
+  <br>
+  <div class="container" fx-layout="row" >
+    <a *ngFor="let conta of contas" [routerLink]="['/home/painel-gestao/conta-cliente/cliente-form', conta.id]" >
+      <mat-card class="first-card">
+          <mat-card-title>
+            <h5> <mat-icon>money</mat-icon>
+              <br>
+              Conta : <b>{{conta.nome}}</b></h5>
+          </mat-card-title>
+          <mat-card-content>
+
+            <ul>
+              <li><b>Número : </b> {{'conta.numeroConta'}} - <b>D - </b> {{'conta.digito'}}</li>
+              <li><b>Banco : </b>{{'conta.banco'}}</li>
+              <li></li>
+            </ul>
+            <br>
+            <h3>Saldo : {{'conta.saldo'}}</h3>
+          </mat-card-content>
+      </mat-card>
+      </a>
+  </div>
+  <div fx-flex fx-layout-align="end" >
+    <a mat-mini-fab color="primary" routerLink="cliente-form" >
+      <mat-icon>add</mat-icon>
+    </a>
+  </div>
+</mat-card>

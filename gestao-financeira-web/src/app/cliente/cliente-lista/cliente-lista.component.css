@@ -11,9 +11,12 @@ table {
   width: 100%;
 }
 
-h4 {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+h3 {
+  padding: 0.9em;
+  border-radius: 0.5em;
+  margin-right: 10em;
+  background-color: #660bd6;
+  color:#fff;
 }
 
 
@@ -26,10 +29,12 @@ h4 {
   color:#fff;
 }
 
-div {
-  padding-right: 10px;
-}
 
-mat-list-item  {
- padding-left: 2%;
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+}
+.grid-item {
+  padding: 20px;
 }

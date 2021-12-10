@@ -5,26 +5,157 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1ba3415-752c-464f-a98d-758759a43552" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/lancamento/lancamento-form/lancamento-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/lancamento/lancamento-form/lancamento-form.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/lancamento/lancamento-form/lancamento-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/lancamento/lancamento-form/lancamento-form.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../corporative-service/src/main/java/com/financeiro/corporative/service/ContaClienteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/cliente/cliente-lista/cliente-lista.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/cliente/cliente-lista/cliente-lista.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/cliente/cliente-lista/cliente-lista.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/cliente/cliente-lista/cliente-lista.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/conta-cliente/conta-cliente-dados/conta-cliente-dados.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/conta-cliente/conta-cliente-dados/conta-cliente-dados.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/conta-cliente/conta-cliente-dados/conta-cliente-dados.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/conta-cliente/conta-cliente-dados/conta-cliente-dados.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/conta-cliente/conta-cliente-dados/conta-cliente-dados.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/conta-cliente/conta-cliente-dados/conta-cliente-dados.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/conta-cliente/conta-cliente-dados/conta-cliente-dados.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/conta-cliente/conta-cliente-form/conta-cliente-form.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/conta-cliente/conta-cliente-form/conta-cliente-form.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/conta-cliente/conta-cliente-form/conta-cliente-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/conta-cliente/conta-cliente-form/conta-cliente-form.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/conta-cliente/conta-cliente-form/conta-cliente-form.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/conta-cliente/conta-cliente-form/conta-cliente-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/conta-cliente/conta-cliente-form/conta-cliente-form.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/conta-cliente/conta-cliente.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/conta-cliente/conta-cliente.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/conta-cliente/conta-cliente.component.spec.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/lancamento/lancamento-lista/lancamento-lista.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/lancamento/lancamento-lista/lancamento-lista.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/lancamento/lancamento-lista/lancamento-lista.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/lancamento/lancamento-lista/lancamento-lista.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/models/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/models/models.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/services/estado.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/services/estado.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/services/lancamento.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/services/lancamento.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/com/gf/gateway/rest/LancamentoVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/com/gf/gateway/rest/LancamentoVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gestao-service/src/main/java/com/gf/financeiro/gestao/model/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gestao-service/src/main/java/com/gf/financeiro/gestao/model/Categoria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/home/painel-financas-pessoais/painel-financas-pessoais.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/home/painel-financas-pessoais/painel-financas-pessoais.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/home/painel-financas-pessoais/painel-financas-pessoais.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/home/painel-financas-pessoais/painel-financas-pessoais.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/home/painel-gestao/painel-gestao.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/home/painel-gestao/painel-gestao.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/home/painel-gestao/painel-gestao.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/home/painel-gestao/painel-gestao.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/home/painel-investimentos/painel-investimentos.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/home/painel-investimentos/painel-investimentos.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/home/painel-investimentos/painel-investimentos.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/home/painel-investimentos/painel-investimentos.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/home/painel-investimentos/painel-investimentos.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/home/painel-investimentos/painel-investimentos.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/com/gf/gateway/resources/LancamentoResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/com/gf/gateway/resources/LancamentoResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/com/gf/gateway/services/LancamentoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/com/gf/gateway/services/LancamentoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../corporative-service/src/main/java/com/financeiro/corporative/model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../corporative-service/src/main/java/com/financeiro/corporative/model/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../corporative-service/src/main/java/com/financeiro/corporative/model/ContaCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../corporative-service/src/main/java/com/financeiro/corporative/model/ContaCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../corporative-service/src/main/java/com/financeiro/corporative/model/enums/TipoConta.java" beforeDir="false" afterPath="$PROJECT_DIR$/../corporative-service/src/main/java/com/financeiro/corporative/model/enums/TipoConta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../financeiro-service/src/main/java/com/gf/financeiro/model/ExtratoVenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/../financeiro-service/src/main/java/com/gf/financeiro/model/ExtratoAtivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../financeiro-service/src/main/java/com/gf/financeiro/model/Fornecedor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../financeiro-service/src/main/java/com/gf/financeiro/model/Orcamento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../financeiro-service/src/main/java/com/gf/financeiro/model/OrcamentoDetalhe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../financeiro-service/src/main/java/com/gf/financeiro/model/Pagamento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../financeiro-service/src/main/java/com/gf/financeiro/model/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../financeiro-service/src/main/java/com/gf/financeiro/model/Produto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../financeiro-service/src/main/java/com/gf/financeiro/model/TipoPagamento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../financeiro-service/src/main/java/com/gf/financeiro/model/Tributacao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../financeiro-service/src/main/java/com/gf/financeiro/model/VendaProduto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../financeiro-service/src/main/java/com/gf/financeiro/repository/FornecedorRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../financeiro-service/src/main/java/com/gf/financeiro/repository/OrcamentoDetalheRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../financeiro-service/src/main/java/com/gf/financeiro/repository/OrcamentoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../financeiro-service/src/main/java/com/gf/financeiro/repository/PagamentoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../financeiro-service/src/main/java/com/gf/financeiro/repository/TributacaoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../financeiro-service/src/main/java/com/gf/financeiro/repository/VendaProdutoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../financeiro-service/src/main/java/com/gf/financeiro/service/PagamentoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../financeiro-service/src/main/java/com/gf/financeiro/service/VendaService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../gestao-service/src/main/java/com/gf/financeiro/gestao/service/LancamentoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gestao-service/src/main/java/com/gf/financeiro/gestao/service/LancamentoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_android_annotations_4_1_1_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_grpc_proto_google_common_protos_1_17_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_3_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_failureaccess_1_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_29_0_android.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_12_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_util_3_12_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_api_1_37_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_context_1_37_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_core_1_37_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_netty_shaded_1_37_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_protobuf_1_32_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_protobuf_lite_1_32_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_services_1_37_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_stub_1_37_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_perfmark_perfmark_api_0_23_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_10_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_devh_grpc_common_spring_boot_2_12_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_devh_grpc_server_spring_boot_autoconfigure_2_12_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_devh_grpc_server_spring_boot_starter_2_12_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_13_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_13_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_annotations_api_6_0_53.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_compat_qual_2_5_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_18.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_4_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_4_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_4_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_4_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_4_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_4_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_4_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_4_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_3_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_27.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/proto.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/proto/conta-cliente.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/conta-cliente.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/proto/lancamento-service.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/lancamento-service.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoDTO$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoDTO$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoDTO$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoDTO$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoDTOOrBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoDTOOrBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaCliente$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaCliente$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaCliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaCliente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaClienteDTO$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaClienteDTO$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaClienteDTO$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaClienteDTO$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaClienteDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaClienteDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaClienteDTOOrBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaClienteDTOOrBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaClienteServiceGrpc$ContaClienteServiceBaseDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaClienteServiceGrpc$ContaClienteServiceBaseDescriptorSupplier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaClienteServiceGrpc$ContaClienteServiceBlockingStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaClienteServiceGrpc$ContaClienteServiceBlockingStub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaClienteServiceGrpc$ContaClienteServiceFileDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaClienteServiceGrpc$ContaClienteServiceFileDescriptorSupplier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaClienteServiceGrpc$ContaClienteServiceFutureStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaClienteServiceGrpc$ContaClienteServiceFutureStub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaClienteServiceGrpc$ContaClienteServiceImplBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaClienteServiceGrpc$ContaClienteServiceImplBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaClienteServiceGrpc$ContaClienteServiceMethodDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaClienteServiceGrpc$ContaClienteServiceMethodDescriptorSupplier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaClienteServiceGrpc$ContaClienteServiceStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaClienteServiceGrpc$ContaClienteServiceStub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaClienteServiceGrpc$MethodHandlers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaClienteServiceGrpc$MethodHandlers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaClienteServiceGrpc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/ContaClienteServiceGrpc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoResquest$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoResquest$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoResquest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoResquestOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoServiceGrpc$LancamentoServiceBaseDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoServiceGrpc$LancamentoServiceBaseDescriptorSupplier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoServiceGrpc$LancamentoServiceBlockingStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoServiceGrpc$LancamentoServiceBlockingStub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoServiceGrpc$LancamentoServiceFileDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoServiceGrpc$LancamentoServiceFileDescriptorSupplier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoServiceGrpc$LancamentoServiceFutureStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoServiceGrpc$LancamentoServiceFutureStub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoServiceGrpc$LancamentoServiceImplBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoServiceGrpc$LancamentoServiceImplBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoServiceGrpc$LancamentoServiceMethodDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoServiceGrpc$LancamentoServiceMethodDescriptorSupplier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoServiceGrpc$LancamentoServiceStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoServiceGrpc$LancamentoServiceStub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoServiceGrpc$MethodHandlers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoServiceGrpc$MethodHandlers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoServiceGrpc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoServiceGrpc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoServiceOuterClass$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoServiceOuterClass$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoServiceOuterClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/grpc/proto/LancamentoServiceOuterClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/emptyRequest$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/emptyRequest$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/emptyRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/grpc/proto/emptyRequestOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/conta-cliente.proto" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/conta-cliente.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/lancamento-service.proto" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lancamento-service.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/LancamentoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/LancamentoDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/LancamentoDTOOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/LancamentoDTOOrBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/grpc-java/com/grpc/proto/ContaClienteServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/grpc-java/com/grpc/proto/ContaClienteServiceGrpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/grpc-java/com/grpc/proto/LancamentoServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/grpc-java/com/grpc/proto/LancamentoServiceGrpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/ContaCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/ContaCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/ContaClienteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/ContaClienteDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/ContaClienteDTOOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/ContaClienteDTOOrBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/LancamentoResquest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/LancamentoResquestOrBuilder.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/LancamentoServiceOuterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/LancamentoServiceOuterClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/emptyRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/grpc/proto/emptyRequestOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/proto-1.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/proto-1.2.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +166,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/proto/conta-cliente.proto" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/proto/pessoa.proto" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/utils/Utils.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/proto/estado.proto" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/readme.txt" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/proto/pagamento.proto" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/proto.iml" root0="FORCE_HIGHLIGHTING" />
@@ -44,10 +187,7 @@
     <setting file="file://$PROJECT_DIR$/src/main/proto/lancamento-service.proto" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/proto/cidade.proto" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/proto/conta-cliente.proto" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/proto/pessoa.proto" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/proto/cliente.proto" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/utils/Utils.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -69,7 +209,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../api-gateway" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/models" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -127,6 +267,7 @@
       <workItem from="1638640655479" duration="7831000" />
       <workItem from="1638831723115" duration="3950000" />
       <workItem from="1638921530596" duration="2362000" />
+      <workItem from="1639009145921" duration="7575000" />
     </task>
     <servers />
   </component>

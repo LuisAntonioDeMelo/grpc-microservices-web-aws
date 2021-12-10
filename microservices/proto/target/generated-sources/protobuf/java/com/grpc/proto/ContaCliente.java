@@ -24,6 +24,11 @@ public final class ContaCliente {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ContaRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ResponseContas_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ResponseContas_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -33,17 +38,19 @@ public final class ContaCliente {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\023conta-cliente.proto\"\220\001\n\017ContaClienteDT" +
+      "\n\023conta-cliente.proto\"\207\001\n\017ContaClienteDT" +
       "O\022\n\n\002id\030\001 \001(\003\022\022\n\ncliente_id\030\002 \001(\003\022\r\n\005sal" +
-      "do\030\003 \001(\001\022\027\n\017limitePagamento\030\004 \001(\001\022\026\n\016deb" +
-      "itoPendente\030\005 \001(\001\022\035\n\ttipoConta\030\006 \001(\0162\n.T" +
-      "ipoConta\"!\n\014ContaRequest\022\021\n\tidCliente\030\001 " +
-      "\001(\003*\'\n\tTipoConta\022\014\n\010CORRENTE\020\000\022\014\n\010POUPAN" +
-      "CA\020\0012\201\001\n\023ContaClienteService\0224\n\016cadastra" +
-      "rConta\022\020.ContaClienteDTO\032\020.ContaClienteD" +
-      "TO\0224\n\021obterContaCliente\022\r.ContaRequest\032\020" +
-      ".ContaClienteDTOB\022\n\016com.grpc.protoP\001b\006pr" +
-      "oto3"
+      "do\030\003 \001(\001\022\r\n\005banco\030\004 \001(\005\022\023\n\013numeroConta\030\005" +
+      " \001(\t\022\016\n\006digito\030\006 \001(\t\022\021\n\ttipoConta\030\007 \001(\005\"" +
+      "!\n\014ContaRequest\022\021\n\tidCliente\030\001 \001(\003\":\n\016Re" +
+      "sponseContas\022(\n\016contasClientes\030\001 \003(\0132\020.C" +
+      "ontaClienteDTO*\'\n\tTipoConta\022\014\n\010CORRENTE\020" +
+      "\000\022\014\n\010POUPANCA\020\0012\267\001\n\023ContaClienteService\022" +
+      "4\n\016cadastrarConta\022\020.ContaClienteDTO\032\020.Co" +
+      "ntaClienteDTO\0224\n\021obterContaCliente\022\r.Con" +
+      "taRequest\032\020.ContaClienteDTO\0224\n\022obterCont" +
+      "asCliente\022\r.ContaRequest\032\017.ResponseConta" +
+      "sB\022\n\016com.grpc.protoP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -62,13 +69,19 @@ public final class ContaCliente {
     internal_static_ContaClienteDTO_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ContaClienteDTO_descriptor,
-        new java.lang.String[] { "Id", "ClienteId", "Saldo", "LimitePagamento", "DebitoPendente", "TipoConta", });
+        new java.lang.String[] { "Id", "ClienteId", "Saldo", "Banco", "NumeroConta", "Digito", "TipoConta", });
     internal_static_ContaRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_ContaRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ContaRequest_descriptor,
         new java.lang.String[] { "IdCliente", });
+    internal_static_ResponseContas_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_ResponseContas_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ResponseContas_descriptor,
+        new java.lang.String[] { "ContasClientes", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

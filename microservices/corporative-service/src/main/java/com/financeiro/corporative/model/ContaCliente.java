@@ -13,6 +13,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
+@Table(name="conta_cliente")
 public class ContaCliente {
 
     @Id
@@ -24,10 +25,10 @@ public class ContaCliente {
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 
-    private String banco;
+    private Integer banco;
     private String numeroConta;
     private Double saldo;
-    private Double limitePagamento;
+    private String digito;
     private Double debitoPedente;
     private TipoConta conta;
 }

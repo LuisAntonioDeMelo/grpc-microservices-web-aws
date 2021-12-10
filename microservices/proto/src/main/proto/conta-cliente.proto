@@ -12,18 +12,24 @@ message ContaClienteDTO {
   int64 id = 1;
   int64 cliente_id = 2;
   double saldo = 3;
-  double limitePagamento = 4;
-  double debitoPendente = 5;
-  TipoConta tipoConta = 6;
+  int32 banco = 4;
+  string numeroConta = 5;
+  string digito = 6;
+  int32 tipoConta = 7;
 }
 
 message ContaRequest {
   int64 idCliente = 1;
 }
 
+message ResponseContas {
+  repeated ContaClienteDTO contasClientes = 1;
+}
+
 service ContaClienteService {
   rpc cadastrarConta(ContaClienteDTO) returns (ContaClienteDTO);
   rpc obterContaCliente(ContaRequest) returns (ContaClienteDTO);
+  rpc obterContasCliente(ContaRequest) returns (ResponseContas);
 }
 
 

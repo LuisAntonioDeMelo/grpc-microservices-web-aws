@@ -1,3 +1,4 @@
+import { AuthService } from './../../services/auth.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm, FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -50,6 +51,7 @@ export class LancamentoListaComponent implements OnInit {
     private lancamentoService: LancamentoService,
     private categoriaService: CategoriaService,
     private snack: MatSnackBar,
+    private authService:AuthService,
     private router: Router
   ) {}
 
@@ -59,7 +61,7 @@ export class LancamentoListaComponent implements OnInit {
       .subscribe((categorias) => (this.categorias = categorias))
 
     this.lancamentoService
-      .get()
+      .get(this.authService.currentUserValue.idPessoa)
       .subscribe((lancamentos) => {
         console.log(lancamentos)
         this.lancamentos = lancamentos
@@ -71,12 +73,9 @@ export class LancamentoListaComponent implements OnInit {
 
   public pesquisa() {
     this.lancamentoService
-      .get()
+      .get(this.authService.currentUserValue.idPessoa)
       .pipe(takeUntil(this.unsubscribed$))
       .subscribe((lancamentos) => {
-        lancamentos.forEach(l => {
-          l.nomeCategoria = this.categorias.find(c => c.codigo === l.idCategoria).nome
-        })
         this.lancamentos = lancamentos
         this.dataSource = lancamentos
       })

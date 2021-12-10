@@ -19,8 +19,9 @@ private static final long serialVersionUID = 0L;
     id_ = 0L;
     clienteId_ = 0L;
     saldo_ = 0D;
-    limitePagamento_ = 0D;
-    debitoPendente_ = 0D;
+    banco_ = 0;
+    numeroConta_ = "";
+    digito_ = "";
     tipoConta_ = 0;
   }
 
@@ -63,20 +64,26 @@ private static final long serialVersionUID = 0L;
             saldo_ = input.readDouble();
             break;
           }
-          case 33: {
+          case 32: {
 
-            limitePagamento_ = input.readDouble();
+            banco_ = input.readInt32();
             break;
           }
-          case 41: {
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-            debitoPendente_ = input.readDouble();
+            numeroConta_ = s;
             break;
           }
-          case 48: {
-            int rawValue = input.readEnum();
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-            tipoConta_ = rawValue;
+            digito_ = s;
+            break;
+          }
+          case 56: {
+
+            tipoConta_ = input.readInt32();
             break;
           }
           default: {
@@ -138,39 +145,90 @@ private static final long serialVersionUID = 0L;
     return saldo_;
   }
 
-  public static final int LIMITEPAGAMENTO_FIELD_NUMBER = 4;
-  private double limitePagamento_;
+  public static final int BANCO_FIELD_NUMBER = 4;
+  private int banco_;
   /**
-   * <code>double limitePagamento = 4;</code>
+   * <code>int32 banco = 4;</code>
    */
-  public double getLimitePagamento() {
-    return limitePagamento_;
+  public int getBanco() {
+    return banco_;
   }
 
-  public static final int DEBITOPENDENTE_FIELD_NUMBER = 5;
-  private double debitoPendente_;
+  public static final int NUMEROCONTA_FIELD_NUMBER = 5;
+  private volatile java.lang.Object numeroConta_;
   /**
-   * <code>double debitoPendente = 5;</code>
+   * <code>string numeroConta = 5;</code>
    */
-  public double getDebitoPendente() {
-    return debitoPendente_;
+  public java.lang.String getNumeroConta() {
+    java.lang.Object ref = numeroConta_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      numeroConta_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string numeroConta = 5;</code>
+   */
+  public com.google.protobuf.ByteString
+      getNumeroContaBytes() {
+    java.lang.Object ref = numeroConta_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      numeroConta_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
-  public static final int TIPOCONTA_FIELD_NUMBER = 6;
+  public static final int DIGITO_FIELD_NUMBER = 6;
+  private volatile java.lang.Object digito_;
+  /**
+   * <code>string digito = 6;</code>
+   */
+  public java.lang.String getDigito() {
+    java.lang.Object ref = digito_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      digito_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string digito = 6;</code>
+   */
+  public com.google.protobuf.ByteString
+      getDigitoBytes() {
+    java.lang.Object ref = digito_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      digito_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int TIPOCONTA_FIELD_NUMBER = 7;
   private int tipoConta_;
   /**
-   * <code>.TipoConta tipoConta = 6;</code>
+   * <code>int32 tipoConta = 7;</code>
    */
-  public int getTipoContaValue() {
+  public int getTipoConta() {
     return tipoConta_;
-  }
-  /**
-   * <code>.TipoConta tipoConta = 6;</code>
-   */
-  public com.grpc.proto.TipoConta getTipoConta() {
-    @SuppressWarnings("deprecation")
-    com.grpc.proto.TipoConta result = com.grpc.proto.TipoConta.valueOf(tipoConta_);
-    return result == null ? com.grpc.proto.TipoConta.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -196,14 +254,17 @@ private static final long serialVersionUID = 0L;
     if (saldo_ != 0D) {
       output.writeDouble(3, saldo_);
     }
-    if (limitePagamento_ != 0D) {
-      output.writeDouble(4, limitePagamento_);
+    if (banco_ != 0) {
+      output.writeInt32(4, banco_);
     }
-    if (debitoPendente_ != 0D) {
-      output.writeDouble(5, debitoPendente_);
+    if (!getNumeroContaBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, numeroConta_);
     }
-    if (tipoConta_ != com.grpc.proto.TipoConta.CORRENTE.getNumber()) {
-      output.writeEnum(6, tipoConta_);
+    if (!getDigitoBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, digito_);
+    }
+    if (tipoConta_ != 0) {
+      output.writeInt32(7, tipoConta_);
     }
     unknownFields.writeTo(output);
   }
@@ -226,17 +287,19 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(3, saldo_);
     }
-    if (limitePagamento_ != 0D) {
+    if (banco_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(4, limitePagamento_);
+        .computeInt32Size(4, banco_);
     }
-    if (debitoPendente_ != 0D) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(5, debitoPendente_);
+    if (!getNumeroContaBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, numeroConta_);
     }
-    if (tipoConta_ != com.grpc.proto.TipoConta.CORRENTE.getNumber()) {
+    if (!getDigitoBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, digito_);
+    }
+    if (tipoConta_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(6, tipoConta_);
+        .computeInt32Size(7, tipoConta_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -262,15 +325,14 @@ private static final long serialVersionUID = 0L;
         java.lang.Double.doubleToLongBits(getSaldo())
         == java.lang.Double.doubleToLongBits(
             other.getSaldo()));
-    result = result && (
-        java.lang.Double.doubleToLongBits(getLimitePagamento())
-        == java.lang.Double.doubleToLongBits(
-            other.getLimitePagamento()));
-    result = result && (
-        java.lang.Double.doubleToLongBits(getDebitoPendente())
-        == java.lang.Double.doubleToLongBits(
-            other.getDebitoPendente()));
-    result = result && tipoConta_ == other.tipoConta_;
+    result = result && (getBanco()
+        == other.getBanco());
+    result = result && getNumeroConta()
+        .equals(other.getNumeroConta());
+    result = result && getDigito()
+        .equals(other.getDigito());
+    result = result && (getTipoConta()
+        == other.getTipoConta());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -291,14 +353,14 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + SALDO_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         java.lang.Double.doubleToLongBits(getSaldo()));
-    hash = (37 * hash) + LIMITEPAGAMENTO_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        java.lang.Double.doubleToLongBits(getLimitePagamento()));
-    hash = (37 * hash) + DEBITOPENDENTE_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        java.lang.Double.doubleToLongBits(getDebitoPendente()));
+    hash = (37 * hash) + BANCO_FIELD_NUMBER;
+    hash = (53 * hash) + getBanco();
+    hash = (37 * hash) + NUMEROCONTA_FIELD_NUMBER;
+    hash = (53 * hash) + getNumeroConta().hashCode();
+    hash = (37 * hash) + DIGITO_FIELD_NUMBER;
+    hash = (53 * hash) + getDigito().hashCode();
     hash = (37 * hash) + TIPOCONTA_FIELD_NUMBER;
-    hash = (53 * hash) + tipoConta_;
+    hash = (53 * hash) + getTipoConta();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -438,9 +500,11 @@ private static final long serialVersionUID = 0L;
 
       saldo_ = 0D;
 
-      limitePagamento_ = 0D;
+      banco_ = 0;
 
-      debitoPendente_ = 0D;
+      numeroConta_ = "";
+
+      digito_ = "";
 
       tipoConta_ = 0;
 
@@ -473,8 +537,9 @@ private static final long serialVersionUID = 0L;
       result.id_ = id_;
       result.clienteId_ = clienteId_;
       result.saldo_ = saldo_;
-      result.limitePagamento_ = limitePagamento_;
-      result.debitoPendente_ = debitoPendente_;
+      result.banco_ = banco_;
+      result.numeroConta_ = numeroConta_;
+      result.digito_ = digito_;
       result.tipoConta_ = tipoConta_;
       onBuilt();
       return result;
@@ -533,14 +598,19 @@ private static final long serialVersionUID = 0L;
       if (other.getSaldo() != 0D) {
         setSaldo(other.getSaldo());
       }
-      if (other.getLimitePagamento() != 0D) {
-        setLimitePagamento(other.getLimitePagamento());
+      if (other.getBanco() != 0) {
+        setBanco(other.getBanco());
       }
-      if (other.getDebitoPendente() != 0D) {
-        setDebitoPendente(other.getDebitoPendente());
+      if (!other.getNumeroConta().isEmpty()) {
+        numeroConta_ = other.numeroConta_;
+        onChanged();
       }
-      if (other.tipoConta_ != 0) {
-        setTipoContaValue(other.getTipoContaValue());
+      if (!other.getDigito().isEmpty()) {
+        digito_ = other.digito_;
+        onChanged();
+      }
+      if (other.getTipoConta() != 0) {
+        setTipoConta(other.getTipoConta());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -649,95 +719,188 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private double limitePagamento_ ;
+    private int banco_ ;
     /**
-     * <code>double limitePagamento = 4;</code>
+     * <code>int32 banco = 4;</code>
      */
-    public double getLimitePagamento() {
-      return limitePagamento_;
+    public int getBanco() {
+      return banco_;
     }
     /**
-     * <code>double limitePagamento = 4;</code>
+     * <code>int32 banco = 4;</code>
      */
-    public Builder setLimitePagamento(double value) {
+    public Builder setBanco(int value) {
       
-      limitePagamento_ = value;
+      banco_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>double limitePagamento = 4;</code>
+     * <code>int32 banco = 4;</code>
      */
-    public Builder clearLimitePagamento() {
+    public Builder clearBanco() {
       
-      limitePagamento_ = 0D;
-      onChanged();
-      return this;
-    }
-
-    private double debitoPendente_ ;
-    /**
-     * <code>double debitoPendente = 5;</code>
-     */
-    public double getDebitoPendente() {
-      return debitoPendente_;
-    }
-    /**
-     * <code>double debitoPendente = 5;</code>
-     */
-    public Builder setDebitoPendente(double value) {
-      
-      debitoPendente_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>double debitoPendente = 5;</code>
-     */
-    public Builder clearDebitoPendente() {
-      
-      debitoPendente_ = 0D;
+      banco_ = 0;
       onChanged();
       return this;
     }
 
-    private int tipoConta_ = 0;
+    private java.lang.Object numeroConta_ = "";
     /**
-     * <code>.TipoConta tipoConta = 6;</code>
+     * <code>string numeroConta = 5;</code>
      */
-    public int getTipoContaValue() {
+    public java.lang.String getNumeroConta() {
+      java.lang.Object ref = numeroConta_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        numeroConta_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string numeroConta = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNumeroContaBytes() {
+      java.lang.Object ref = numeroConta_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        numeroConta_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string numeroConta = 5;</code>
+     */
+    public Builder setNumeroConta(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      numeroConta_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string numeroConta = 5;</code>
+     */
+    public Builder clearNumeroConta() {
+      
+      numeroConta_ = getDefaultInstance().getNumeroConta();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string numeroConta = 5;</code>
+     */
+    public Builder setNumeroContaBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      numeroConta_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object digito_ = "";
+    /**
+     * <code>string digito = 6;</code>
+     */
+    public java.lang.String getDigito() {
+      java.lang.Object ref = digito_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        digito_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string digito = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDigitoBytes() {
+      java.lang.Object ref = digito_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        digito_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string digito = 6;</code>
+     */
+    public Builder setDigito(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      digito_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string digito = 6;</code>
+     */
+    public Builder clearDigito() {
+      
+      digito_ = getDefaultInstance().getDigito();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string digito = 6;</code>
+     */
+    public Builder setDigitoBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      digito_ = value;
+      onChanged();
+      return this;
+    }
+
+    private int tipoConta_ ;
+    /**
+     * <code>int32 tipoConta = 7;</code>
+     */
+    public int getTipoConta() {
       return tipoConta_;
     }
     /**
-     * <code>.TipoConta tipoConta = 6;</code>
+     * <code>int32 tipoConta = 7;</code>
      */
-    public Builder setTipoContaValue(int value) {
+    public Builder setTipoConta(int value) {
+      
       tipoConta_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>.TipoConta tipoConta = 6;</code>
-     */
-    public com.grpc.proto.TipoConta getTipoConta() {
-      @SuppressWarnings("deprecation")
-      com.grpc.proto.TipoConta result = com.grpc.proto.TipoConta.valueOf(tipoConta_);
-      return result == null ? com.grpc.proto.TipoConta.UNRECOGNIZED : result;
-    }
-    /**
-     * <code>.TipoConta tipoConta = 6;</code>
-     */
-    public Builder setTipoConta(com.grpc.proto.TipoConta value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      
-      tipoConta_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.TipoConta tipoConta = 6;</code>
+     * <code>int32 tipoConta = 7;</code>
      */
     public Builder clearTipoConta() {
       

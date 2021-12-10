@@ -2,48 +2,57 @@
   <mat-card-title>
     <h4>Nome : {{ cliente?.nome }}</h4>
   </mat-card-title>
-  <mat-card-content>
+  <mat-card-content class="grid-container">
     <mat-list>
       <h3><b>Dados</b></h3>
-      <mat-list-item>
-        <b>CPF :</b>
+      <mat-list-item class="grid-item">
+        <b>CPF : </b>
         {{ cliente?.cpf }}
-        <b style="margin-left: 20%;">RG</b>
+      </mat-list-item>
+      <mat-list-item class="grid-item">
+        <b>RG : </b>
         {{ cliente?.rg }}
       </mat-list-item>
-      <mat-list-item>
+      <mat-list-item class="grid-item">
         <b>E-mail :</b>
         {{ cliente?.email }}
-        <b style="margin-left: 20%;">Data Cadastro :</b>
+      </mat-list-item>
+      <mat-list-item class="grid-item">
+        <b>Data Cadastro : </b>
         {{ cliente?.dataCadastro }}
       </mat-list-item>
-      <mat-list-item>
-        <b>Telefone :</b>
+      <mat-list-item class="grid-item">
+        <b>Telefone : </b>
         {{ cliente?.telefone }}
       </mat-list-item>
     </mat-list>
     <mat-list>
       <h3><b>Cliente</b></h3>
-      <mat-list-item>
+      <mat-list-item class="grid-item">
         <b>Limite :</b>
-        {{ cliente.limite }} -
-        <b style="margin-left: 20%;">Dia Vencimento :</b>
+        {{ cliente.limite }}
+      </mat-list-item>
+      <mat-list-item class="grid-item">
+        <b>Dia Vencimento :</b>
         {{ cliente.diaVencimento }}
       </mat-list-item>
     </mat-list>
+
     <mat-list>
       <h3><b>Endereço</b></h3>
-      <mat-list-item>
+      <mat-list-item class="grid-item">
         <b>Logradouro :</b>
-        {{ cliente.logradouro }} -
-        <b style="margin-left: 20%;">Número :</b>
+        {{ cliente.logradouro }}
+        </mat-list-item>
+        <mat-list-item class="grid-item">
+        <b>Número :</b>
         {{ cliente.numero }}
       </mat-list-item>
-      <mat-list-item>
+      <mat-list-item class="grid-item">
         <b>Complemento :</b>
         {{ cliente.complemento }}
       </mat-list-item>
-      <mat-list-item>
+      <mat-list-item class="grid-item">
         <b>Complemento :</b>
         {{ cliente.complemento }}
       </mat-list-item>
@@ -52,13 +61,7 @@
   <div flexLayout="flex">
     <div fxFlex="70"></div>
     <div fxFlex="30">
-      <button
-        id="btn-novo"
-        (click)="editar()"
-        mat-raised-button
-        color="primary"
-        class=""
-      >
+      <button id="btn-novo" (click)="editar()" mat-raised-button color="primary" class="">
         Editar Dados
       </button>
     </div>

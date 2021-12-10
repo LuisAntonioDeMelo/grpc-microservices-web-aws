@@ -22,7 +22,7 @@ message LancamentoDTO {
   string nomeCliente = 10;
 }
 
-message LancamentoResquest{
+message LancamentoRequest{
   int32 codigo = 1;
 }
 
@@ -47,11 +47,18 @@ message PesquisaLancamentorResponse {
   int32 result_per_page = 3;
 }
 
-message emptyRequest {}
+message pesquisaRequest {
+  int64 idPessoa = 1;
+}
+
+message returnMessage {
+  string mensagem = 1;
+}
 
 service LancamentoService {
-  rpc obterLancamento(LancamentoResquest) returns (LancamentoResponse);
+  rpc obterLancamento(LancamentoRequest) returns (LancamentoResponse);
   rpc salvarLancamento(LancamentoDTO) returns (LancamentoResponse);
-  rpc listar(emptyRequest) returns (LancamentosResponse);
+  rpc listar(pesquisaRequest) returns (LancamentosResponse);
   rpc pesquisarLancamentoPorCliente(PesquisaLancamentoQuery) returns (PesquisaLancamentorResponse);
+  rpc deletarLancamento(LancamentoRequest) returns (returnMessage);
 }
