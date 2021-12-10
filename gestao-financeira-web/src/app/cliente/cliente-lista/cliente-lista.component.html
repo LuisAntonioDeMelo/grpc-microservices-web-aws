@@ -30,11 +30,11 @@
       <h3><b>Cliente</b></h3>
       <mat-list-item class="grid-item">
         <b>Limite :</b>
-        {{ cliente.limite }}
+        {{ cliente?.limite | currency:'BRL':true }}
       </mat-list-item>
       <mat-list-item class="grid-item">
         <b>Dia Vencimento :</b>
-        {{ cliente.diaVencimento }}
+        {{ cliente?.diaVencimento }}
       </mat-list-item>
     </mat-list>
 
@@ -42,19 +42,23 @@
       <h3><b>Endereço</b></h3>
       <mat-list-item class="grid-item">
         <b>Logradouro :</b>
-        {{ cliente.logradouro }}
+        {{ cliente?.logradouro }}
         </mat-list-item>
         <mat-list-item class="grid-item">
         <b>Número :</b>
-        {{ cliente.numero }}
+        {{ cliente?.numero }}
       </mat-list-item>
       <mat-list-item class="grid-item">
         <b>Complemento :</b>
-        {{ cliente.complemento }}
+        {{ cliente?.complemento }}
       </mat-list-item>
       <mat-list-item class="grid-item">
-        <b>Complemento :</b>
-        {{ cliente.complemento }}
+        <b>CEP :</b>
+        {{ cliente?.cep }}
+      </mat-list-item>
+      <mat-list-item class="grid-item">
+        <b>Bairro :</b>
+        {{ cliente?.bairro }}
       </mat-list-item>
     </mat-list>
   </mat-card-content>

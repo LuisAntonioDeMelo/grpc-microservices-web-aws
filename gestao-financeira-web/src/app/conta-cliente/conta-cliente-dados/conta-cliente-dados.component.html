@@ -7,17 +7,17 @@
           <mat-card-title>
             <h5> <mat-icon>money</mat-icon>
               <br>
-              Conta : <b>{{conta.nome}}</b></h5>
+              Conta : <b>{{conta.banco}}</b></h5>
           </mat-card-title>
           <mat-card-content>
 
             <ul>
-              <li><b>Número : </b> {{'conta.numeroConta'}} - <b>D - </b> {{'conta.digito'}}</li>
-              <li><b>Banco : </b>{{'conta.banco'}}</li>
+              <li><b>Número : </b> {{conta.numeroConta}} - <b>D - </b> {{conta.digito}}</li>
+              <li><b>Banco : </b>{{conta.banco}}</li>
               <li></li>
             </ul>
             <br>
-            <h3>Saldo : {{'conta.saldo'}}</h3>
+            <h3>Saldo : {{conta.saldo}}</h3>
           </mat-card-content>
       </mat-card>
       </a>

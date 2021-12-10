@@ -29,6 +29,7 @@ public class ContaClienteVO {
                 .digito(dto.getDigito())
                 .numeroConta(dto.getNumeroConta())
                 .saldo(dto.getSaldo())
+                .banco(dto.getBanco())
                 .conta(dto.getTipoConta())
                 .build();
     }

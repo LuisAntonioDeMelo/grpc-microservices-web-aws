@@ -23,8 +23,8 @@ export class ContaClienteDadosComponent implements OnInit {
   ngOnInit(): void {
     const idPessoa = this.auth.currentUserValue.idPessoa
     this.clienteService.getPorId(idPessoa).subscribe((c: any) => {
-      this.cliente = c;
-      this.carregarContas(c.idCliente)
+      this.cliente = c
+      this.carregarContas(c.id)
     })
   }
 
@@ -34,7 +34,10 @@ export class ContaClienteDadosComponent implements OnInit {
 
   carregarContas(idCliente) {
     this.contaClienteService
-      .getPorId(idCliente)
-      .subscribe((contas) => (this.contas = contas))
+      .get(idCliente)
+      .subscribe((contas) => {
+        console.log(contas)
+        this.contas = contas
+      })
   }
 }

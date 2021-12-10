@@ -11,6 +11,7 @@ import {
 } from 'src/app/models/models'
 import { CategoriaService } from 'src/app/services/categoria.service'
 import { LancamentoService } from 'src/app/services/lancamento.service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lancamento-form',
@@ -29,9 +30,10 @@ export class LancamentoFormComponent implements OnInit {
     private fb: FormBuilder,
     private lancamentoService: LancamentoService,
     private categoriaService: CategoriaService,
-    private clienteService:ClienteService,
+   // private clienteService:ClienteService,
     private snack: MatSnackBar,
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -60,6 +62,9 @@ export class LancamentoFormComponent implements OnInit {
       this.lancamentoService.add(lancamento).subscribe(
         (ok) => {
           this.notificacao('Lançamento Salvo com Sucesso.')
+          setTimeout(() => {
+            this.router.navigate(['/home/painel-financas-pessoais/lancamentos']);
+          }, 200);
         },
         (error) => {
           console.log(error)

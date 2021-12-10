@@ -40,7 +40,7 @@
         <h4>Valor</h4>
         <mat-form-field appearance="fill">
           <mat-label>Insira o valor</mat-label>
-          <input matInput id="valor" formControlName="valor" />
+          <input type="number" matInput id="valor" formControlName="valor" />
         </mat-form-field>
       </div>
     </div>
@@ -56,18 +56,6 @@
             </mat-option>
           </mat-select>
         </mat-form-field>
-      </div>
-      <div fxFlex="50">
-        <!-- <h4>Pessoa</h4>
-        <mat-form-field appearance="fill">
-          <mat-label>Selecione uma Pessoa</mat-label>
-          <mat-select id="cliente" formControlName="pessoa">
-            <mat-option value="">---</mat-option>
-            <mat-option [id]="'cliente-' + cliente.codigo" *ngFor="let cliente of clientes" [value]="cliente">
-              {{ cliente.nome }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field> -->
       </div>
     </div>
     <h4>Observação</h4>

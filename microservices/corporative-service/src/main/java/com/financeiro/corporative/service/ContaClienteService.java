@@ -47,7 +47,7 @@ public class ContaClienteService extends ContaClienteServiceGrpc.ContaClienteSer
     @Override
     public void obterContasCliente(ContaRequest request, StreamObserver<ResponseContas> responseObserver) {
         List<ContaCliente> contaClientes = contaClienteRepository
-                .findAllByContaClientesByClienteId(request.getIdCliente());
+                .obterContasPorIdCliente(request.getIdCliente());
         List<ContaClienteDTO>  contaClienteDTOS =
                 contaClientes
                 .stream()

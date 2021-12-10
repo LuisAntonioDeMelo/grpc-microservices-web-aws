@@ -1,6 +1,6 @@
 package com.gf.financeiro.model;
 
-import com.grpc.proto.Cliente;
+import com.gf.financeiro.model.shared.Cliente;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -28,6 +28,6 @@ public class Produto {
     private ExtratoAtivo extratoAtivo;
 
     @ManyToOne
-    private Cliente idCliente;
+    private Cliente cliente;
 }
 

@@ -46,6 +46,8 @@ export class LancamentoListaComponent implements OnInit {
     dataPagamento: [null, '']
   })
 
+  idPessoa:number;
+
   constructor(
     private fb: FormBuilder,
     private lancamentoService: LancamentoService,
@@ -56,26 +58,20 @@ export class LancamentoListaComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-
+    this.idPessoa = this.authService.currentUserValue.idPessoa;
     this.categoriaService.get()
       .subscribe((categorias) => (this.categorias = categorias))
 
-    this.lancamentoService
-      .get(this.authService.currentUserValue.idPessoa)
-      .subscribe((lancamentos) => {
+    this.lancamentoService.get(this.idPessoa).subscribe((lancamentos) => {
         console.log(lancamentos)
         this.lancamentos = lancamentos
         this.dataSource = lancamentos
       })
-
-
   }
 
-  public pesquisa() {
-    this.lancamentoService
-      .get(this.authService.currentUserValue.idPessoa)
-      .pipe(takeUntil(this.unsubscribed$))
-      .subscribe((lancamentos) => {
+  public pesquisar() {
+    console.log(this.idPessoa)
+    this.lancamentoService.get(this.idPessoa).subscribe((lancamentos) => {
         this.lancamentos = lancamentos
         this.dataSource = lancamentos
       })
