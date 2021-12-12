@@ -12,6 +12,15 @@ import { Router } from '@angular/router'
 export class ContaClienteDadosComponent implements OnInit {
   cliente: any
   contas = []
+  bancos = [
+    { id:1 , nome: "Caixa Econômica Federal" },
+    { id:2 , nome: "Banco do Brasil" },
+    { id:3 , nome: "Bradesco" },
+    { id:4 , nome: "NU Bank" },
+    { id:5 , nome: "Banco Inter" },
+    { id:6 , nome: "Santander" },
+    { id:7 , nome: "Banco PAN"}
+  ]
 
   constructor(
     private router: Router,
@@ -39,5 +48,13 @@ export class ContaClienteDadosComponent implements OnInit {
         console.log(contas)
         this.contas = contas
       })
+  }
+
+  setBanco(value) {
+    return this.bancos.find(b => b.id === value).nome;
+  }
+
+  tipoConta(value){
+    return value === 1? 'Corrente ': 'Poupança'
   }
 }

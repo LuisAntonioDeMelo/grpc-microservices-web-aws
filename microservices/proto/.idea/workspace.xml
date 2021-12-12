@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1ba3415-752c-464f-a98d-758759a43552" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../financeiro-service/src/main/java/com/gf/financeiro/repository/ExtratoAtivoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/cliente/cliente-lista/cliente-lista.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/cliente/cliente-lista/cliente-lista.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/conta-cliente/conta-cliente-dados/conta-cliente-dados.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/conta-cliente/conta-cliente-dados/conta-cliente-dados.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/conta-cliente/conta-cliente-dados/conta-cliente-dados.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/conta-cliente/conta-cliente-dados/conta-cliente-dados.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/conta-cliente/conta-cliente-form/conta-cliente-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/conta-cliente/conta-cliente-form/conta-cliente-form.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/lancamento/lancamento-form/lancamento-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/lancamento/lancamento-form/lancamento-form.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/lancamento/lancamento-form/lancamento-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/lancamento/lancamento-form/lancamento-form.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/lancamento/lancamento-lista/lancamento-lista.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/lancamento/lancamento-lista/lancamento-lista.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/lancamento/lancamento-lista/lancamento-lista.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/lancamento/lancamento-lista/lancamento-lista.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/com/gf/gateway/rest/ContaClienteVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/com/gf/gateway/rest/ContaClienteVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../corporative-service/src/main/java/com/financeiro/corporative/repository/ContaClienteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../corporative-service/src/main/java/com/financeiro/corporative/repository/ContaClienteRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../corporative-service/src/main/java/com/financeiro/corporative/service/ContaClienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../corporative-service/src/main/java/com/financeiro/corporative/service/ContaClienteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../financeiro-service/src/main/java/com/gf/financeiro/model/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../financeiro-service/src/main/java/com/gf/financeiro/model/Produto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../financeiro-service/src/main/java/com/gf/financeiro/repository/ExtratoVendaRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../financeiro-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../financeiro-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,6 +119,8 @@
       <workItem from="1638831723115" duration="3950000" />
       <workItem from="1638921530596" duration="2362000" />
       <workItem from="1639009145921" duration="8237000" />
+      <workItem from="1639248265723" duration="581000" />
+      <workItem from="1639266897525" duration="567000" />
     </task>
     <servers />
   </component>

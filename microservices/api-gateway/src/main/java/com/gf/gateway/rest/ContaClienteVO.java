@@ -33,6 +33,18 @@ public class ContaClienteVO {
                 .conta(dto.getTipoConta())
                 .build();
     }
+    public ContaClienteDTO buildProto() {
+        return ContaClienteDTO.newBuilder()
+                .setId(getId())
+                .setTipoConta(getConta())
+                .setClienteId(getClienteId())
+                .setBanco(getBanco())
+                .setDigito(getDigito())
+                .setSaldo(getSaldo())
+                .setNumeroConta(getNumeroConta())
+                .build();
+    }
+
     public ContaClienteDTO buildNewProto() {
         return ContaClienteDTO.newBuilder()
                 .setTipoConta(getConta())

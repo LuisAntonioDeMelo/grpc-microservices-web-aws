@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { MatSnackBar } from '@angular/material/snack-bar'
-import { Router } from '@angular/router'
+import { ActivatedRoute, Router } from '@angular/router'
 import { AuthService } from 'src/app/services/auth.service'
 import { ClienteService } from 'src/app/services/cliente.service'
 import { ContaClienteService } from 'src/app/services/conta-cliente.service'
@@ -12,6 +12,8 @@ import { ContaClienteService } from 'src/app/services/conta-cliente.service'
   styleUrls: ['./conta-cliente-form.component.css'],
 })
 export class ContaClienteFormComponent implements OnInit {
+  id:any
+
   contaClienteForm: FormGroup = this.fb.group({
     banco: [null, [Validators.required]],
     numeroConta: [null, [Validators.required]],
@@ -27,11 +29,20 @@ export class ContaClienteFormComponent implements OnInit {
     private auth: AuthService,
     private contaClienteService: ContaClienteService,
     private snack: MatSnackBar,
-    private router: Router
+    private router: Router,
+    private route:ActivatedRoute
   ) {}
 
   ngOnInit(): void {
     this.carregarCliente(this.auth.currentUserValue.idPessoa);
+    this.id =  this.route.snapshot.params.id;
+
+    if(this.id){
+      this.contaClienteService.getPorId(this.id).subscribe(conta => {
+        this.carregarConta(conta)
+      })
+    }
+
   }
 
   carregarCliente(idPessoa) {
@@ -41,12 +52,23 @@ export class ContaClienteFormComponent implements OnInit {
     })
   }
 
+  carregarConta(conta){
+    this.contaClienteForm.patchValue({
+      banco: conta.banco,
+      numeroConta: conta.numeroConta,
+      saldo: conta.saldo,
+      digito: conta.digito,
+      tipoConta: conta.conta
+    })
+  }
+
   limpar() {}
 
   salvar() {
     if (this.contaClienteForm.valid) {
       let contaCliente = this.contaClienteForm.value;
       this.contaClienteService.salvar({
+        id:this.id,
         clienteId: this.cliente.id,
         banco: contaCliente.banco,
         numeroConta: contaCliente.numeroConta,
@@ -69,6 +91,7 @@ export class ContaClienteFormComponent implements OnInit {
       this.notificacao('Preencha todos os campos ');
     }
   }
+
 
   notificacao(msg: string) {
     this.snack.open(msg, 'ok', { duration: 3000 })

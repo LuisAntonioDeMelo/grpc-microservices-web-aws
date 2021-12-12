@@ -70,11 +70,12 @@ public class ContaClienteService extends ContaClienteServiceGrpc.ContaClienteSer
 
     private ContaClienteDTO getBuild(ContaCliente contaCliente){
         return ContaClienteDTO.newBuilder()
-                .setClienteId(contaCliente.getId())
+                .setId(contaCliente.getId())
                 .setBanco(contaCliente.getBanco())
                 .setDigito(contaCliente.getDigito())
                 .setClienteId(contaCliente.getCliente().getId())
                 .setSaldo(contaCliente.getSaldo())
+                .setNumeroConta(contaCliente.getNumeroConta())
                 .setTipoConta(contaCliente.getConta().getCodigo())
                 .build();
     }
