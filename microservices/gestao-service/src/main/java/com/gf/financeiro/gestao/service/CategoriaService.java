@@ -24,26 +24,26 @@ public class CategoriaService extends CategoriaServiceGrpc.CategoriaServiceImplB
     @Override
     public void obterCategorias(emptyCategoria request, StreamObserver<categoriasResponse> responseObserver) {
         List<Categoria> categorias = categoriaRepository.findAll();
-      //  if (!CollectionUtils.isEmpty(categorias)) {
-            List<CategoriaDTO>  categoriaDTOS =
-                    categorias.stream()
-                            .map(c -> getBuild(c))
-                            .collect(Collectors.toList());
+        //  if (!CollectionUtils.isEmpty(categorias)) {
+        List<CategoriaDTO> categoriaDTOS =
+                categorias.stream()
+                        .map(c -> getBuild(c))
+                        .collect(Collectors.toList());
 
-            categoriasResponse response = categoriasResponse.newBuilder().addAllCategorias(categoriaDTOS).build();
-            responseObserver.onNext(response);
-       // }
+        categoriasResponse response = categoriasResponse.newBuilder().addAllCategorias(categoriaDTOS).build();
+        responseObserver.onNext(response);
+        // }
         responseObserver.onCompleted();
     }
 
     @Override
     public void salvarCategoria(CategoriaDTO request, StreamObserver<CategoriaDTO> responseObserver) {
-        try{
+        try {
             Categoria categoria = new Categoria();
             categoria.setNome(request.getNome());
             categoria = categoriaRepository.save(categoria);
             responseObserver.onNext(getBuild(categoria));
-        }catch (Exception e){
+        } catch (Exception e) {
             responseObserver.onError(
                     new StatusRuntimeException(Status.ABORTED.withDescription("Não foi possivel salvar categoria"))
             );

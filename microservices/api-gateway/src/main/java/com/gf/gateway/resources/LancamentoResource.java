@@ -1,6 +1,6 @@
 package com.gf.gateway.resources;
 
-import com.gf.gateway.rest.LancamentoVO;
+import com.gf.gateway.rest.vo.LancamentoVO;
 import com.gf.gateway.services.LancamentoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

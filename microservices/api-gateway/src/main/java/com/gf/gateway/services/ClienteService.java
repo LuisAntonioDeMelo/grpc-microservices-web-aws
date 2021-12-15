@@ -1,12 +1,10 @@
 package com.gf.gateway.services;
 
-import com.gf.gateway.rest.ClienteVO;
+import com.gf.gateway.rest.vo.ClienteVO;
 import com.grpc.proto.*;
 import net.devh.boot.grpc.client.inject.GrpcClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class ClienteService {

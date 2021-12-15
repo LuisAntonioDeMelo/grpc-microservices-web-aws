@@ -1,7 +1,6 @@
 package com.gf.gateway.resources;
 
-import com.gf.gateway.rest.CidadeVO;
-import com.gf.gateway.rest.ContaClienteVO;
+import com.gf.gateway.rest.vo.ContaClienteVO;
 import com.gf.gateway.services.ClienteContaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

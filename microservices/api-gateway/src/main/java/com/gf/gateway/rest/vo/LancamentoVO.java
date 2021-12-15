@@ -1,11 +1,9 @@
-package com.gf.gateway.rest;
+package com.gf.gateway.rest.vo;
 
 import com.grpc.proto.LancamentoDTO;
-import com.grpc.proto.TipoLancamento;
 import lombok.Builder;
 import lombok.Data;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 

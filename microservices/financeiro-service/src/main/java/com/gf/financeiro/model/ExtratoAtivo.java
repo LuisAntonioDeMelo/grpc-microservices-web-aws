@@ -21,7 +21,7 @@ public class ExtratoAtivo {
 
     @OneToMany
     @JoinColumn(name = "produto_id")
-    private List<Produto> produtos;
+    private List<Ativo> ativos;
 
     private LocalDateTime dataImpressao;
 }

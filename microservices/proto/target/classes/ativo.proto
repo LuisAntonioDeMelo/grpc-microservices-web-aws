@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.grpc.proto";
+
+message AtivoDTO {
+  int64 id = 1;
+  int64 cliente_id = 2;
+  string codigo = 3;
+  double quantidade = 4;
+  string nome = 5;
+  double valorMoeda = 6;
+  double valorFracionado = 7;
+}
+
+message AtivoRequest {
+  int64 id = 1;
+}
+
+message AtivosReponse {
+  repeated AtivoDTO ativos = 1;
+}
+
+message emptyAtivo {}
+
+service AtivoService {
+  rpc adicionarAtivo(AtivoDTO) returns (AtivoDTO);
+  rpc obterPorId(AtivoRequest) returns (AtivoDTO);
+  rpc obterAtivos(AtivoRequest) returns (AtivosReponse);
+}

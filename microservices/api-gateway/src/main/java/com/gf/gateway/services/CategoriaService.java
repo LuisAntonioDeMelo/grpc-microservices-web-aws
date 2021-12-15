@@ -1,6 +1,6 @@
 package com.gf.gateway.services;
 
-import com.gf.gateway.rest.CategoriaVO;
+import com.gf.gateway.rest.vo.CategoriaVO;
 import com.grpc.proto.CategoriaServiceGrpc;
 import com.grpc.proto.categoriasResponse;
 import com.grpc.proto.emptyCategoria;

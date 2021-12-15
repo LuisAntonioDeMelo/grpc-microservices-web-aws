@@ -1,7 +1,6 @@
-package com.gf.gateway.rest;
+package com.gf.gateway.rest.vo;
 
 import com.grpc.proto.EstadoDTO;
-import com.grpc.proto.cidadeDTO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

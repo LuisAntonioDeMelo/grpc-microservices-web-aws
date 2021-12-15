@@ -44,7 +44,6 @@ import { ContaClienteComponent } from './conta-cliente/conta-cliente.component';
 import { ContaClienteFormComponent } from './conta-cliente/conta-cliente-form/conta-cliente-form.component';
 import { ContaClienteDadosComponent } from './conta-cliente/conta-cliente-dados/conta-cliente-dados.component';
 import { AtivosFinanceirosComponent } from './ativos-financeiros/ativos-financeiros.component';
-import { RedimentosComponent } from './ativos-financeiros/redimentos/redimentos.component';
 import { AtivosComponent } from './ativos-financeiros/ativos/ativos.component';
 
 
@@ -85,7 +84,6 @@ import { AtivosComponent } from './ativos-financeiros/ativos/ativos.component';
     ContaClienteFormComponent,
     ContaClienteDadosComponent,
     AtivosFinanceirosComponent,
-    RedimentosComponent,
     AtivosComponent
  ],
   imports: [

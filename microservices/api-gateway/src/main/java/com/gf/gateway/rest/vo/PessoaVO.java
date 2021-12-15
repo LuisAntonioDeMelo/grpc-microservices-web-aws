@@ -1,4 +1,4 @@
-package com.gf.gateway.rest;
+package com.gf.gateway.rest.vo;
 
 import com.grpc.proto.PessoaDTO;
 import lombok.Builder;

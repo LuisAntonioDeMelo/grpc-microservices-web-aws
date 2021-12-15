@@ -1,7 +1,6 @@
 package com.gf.gateway.services;
 
-import com.gf.gateway.resources.CidadeResource;
-import com.gf.gateway.rest.CidadeVO;
+import com.gf.gateway.rest.vo.CidadeVO;
 import com.grpc.proto.*;
 import net.devh.boot.grpc.client.inject.GrpcClient;
 import org.springframework.stereotype.Service;

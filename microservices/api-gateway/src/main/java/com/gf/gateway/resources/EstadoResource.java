@@ -1,9 +1,7 @@
 package com.gf.gateway.resources;
 
 
-import com.gf.gateway.rest.CidadeVO;
-import com.gf.gateway.rest.EstadoVO;
-import com.gf.gateway.services.CidadeService;
+import com.gf.gateway.rest.vo.EstadoVO;
 import com.gf.gateway.services.EstadoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

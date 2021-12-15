@@ -1,6 +1,6 @@
 package com.gf.gateway.services;
 
-import com.gf.gateway.rest.ContaClienteVO;
+import com.gf.gateway.rest.vo.ContaClienteVO;
 import com.grpc.proto.ContaClienteDTO;
 import com.grpc.proto.ContaClienteServiceGrpc;
 import com.grpc.proto.ContaRequest;

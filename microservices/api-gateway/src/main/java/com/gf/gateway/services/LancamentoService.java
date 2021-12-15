@@ -1,5 +1,5 @@
 package com.gf.gateway.services;
-import com.gf.gateway.rest.LancamentoVO;
+import com.gf.gateway.rest.vo.LancamentoVO;
 import com.grpc.proto.*;
 import net.devh.boot.grpc.client.inject.GrpcClient;
 import org.springframework.stereotype.Service;

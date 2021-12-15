@@ -1,12 +1,9 @@
-package com.gf.gateway.rest;
+package com.gf.gateway.rest.vo;
 
 import com.grpc.proto.ClienteDTO;
 import com.grpc.proto.PessoaDTO;
 import lombok.Builder;
 import lombok.Data;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Data
 @Builder

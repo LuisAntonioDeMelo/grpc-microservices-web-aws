@@ -1,28 +1,28 @@
 package com.gf.financeiro.model;
 
 import com.gf.financeiro.model.shared.Cliente;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
-@Table(name = "produto")
-public class Produto {
+@Table(name = "ativo")
+public class Ativo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String descricao;
-    private String modelo;
-    private String unidade;
+    private String codigo;
+    private Double quantidade;
+    private String nome;
+    private Double valorMoeda;
+    private Double valorFracionado;
 
     @ManyToOne
     private ExtratoAtivo extratoAtivo;

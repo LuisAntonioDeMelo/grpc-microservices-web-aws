@@ -1,8 +1,6 @@
-package com.gf.gateway.rest;
+package com.gf.gateway.rest.vo;
 
-import com.grpc.proto.ClienteDTO;
 import com.grpc.proto.ContaClienteDTO;
-import com.grpc.proto.LancamentoDTO;
 import lombok.Builder;
 import lombok.Data;
 

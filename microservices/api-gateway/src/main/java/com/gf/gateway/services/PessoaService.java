@@ -1,6 +1,6 @@
 package com.gf.gateway.services;
 
-import com.gf.gateway.rest.ClienteVO;
+import com.gf.gateway.rest.vo.ClienteVO;
 import com.grpc.proto.PessoaDTO;
 import com.grpc.proto.PessoaResponse;
 import com.grpc.proto.PessoaServiceGrpc;

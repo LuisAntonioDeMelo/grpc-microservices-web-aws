@@ -1,6 +1,6 @@
 package com.gf.gateway.services;
 
-import com.gf.gateway.rest.EstadoVO;
+import com.gf.gateway.rest.vo.EstadoVO;
 import com.grpc.proto.EstadoServiceGrpc;
 import com.grpc.proto.EstadosResponse;
 import com.grpc.proto.emptyEstado;

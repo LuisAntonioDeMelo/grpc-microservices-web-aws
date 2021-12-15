@@ -28,6 +28,7 @@ com\grpc\proto\cargoResponse$Builder.class
 com\grpc\proto\returnMessage.class
 com\grpc\proto\cargoRequest.class
 com\grpc\proto\cargoRequest$Builder.class
+com\grpc\proto\AtivoRequest.class
 com\grpc\proto\CategoriaServiceGrpc$CategoriaServiceBaseDescriptorSupplier.class
 com\grpc\proto\EstadosResponse$Builder.class
 com\grpc\proto\OrcamentoServiceGrpc$1.class
@@ -43,6 +44,7 @@ com\grpc\proto\PagamentoResponse.class
 com\grpc\proto\CargoServiceGrpc$CargoServiceFileDescriptorSupplier.class
 com\grpc\proto\ClienteDTO$1.class
 com\grpc\proto\EstadoServiceGrpc$MethodHandlers.class
+com\grpc\proto\AtivoServiceGrpc$AtivoServiceImplBase.class
 com\grpc\proto\CidadeServiceGrpc$CidadeServiceMethodDescriptorSupplier.class
 com\grpc\proto\DepartamentoServiceGrpc$DepartamentoServiceMethodDescriptorSupplier.class
 com\grpc\proto\emptyCategoria$Builder.class
@@ -53,12 +55,14 @@ com\grpc\proto\CidadesResponseOrBuilder.class
 com\grpc\proto\EstadoDTO$1.class
 com\grpc\proto\EstadoServiceGrpc$EstadoServiceStub.class
 com\grpc\proto\ContaRequest$Builder.class
+com\grpc\proto\emptyAtivo$1.class
 com\grpc\proto\LancamentoDTO.class
 com\grpc\proto\OrcamentoServiceGrpc.class
 com\grpc\proto\cidadeDTO$Builder.class
 com\grpc\proto\ResponseContas.class
 com\grpc\proto\cidadeDTO$1.class
 com\grpc\proto\LancamentoRequest$Builder.class
+com\grpc\proto\AtivoServiceGrpc$AtivoServiceFutureStub.class
 com\grpc\proto\ClienteServiceGrpc$ClienteServiceMethodDescriptorSupplier.class
 com\grpc\proto\cargoDTO$1.class
 com\grpc\proto\LancamentoDTO$Builder.class
@@ -69,6 +73,7 @@ com\grpc\proto\PessoaResponseOrBuilder.class
 com\grpc\proto\ClienteServiceGrpc$MethodHandlers.class
 com\grpc\proto\departamentoRequestOrBuilder.class
 com\grpc\proto\CategoriaDTO$Builder.class
+com\grpc\proto\AtivoDTO$1.class
 com\grpc\proto\cargoDTO.class
 com\grpc\proto\ClienteServiceGrpc$ClienteServiceStub.class
 com\grpc\proto\emptyCidade$Builder.class
@@ -88,6 +93,7 @@ com\grpc\proto\CargoServiceGrpc$CargoServiceFutureStub.class
 com\grpc\proto\CategoriaDTO.class
 com\grpc\proto\ResponseContas$1.class
 com\grpc\proto\cargoDTO$Builder.class
+com\grpc\proto\AtivoRequest$Builder.class
 com\grpc\proto\DepartamentoDTO$1.class
 com\grpc\proto\ContaClienteDTO.class
 com\grpc\proto\ClienteServiceGrpc.class
@@ -104,7 +110,9 @@ com\grpc\proto\ContaRequestOrBuilder.class
 com\grpc\proto\emptyCategoria.class
 com\grpc\proto\EstadoDTO.class
 com\grpc\proto\CidadeServiceGrpc$CidadeServiceFutureStub.class
+com\grpc\proto\AtivosReponse$Builder.class
 com\grpc\proto\PagamentoServiceGrpc$MethodHandlers.class
+com\grpc\proto\emptyAtivo$Builder.class
 com\grpc\proto\Estado$1.class
 com\grpc\proto\ContaRequest.class
 com\grpc\proto\OrcamentoDTO$1.class
@@ -119,6 +127,7 @@ com\grpc\proto\PessoaDTOOrBuilder.class
 com\grpc\proto\Pessoa$1.class
 com\grpc\proto\CategoriaServiceGrpc$CategoriaServiceImplBase.class
 com\grpc\proto\OrcamentoServiceGrpc$OrcamentoServiceFileDescriptorSupplier.class
+com\grpc\proto\AtivoServiceGrpc$1.class
 com\grpc\proto\ClienteDTO$Builder.class
 com\grpc\proto\pesquisaRequestOrBuilder.class
 com\grpc\proto\OrcamentoRequestOrBuilder.class
@@ -132,16 +141,20 @@ com\grpc\proto\DepartamentoDTO.class
 com\grpc\proto\OrcamentoServiceGrpc$OrcamentoServiceBaseDescriptorSupplier.class
 com\grpc\proto\emptyOrcamento.class
 com\grpc\proto\PessoaRequest$1.class
+com\grpc\proto\AtivoServiceGrpc$AtivoServiceBlockingStub.class
 com\grpc\proto\DepartamentoServiceGrpc$DepartamentoServiceFutureStub.class
 com\grpc\proto\PessoaServiceGrpc$PessoaServiceImplBase.class
 com\grpc\proto\DepartamentoServiceGrpc$DepartamentoServiceBlockingStub.class
+com\grpc\proto\emptyAtivoOrBuilder.class
 com\grpc\proto\PagamentoServiceGrpc$PagamentoServiceStub.class
 com\grpc\proto\ContaClienteServiceGrpc$ContaClienteServiceMethodDescriptorSupplier.class
 com\grpc\proto\TipoLancamento$1.class
+com\grpc\proto\AtivoServiceGrpc$AtivoServiceBaseDescriptorSupplier.class
 com\grpc\proto\Cidade.class
 com\grpc\proto\OrcamentoServiceGrpc$OrcamentoServiceStub.class
 com\grpc\proto\LancamentoServiceGrpc$LancamentoServiceMethodDescriptorSupplier.class
 com\grpc\proto\ClienteDTO.class
+com\grpc\proto\AtivoServiceGrpc.class
 com\grpc\proto\DepartamentoServiceGrpc$DepartamentoServiceBaseDescriptorSupplier.class
 com\grpc\proto\CategoriaServiceGrpc$CategoriaServiceFutureStub.class
 com\grpc\proto\CidadeServiceGrpc.class
@@ -176,6 +189,7 @@ com\grpc\proto\EstadoDTO$Builder.class
 com\grpc\proto\EstadoRequest$Builder.class
 com\grpc\proto\PagamentoResponse$1.class
 com\grpc\proto\emptyEstadoOrBuilder.class
+com\grpc\proto\AtivoServiceGrpc$AtivoServiceStub.class
 com\grpc\proto\CidadesResponse.class
 com\grpc\proto\PagamentoServiceGrpc$PagamentoServiceFileDescriptorSupplier.class
 com\grpc\proto\LancamentoServiceOuterClass.class
@@ -185,6 +199,7 @@ com\grpc\proto\DepartamentoServiceGrpc$DepartamentoServiceFileDescriptorSupplier
 com\grpc\proto\LancamentoResponse.class
 com\grpc\proto\CidadeRequest.class
 com\grpc\proto\ContaClienteServiceGrpc$1.class
+com\grpc\proto\AtivoDTO.class
 com\grpc\proto\ClienteServiceGrpc$ClienteServiceImplBase.class
 com\grpc\proto\PagamentoRequest$Builder.class
 com\grpc\proto\ContaClienteServiceGrpc$ContaClienteServiceFileDescriptorSupplier.class
@@ -194,6 +209,7 @@ com\grpc\proto\emptyCargoOrBuilder.class
 com\grpc\proto\PessoaDTO$Builder.class
 com\grpc\proto\emptyOrcamento$1.class
 com\grpc\proto\LancamentoResponseOrBuilder.class
+com\grpc\proto\AtivoDTO$Builder.class
 com\grpc\proto\EstadosResponseOrBuilder.class
 com\grpc\proto\ClienteServiceGrpc$ClienteServiceBaseDescriptorSupplier.class
 com\grpc\proto\EstadoRequest$1.class
@@ -203,12 +219,15 @@ com\grpc\proto\CidadeServiceGrpc$1.class
 com\grpc\proto\returnMessageOrBuilder.class
 com\grpc\proto\OrcamentoServiceGrpc$MethodHandlers.class
 com\grpc\proto\PessoaRequest.class
+com\grpc\proto\AtivosReponse$1.class
 com\grpc\proto\PessoaResponse.class
 com\grpc\proto\PagamentoDTO$1.class
+com\grpc\proto\AtivosReponseOrBuilder.class
 com\grpc\proto\CategoriaDTOOrBuilder.class
 com\grpc\proto\EstadoServiceGrpc.class
 com\grpc\proto\emptyPagamento.class
 com\grpc\proto\PessoasResponse.class
+com\grpc\proto\Ativo.class
 com\grpc\proto\CategoriaDTO$1.class
 com\grpc\proto\ContaClienteDTOOrBuilder.class
 com\grpc\proto\DepartamentoDTOOrBuilder.class
@@ -227,6 +246,7 @@ com\grpc\proto\EstadoServiceGrpc$EstadoServiceFutureStub.class
 com\grpc\proto\DepartamentoServiceGrpc.class
 com\grpc\proto\LancamentosResponseOrBuilder.class
 com\grpc\proto\ClienteRequestOrBuilder.class
+com\grpc\proto\AtivoDTOOrBuilder.class
 com\grpc\proto\categoriasResponseOrBuilder.class
 com\grpc\proto\CidadeRequest$1.class
 com\grpc\proto\ClienteResponse$1.class
@@ -241,10 +261,13 @@ com\grpc\proto\ClienteResponseOrBuilder.class
 com\grpc\proto\PessoaServiceGrpc.class
 com\grpc\proto\EstadoDTOOrBuilder.class
 com\grpc\proto\ContaClienteServiceGrpc$ContaClienteServiceImplBase.class
+com\grpc\proto\AtivoServiceGrpc$AtivoServiceMethodDescriptorSupplier.class
+com\grpc\proto\AtivoServiceGrpc$MethodHandlers.class
 com\grpc\proto\LancamentoServiceGrpc$LancamentoServiceBaseDescriptorSupplier.class
 com\grpc\proto\cargoResponseOrBuilder.class
 com\grpc\proto\DepartamentoDTO$Builder.class
 com\grpc\proto\emptyEstado.class
+com\grpc\proto\AtivoServiceGrpc$AtivoServiceFileDescriptorSupplier.class
 com\grpc\proto\cargoRequestOrBuilder.class
 com\grpc\proto\CidadesResponse$1.class
 com\grpc\proto\Departamento.class
@@ -263,6 +286,7 @@ com\grpc\proto\emptyPagamento$Builder.class
 com\grpc\proto\LancamentoServiceGrpc$1.class
 com\grpc\proto\Categoria.class
 com\grpc\proto\emptyOrcamento$Builder.class
+com\grpc\proto\AtivoRequestOrBuilder.class
 com\grpc\proto\Pagamento$1.class
 com\grpc\proto\PesquisaLancamentoQueryOrBuilder.class
 com\grpc\proto\departamentoRequest.class
@@ -286,6 +310,8 @@ com\grpc\proto\emptyCidadeOrBuilder.class
 com\grpc\proto\returnMessage$Builder.class
 com\grpc\proto\OrcamentoDTO$Builder.class
 com\grpc\proto\PesquisaLancamentorResponse.class
+com\grpc\proto\Ativo$1.class
+com\grpc\proto\AtivosReponse.class
 com\grpc\proto\CidadeRequest$Builder.class
 com\grpc\proto\ClienteServiceGrpc$ClienteServiceFutureStub.class
 com\grpc\proto\EstadoServiceGrpc$EstadoServiceImplBase.class
@@ -299,6 +325,7 @@ com\grpc\proto\ClienteResponse.class
 com\grpc\proto\CargoServiceGrpc$CargoServiceBlockingStub.class
 com\grpc\proto\OrcamentoServiceGrpc$OrcamentoServiceImplBase.class
 com\grpc\proto\PessoaDTO.class
+com\grpc\proto\AtivoRequest$1.class
 com\grpc\proto\PesquisaLancamentorResponseOrBuilder.class
 com\grpc\proto\EstadoServiceGrpc$EstadoServiceBlockingStub.class
 com\grpc\proto\PessoasResponseOrBuilder.class
@@ -316,6 +343,7 @@ com\grpc\proto\DepartamentoResponse$Builder.class
 utils\Utils.class
 com\grpc\proto\EstadoRequestOrBuilder.class
 com\grpc\proto\PessoaServiceGrpc$PessoaServiceFutureStub.class
+com\grpc\proto\emptyAtivo.class
 com\grpc\proto\TipoConta$1.class
 com\grpc\proto\LancamentoServiceGrpc$LancamentoServiceFileDescriptorSupplier.class
 com\grpc\proto\cargoDTOOrBuilder.class
