@@ -3,15 +3,16 @@ package com.gf.financeiro.service;
 import com.gf.financeiro.model.Ativo;
 import com.gf.financeiro.model.shared.Cliente;
 import com.gf.financeiro.repository.AtivoRepository;
-import com.grpc.proto.AtivoDTO;
-import com.grpc.proto.AtivoRequest;
-import com.grpc.proto.AtivoServiceGrpc;
-import com.grpc.proto.AtivosReponse;
+import com.grpc.proto.*;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.CollectionUtils;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 
 @GrpcService
@@ -55,7 +56,18 @@ public class AtivoService extends AtivoServiceGrpc.AtivoServiceImplBase {
 
     @Override
     public void obterAtivos(AtivoRequest request, StreamObserver<AtivosReponse> responseObserver) {
-        super.obterAtivos(request, responseObserver);
+        List<Ativo> ativos = ativoRepository.findAllByIdCliente(request.getId());
+        if (!CollectionUtils.isEmpty(ativos)) {
+            List<AtivoDTO> ativoDTOList =
+                    ativos.stream()
+                            .map(l -> getBuild(l))
+                            .collect(Collectors.toList());
+
+            AtivosReponse response = AtivosReponse.newBuilder().addAllAtivos(ativoDTOList).build();
+            responseObserver.onNext(response);
+        }
+        responseObserver.onCompleted();
+
     }
 
     @Override

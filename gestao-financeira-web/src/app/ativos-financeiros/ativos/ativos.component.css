@@ -30,3 +30,8 @@ div {
   height: auto;
   padding-right: 10px;
 }
+
+
+table {
+  width: 100%;
+}
