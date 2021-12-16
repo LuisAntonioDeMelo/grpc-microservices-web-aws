@@ -79,7 +79,7 @@ export class ContaClienteFormComponent implements OnInit {
         (ok) => {
           this.notificacao('Conta Salva com Sucesso.')
           setTimeout(() => {
-            this.router.navigate(['/home/painel-gestao/conta-cliente/lancamentos']);
+            this.router.navigate(['/home/painel-gestao/conta-cliente']);
           }, 200);
         },
         (error) => {

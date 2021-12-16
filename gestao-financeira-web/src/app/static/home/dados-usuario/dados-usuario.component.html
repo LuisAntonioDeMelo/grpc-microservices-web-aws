@@ -2,16 +2,19 @@
   <h3>Dados Usuário</h3>
   <br>
   <div class="container">
-    <a *ngFor="let card of cards" [routerLink]="'/'+card.link">
+    <a *ngFor="let card of cards" >
       <mat-card class="first-card">
           <mat-card-title>
-            <h4> <mat-icon> {{card.icon}}</mat-icon> <b>{{card.nome}}</b></h4>
+            <h4> <mat-icon> {{card.icon}}</mat-icon></h4>
           </mat-card-title>
           <mat-card-subtitle>
-
+            <p>{{card.nome}}</p>
           </mat-card-subtitle>
-          <mat-card-content>
-            <h3>Saldo : {{card.content}}</h3>
+          <mat-card-content *ngIf="card.money">
+            <h3>{{card?.content | currency:'BRL':true}}</h3>
+          </mat-card-content>
+          <mat-card-content *ngIf="!card.money">
+            <h3>  <mat-icon> + </mat-icon> {{card?.content }}</h3>
           </mat-card-content>
       </mat-card>
       </a>

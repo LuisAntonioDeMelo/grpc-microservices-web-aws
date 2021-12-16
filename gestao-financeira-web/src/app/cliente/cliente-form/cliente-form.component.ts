@@ -39,6 +39,8 @@ export class ClienteFormComponent implements OnInit {
     complemento:[null, [Validators.required]],
     bairro:[null, [Validators.required]],
     cep: [null, [Validators.required]],
+    credito : '',
+    dataCadastro: ''
   })
 
   constructor(
@@ -96,13 +98,15 @@ export class ClienteFormComponent implements OnInit {
       this.clienteService.salvar(cliente).subscribe(
         res=> {
           this.notificacao('Dados do cliente foram alterados');
+          this.retornarUser()
         },
         (error) => {
           this.notificacao('Ocorreu um erro ao atualizar os dados do cliente');
         }
       );
+    }else {
+      this.notificacao('Insira os dados corretamente')
     }
-    this.notificacao('Insira os dados corretamente')
     return;
   }
 

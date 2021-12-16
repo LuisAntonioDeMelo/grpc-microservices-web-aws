@@ -4,8 +4,8 @@
 }
 
 .first-card {
-  width: 120px;
-  height: 80px;
+  width: 160px;
+  height: 100px;
   background-color: #782aff;
   color: #fff;
   justify-content: center;
@@ -17,12 +17,13 @@ mat-icon {
 
 .mat-card-title {
   display: block;
-  margin-bottom: 30px;
 }
 
 mat-card-subtitle {
   color:#fff;
 }
+
 a {
+  padding-right: 5%;
   text-decoration: none;
 }
