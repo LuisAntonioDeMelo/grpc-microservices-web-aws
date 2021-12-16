@@ -8,6 +8,6 @@ grpc:
     port: 9991
   client:
     corporative-service:
-      address: static://localhost:9990
-      #address: static://${GRPC_HOST_CORP}:9990
+      #address: static://localhost:9990
+      address: static://${GRPC_HOST_CORP}:9990
       negotiationType: plaintext

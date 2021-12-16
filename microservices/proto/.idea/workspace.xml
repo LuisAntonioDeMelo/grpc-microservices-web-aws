@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1ba3415-752c-464f-a98d-758759a43552" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/ativos-financeiros/ativos-financeiros.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/home/dados-usuario/dados-usuario.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/home/dados-usuario/dados-usuario.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/home/dados-usuario/dados-usuario.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../gestao-financeira-web/src/app/static/home/dados-usuario/dados-usuario.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../authentication-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../authentication-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../corporative-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../corporative-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../corporative-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../corporative-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eureka-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../eureka-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../financeiro-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../financeiro-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../financeiro-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../financeiro-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gestao-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../gestao-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gestao-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../gestao-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gestao-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../gestao-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +36,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/proto/ativo.proto" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/proto/conta-cliente.proto" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/proto/pessoa.proto" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/utils/Utils.java" root0="FORCE_HIGHLIGHTING" />

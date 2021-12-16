@@ -7,16 +7,18 @@ services:
         - "8099:8099"
       environment:
         - JAVA_OPTS=
-           -DEUREKA_SERVER=http://eureka-server:8761/eureka/
+           -DEUREKA_SERVER=eureka-server
            -Dspring.profiles.active=prod
+        - IP_HOST=eureka-server
         - GRPC_HOST_GESTAO=gestao-service
-        - GRPC_HOST_FINANCEIRO=0
+        - GRPC_HOST_FINANCEIRO=financeiro-service
         - GRPC_HOST_CORP=corporative-service
       depends_on:
-        - eureka-server
+        - gestao-service
       links:
         - gestao-service
         - eureka-server
+        - financeiro-service
       networks:
         - sprintapp
 
@@ -26,13 +28,18 @@ services:
         - "8080:8080"
       environment:
         - JAVA_OPTS=
-           -DEUREKA_SERVER=http://eureka-server:8761/eureka/
+           -DEUREKA_SERVER=eureka-server
            -Dspring.profiles.active=prod
+        - IP_HOST=eureka-server
+        - POSTGRES_URL=postgres-1.cng4etzlwfe4.us-east-1.rds.amazonaws.com/dbmicro
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASS=rootkey2021
         - GRPC_HOST_CORP=corporative-service
       depends_on:
-        - eureka-server
+        - corporative-service
       links:
         - eureka-server
+        - corporative-service
       networks:
         - sprintapp
 
@@ -42,10 +49,35 @@ services:
         - "8081:8081"
       environment:
         - JAVA_OPTS=
-           -DEUREKA_SERVER=http://eureka-server:8761/eureka/
+           -DEUREKA_SERVER=eureka-server
            -Dspring.profiles.active=prod
+        - IP_HOST=eureka-server
+        - POSTGRES_URL=postgres-1.cng4etzlwfe4.us-east-1.rds.amazonaws.com/dbmicro
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASS=rootkey2021
+        - GRPC_HOST_CORP=corporative-service 
       depends_on:
+        - financeiro-service
+      links:
         - eureka-server
+      networks:
+        - sprintapp
+
+    financeiro-service:
+      image: devluis27/financeiro-service:latest
+      ports:
+        - "8082:8082"
+      environment:
+        - JAVA_OPTS=
+           -DEUREKA_SERVER=eureka-server
+           -Dspring.profiles.active=prod
+        - IP_HOST=eureka-server
+        - POSTGRES_URL=postgres-1.cng4etzlwfe4.us-east-1.rds.amazonaws.com/dbmicro
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASS=rootkey2021
+        - GRPC_HOST_CORP=corporative-service
+      depends_on:
+        - auth-service
       links:
         - eureka-server
       networks:
@@ -57,18 +89,21 @@ services:
         - "9001:9001"
       environment:
         - JAVA_OPTS=
-           -DEUREKA_SERVER=http://eureka-server:8761/eureka/
+           -DEUREKA_SERVER=eureka-server
            -Dspring.profiles.active=prod
         - IP_HOST=eureka-server
+        - POSTGRES_URL=postgres-1.cng4etzlwfe4.us-east-1.rds.amazonaws.com/dbmicro
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASS=rootkey2021
       depends_on:
         - eureka-server
       links:
         - eureka-server
       networks:
         - sprintapp      
-        
+
     eureka-server:
-      image: devluis27/eureka-server:latest
+      image: devluis27/eureka-server:latest   
       ports:
         - "8761:8761"
       networks:
